@@ -1,16 +1,10 @@
 # Diretrizes para Assistente de IA - Projeto Front-End TERS
 
-## Contexto do Projeto
-- **Projeto**: TERS (Transição Energética Renovável Sustentável)
-- **Equipe**: Eco Inovação
-- **Disciplina**: Desenvolvimento FRONT-END para WEB
-- **Tecnologias**: HTML5, CSS3, JavaScript (sem frameworks complexos)
-
 ## Regras de Padrão do Layout (Baseadas no index.html)
 
 1. **Reutilização da Estrutura Base**:
-   - Toda nova página DEVE copiar rigorosamente a estrutura externa do `index.html`: mesmo `<header>`, `<nav>` e `<footer>`.
-   - O conteúdo exclusivo da nova página deve ser inserido apenas dentro da tag `<main>`.
+   - Toda nova página DEVE manter a estrutura externa do `index.html` (`<header>`, `<nav>` e `<footer>`) e seguir os requisitos estruturais de acessibilidade definidos em `accessibility-rules.md`.
+   - Inserir o conteúdo exclusivo da nova página apenas dentro de `<main>`.
 
 2. **Aproveitamento de Estilos Existentes**:
    - Reutilizar as classes do CSS global (pasta `/css`) para títulos, botões, containers e cards.
