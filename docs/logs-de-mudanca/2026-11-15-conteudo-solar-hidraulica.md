@@ -1,7 +1,7 @@
 # 2026-11-15: Conteúdo das páginas solar e hidráulica
 
 - **Data:** 2026-11-15
-- **Responsável pela revisão:** (preencher)
+- **Responsável pela revisão:** Thiago Roberto de Oliveira
 - **Feito com IA?** Sim (Claude Code)
 
 ## Pedidos / prompts usados

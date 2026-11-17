@@ -1,7 +1,7 @@
 # 2026-11-16: Formas caseiras da eólica e aviso da imagem da home
 
 - **Data:** 2026-11-16
-- **Responsável pela revisão:** (preencher)
+- **Responsável pela revisão:** Thiago Roberto de Oliveira
 - **Feito com IA?** Sim (Claude Code)
 
 ## Pedidos / prompts usados
@@ -52,11 +52,13 @@ Segue o modelo da seção 7 das páginas Solar Térmica (aquecedor solar de baix
 
 ## O que foi aceito
 
-- (preencher após a revisão)
+- A seção "No sítio ou na fazenda: formas caseiras de usar o vento" (`id="no-sitio"`) e as referências DUMS e MOORI continuam em `eolica-residencial.html` (commit `8873c4e`, João Vitor).
+
+_Conferido pela IA em 16/11/2026, à noite: a mudança está no código atual e na versão enviada ao GitHub._
 
 ## O que foi corrigido pela equipe
 
-- (preencher após a revisão)
+- **Imagem da home:** em 16/11/2026, à noite, a foto do Canal Bioenergia foi trocada pela foto do Parque Eólico Cutia (Copel, 2019, CC0), que já estava em `img/noticias/`. Era a opção sugerida na tabela abaixo (veja `2026-11-16-ajustes-entrega-final.md`).
 
 ## Para a equipe decidir
 

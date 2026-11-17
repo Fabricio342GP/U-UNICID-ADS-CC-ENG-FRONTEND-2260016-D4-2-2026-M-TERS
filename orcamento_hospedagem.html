@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quanto custa manter o site TERS no ar e por que a equipe escolheu o GitHub Pages para publicá-lo.">
+
+    <title>Orçamento e hospedagem | TERS</title>
+
+    <!-- Folha de estilos e JavaScript compartilhados por todas as páginas -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ================= CABEÇALHO ================= -->
+    <header>
+        <div class="container">
+
+            <!-- Botão hambúrguer + logo -->
+            <div class="header-esquerda">
+                <button class="botao-menu" id="botao-menu" type="button"
+                        aria-label="Abrir menu de energias"
+                        aria-controls="menu-lateral"
+                        aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">TERS</a>
+            </div>
+
+            <!-- Menu horizontal (telas grandes) -->
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Quem somos</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Fase 7 (16/11/2026): botão de alto contraste (regra de acessibilidade).
+                 O main.js liga/desliga a classe "alto-contraste" no <html> e lembra a escolha. -->
+            <button class="botao-contraste" id="botao-contraste" type="button" aria-pressed="false">
+                <span aria-hidden="true">◐</span> Alto contraste
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ================= MENU LATERAL ================= -->
+    <!-- Fundo escuro: ao clicar, fecha o menu -->
+    <div class="menu-fundo" id="menu-fundo"></div>
+
+    <aside class="menu-lateral" id="menu-lateral" aria-label="Menu de energias">
+        <div class="menu-topo">
+            <span class="menu-logo">TERS</span>
+            <button class="menu-fechar" id="menu-fechar" type="button" aria-label="Fechar menu">✕</button>
+        </div>
+
+        <nav aria-label="Páginas de energia">
+                <p class="menu-grupo-titulo" id="grupo-solar">ENERGIA SOLAR</p>
+                <ul aria-labelledby="grupo-solar">
+                    <li><a href="solar-fotovoltaica.html"><span aria-hidden="true">☀️</span> Fotovoltaica</a></li>
+                    <li><a href="solar-termica.html"><span aria-hidden="true">🚿</span> Térmica</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-eolica">ENERGIA EÓLICA</p>
+                <ul aria-labelledby="grupo-eolica">
+                    <li><a href="eolica-residencial.html"><span aria-hidden="true">🌬️</span> Residencial</a></li>
+                    <li><a href="eolica-grandes-parques.html"><span aria-hidden="true">🏞️</span> Grandes parques</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-hidraulica">ENERGIA HIDRÁULICA</p>
+                <ul aria-labelledby="grupo-hidraulica">
+                    <li><a href="hidraulica-funcionamento.html"><span aria-hidden="true">💧</span> Funcionamento</a></li>
+                    <li><a href="hidraulica-impactos.html"><span aria-hidden="true">🌿</span> Impactos</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-mais">MAIS</p>
+                <ul aria-labelledby="grupo-mais">
+                    <li><a href="sobre.html"><span aria-hidden="true">👥</span> Quem somos</a></li>
+                    <li><a href="noticias.html"><span aria-hidden="true">📰</span> Notícias e Eco-Inovação</a></li>
+                    <li><a href="contato.html"><span aria-hidden="true">✉️</span> Contato e Diagnóstico</a></li>
+                </ul>
+        </nav>
+    </aside>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <!-- Página criada em 16/11/2026, pedida no roteiro da 2ª entrega ("escolha justificada em
+         orcamento_hospedagem.html"). Os preços foram consultados nos sites oficiais nesse dia
+         (veja a seção Fontes). Só usa classes que já existiam no CSS. -->
+    <main id="conteudo" tabindex="-1">
+        <section class="pagina-topo">
+            <div class="container">
+                <nav class="trilha" aria-label="Você está em">
+                    <ol>
+                    <li><a href="index.html">Início</a></li>
+                    <li aria-current="page">Orçamento e hospedagem</li>
+                    </ol>
+                </nav>
+
+                <div class="pagina-topo-conteudo">
+                    <div class="pagina-icone" aria-hidden="true">🧾</div>
+                    <div>
+                        <span class="destaque">TRANSPARÊNCIA</span>
+                        <h1>Orçamento e hospedagem</h1>
+                        <p>Quanto custa manter o TERS no ar e por que escolhemos o GitHub Pages para publicar o site.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="container">
+                <h2>Onde o site está publicado</h2>
+                <div class="texto-coluna">
+                    <p>O TERS está no <strong>GitHub Pages</strong>, no endereço <a href="https://fabricio342gp.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260016-D4-2-2026-M-TERS/">fabricio342gp.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260016-D4-2-2026-M-TERS</a>.</p>
+                    <p>Hospedagem é o serviço que guarda os arquivos do site e os entrega a quem abre o endereço. O GitHub Pages publica os arquivos direto do nosso repositório: cada vez que a equipe envia uma mudança para a branch principal (<code>main</code>), o site é atualizado.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabela comparativa: th scope="row" e scope="col" ajudam o leitor de tela a ler cada célula -->
+        <section class="secao secao-branca">
+            <div class="container">
+                <h2>As duas opções que comparamos</h2>
+                <div class="tabela-rolagem">
+                    <table>
+                        <caption>GitHub Pages e Railway, consultados em 16/11/2026</caption>
+                        <thead><tr><th scope="col"></th><th scope="col">GitHub Pages</th><th scope="col">Railway</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Custo para o TERS</th><td>R$ 0. O serviço é gratuito para repositório público, como o nosso.</td><td>Plano Free: US$ 0, com US$ 1 de uso por mês. Plano Hobby: US$ 5 por mês, com US$ 5 de uso incluídos.</td></tr>
+                            <tr><th scope="row">Endereço seguro (HTTPS)</th><td>Automático no endereço github.io.</td><td>Automático no endereço up.railway.app.</td></tr>
+                            <tr><th scope="row">Como publica</th><td>Direto do repositório, a cada envio para a <code>main</code>.</td><td>Precisa criar e configurar um serviço que entregue os arquivos.</td></tr>
+                            <tr><th scope="row">Limites</th><td>Site de até 1 GB e cerca de 100 GB de transferência por mês. O TERS tem menos de 2 MB.</td><td>Depende do plano. No Free, cada serviço usa até 0,5 GB de memória e 1 processador virtual.</td></tr>
+                            <tr><th scope="row">Para que serve melhor</th><td>Sites estáticos (só HTML, CSS, JavaScript e imagens), como o TERS.</td><td>Sites que precisam de servidor ou de banco de dados.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="caixa caixa-atencao">
+                    <p><strong>Por que saímos do Railway:</strong> o TERS foi publicado primeiro no Railway. Em 16/11/2026, o endereço antigo passou a responder "Application not found" (aplicação não encontrada). Como o site não precisa de servidor, mudamos para o GitHub Pages.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="container">
+                <h2>Orçamento do projeto</h2>
+                <div class="tabela-rolagem">
+                    <table>
+                        <caption>Custo mensal para manter o TERS no ar</caption>
+                        <thead><tr><th scope="col">Item</th><th scope="col">Custo por mês</th><th scope="col">Por quê</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Hospedagem</th><td>R$ 0</td><td>GitHub Pages, gratuito para repositório público.</td></tr>
+                            <tr><th scope="row">Endereço seguro (HTTPS)</th><td>R$ 0</td><td>Já vem incluído no GitHub Pages.</td></tr>
+                            <tr><th scope="row">Domínio próprio (ex.: .com.br)</th><td>R$ 0</td><td>Não usamos: o endereço gratuito do github.io atende o projeto.</td></tr>
+                            <tr><th scope="row">Imagens e vídeos</th><td>R$ 0</td><td>Fotos com licença livre (Wikimedia Commons) e vídeos do YouTube mostrados dentro do site.</td></tr>
+                            <tr><th scope="row">Ferramentas</th><td>R$ 0</td><td>VS Code, Git, GitHub e navegador são gratuitos.</td></tr>
+                            <tr><th scope="row">Trabalho da equipe</th><td>Não cobrado</td><td>O TERS é um projeto acadêmico, feito sem fins lucrativos.</td></tr>
+                            <tr><th scope="row">Total</th><td><strong>R$ 0</strong></td><td>O site fica no ar sem custo enquanto o repositório for público.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao secao-branca">
+            <div class="container">
+                <h2>Por que escolhemos o GitHub Pages</h2>
+                <ul class="lista">
+                    <li><strong>Custo zero:</strong> o projeto não tem verba, e o serviço é gratuito para repositório público.</li>
+                    <li><strong>Segurança:</strong> o endereço já abre com HTTPS, sem configurar nada.</li>
+                    <li><strong>Simplicidade:</strong> o código e o site ficam no mesmo lugar. Quem envia uma mudança para o GitHub já atualiza o site.</li>
+                    <li><strong>Combina com o TERS:</strong> o site é estático e não precisa de servidor nem de banco de dados.</li>
+                    <li><strong>Plano B:</strong> se um dia o formulário precisar enviar mensagens de verdade, aí será preciso um servidor, e o plano Hobby do Railway (US$ 5 por mês) volta a ser uma opção.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Fontes dos preços e limites (regra: todo dado numérico com fonte e data) -->
+        <section class="secao" id="referencias">
+            <div class="container">
+                <h2>Fontes</h2>
+                <div class="referencias">
+                <ul class="lista-referencias">
+                    <li>GITHUB. <strong>GitHub Pages limits</strong>. GitHub Docs. Disponível em: <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits">https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits</a>. Acesso em: 16 nov. 2026.</li>
+                    <li>GITHUB. <strong>Securing your GitHub Pages site with HTTPS</strong>. GitHub Docs. Disponível em: <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https">https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https</a>. Acesso em: 16 nov. 2026.</li>
+                    <li>RAILWAY. <strong>Pricing</strong>. Disponível em: <a href="https://railway.com/pricing">https://railway.com/pricing</a>. Acesso em: 16 nov. 2026. Os preços estão em dólar e podem mudar.</li>
+                </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer>
+        <nav aria-label="Mapa do site">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Quem somos</a></li>
+                <li><a href="solar-fotovoltaica.html">Solar fotovoltaica</a></li>
+                <li><a href="solar-termica.html">Solar térmica</a></li>
+                <li><a href="eolica-residencial.html">Eólica residencial</a></li>
+                <li><a href="eolica-grandes-parques.html">Eólica em grandes parques</a></li>
+                <li><a href="hidraulica-funcionamento.html">Hidráulica: funcionamento</a></li>
+                <li><a href="hidraulica-impactos.html">Hidráulica: impactos</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html">Contato e diagnóstico</a></li>
+                <li><a href="orcamento_hospedagem.html">Orçamento e hospedagem</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 - TERS | Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

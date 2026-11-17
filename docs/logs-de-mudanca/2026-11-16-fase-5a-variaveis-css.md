@@ -56,7 +56,10 @@ Essa cor aparecia solta em 5 lugares e também era o valor padrão de `--tema-cl
 
 ## O que foi aceito
 
-- (preencher após a revisão)
+- As variáveis no `:root` foram mantidas. Na conferência de 16/11/2026, à noite, havia **0** cores em hexadecimal fora do `:root`.
+- Enviado no commit `5abfeda` (Evandro).
+
+_Conferido pela IA em 16/11/2026, à noite: a mudança está no código atual e na versão enviada ao GitHub._
 
 ## O que foi corrigido
 

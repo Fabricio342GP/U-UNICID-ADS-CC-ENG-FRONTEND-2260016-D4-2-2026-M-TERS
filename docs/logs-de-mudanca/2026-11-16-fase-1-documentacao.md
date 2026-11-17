@@ -29,11 +29,15 @@ Nenhum HTML, CSS ou JS foi alterado. Por isso não houve backup nesta fase.
 
 ## O que foi aceito
 
-- (preencher após a revisão)
+- `docs/referencias.md` e `docs/prompts/prompts-que-funcionaram.md` foram mantidos e enviados ao GitHub no commit `7cf668f` (Fabricio).
+- A lista de referências continuou sendo usada e atualizada nas fases seguintes (de 70 para 117 referências).
+- Os 2 prompts sugeridos foram usados no documento `docs/uso-de-ia.md`.
+
+_Conferido pela IA em 16/11/2026, à noite: a mudança está no código atual e na versão enviada ao GitHub._
 
 ## O que foi corrigido pela equipe
 
-- (preencher após a revisão)
+- Nada registrado nesta fase.
 
 ## Pendências
 

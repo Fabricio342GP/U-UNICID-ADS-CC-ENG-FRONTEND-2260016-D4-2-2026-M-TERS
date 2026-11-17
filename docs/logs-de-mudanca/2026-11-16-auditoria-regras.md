@@ -57,7 +57,8 @@ Nenhum HTML, CSS ou JS foi alterado neste dia.
 
 ## O que foi corrigido pela equipe
 
-- (preencher após a revisão)
+- **Erro da auditoria:** o item 8 apontou "TVR" como termo sem explicação, mas a página já explicava. Corrigido na Fase 2 (veja `2026-11-16-fase-2-ortografia-termos.md`).
+- **Itens 15 e 16 (Git e backup):** o projeto passou a ser um repositório no GitHub, com commits dos 5 integrantes. Em 16/11/2026, à noite, foi criado o `.gitignore` com `_backup-*/`, para as cópias de segurança não irem para o GitHub (veja `2026-11-16-ajustes-entrega-final.md`).
 
 ## Pendências
 

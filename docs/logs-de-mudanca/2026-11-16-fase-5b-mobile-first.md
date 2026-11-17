@@ -60,7 +60,11 @@ Com `max-width: 768px` e `min-width: 769px`, uma largura **com fração**, entre
 
 ## O que foi aceito
 
-- (preencher após a revisão)
+- O CSS Mobile First foi mantido: as únicas `@media` de largura são `min-width: 769px` e `min-width: 1001px`.
+- Enviado no commit `5abfeda` (Evandro).
+- As capturas de 16/11/2026, à noite (celular, 390 px, e computador, 1280 px), mostram o layout certo nas duas larguras.
+
+_Conferido pela IA em 16/11/2026, à noite: a mudança está no código atual e na versão enviada ao GitHub._
 
 ## O que foi corrigido
 

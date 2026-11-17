@@ -31,5 +31,6 @@ Ali ficam a data, o prompt usado, o que foi aceito e o que foi corrigido.
 | 2026-11-16 | [2026-11-16-fase-7-alto-contraste.md](2026-11-16-fase-7-alto-contraste.md) | Fase 7: botão de alto contraste nas 10 páginas (HTML, CSS e bloco 6 do main.js); 55 testes passaram |
 | 2026-11-16 | [2026-11-16-fase-8-modo-revisao.md](2026-11-16-fase-8-modo-revisao.md) | Fase 8: documenta como o modo ?revisao funciona e o que a equipe precisa decidir |
 | 2026-11-16 | [2026-11-16-fase-9-testes-finais.md](2026-11-16-fase-9-testes-finais.md) | Fase 9: teste de teclado, tabela das 7 regras e passos para W3C e Lighthouse (W3C: 0 erros nas 10 páginas) |
+| 2026-11-16 | [2026-11-16-ajustes-entrega-final.md](2026-11-16-ajustes-entrega-final.md) | Validação da 2ª entrega e ajustes: CSS em minúsculas, GitHub Pages, página de orçamento, foto CC0 na home, README novo na raiz, testes, melhorias do MVP e uso de IA; "aceito" e "corrigido" preenchidos nos logs |
 
 > Acrescente uma linha nesta tabela a cada log novo.

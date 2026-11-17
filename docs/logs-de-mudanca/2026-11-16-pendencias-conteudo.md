@@ -77,6 +77,18 @@ A reportagem do Olhar Digital saiu das Referências, porque o documento pedia pa
 - **"Golpe de aríete é ruidoso":** nenhuma das fontes confirmou. A frase saiu.
 - **REN 673/2015:** foi consolidada na REN 875/2020, que está em vigor com as mudanças da REN 1.070/2023. O site da ANEEL bloqueia o acesso automático. Por isso, o texto da REN 1.070/2023 foi lido numa cópia (lex.com.br), e a referência não traz link da ANEEL.
 
+## O que foi aceito
+
+- As 4 páginas ficaram com as fontes novas e sem selos: `2 a 2,6 m²` e Lei 14.300/2022 (solar fotovoltaica), Portaria Inmetro 633/2026 (solar térmica), Lei 12.334/2010 (hidráulica – funcionamento) e BEN 2026 (hidráulica – impactos). Nenhuma das 4 tem mais `class="pendencia"`.
+- Enviado nos commits `71b3252` e `846e180` (Gustavo) e `3db2bbb` (Fabricio).
+
+_Conferido pela IA em 16/11/2026, à noite: a mudança está no código atual e na versão enviada ao GitHub._
+
+## O que foi corrigido pela equipe
+
+- A equipe decidiu trazer para a página 4 o conteúdo que mandava o leitor para a "página 3", em vez de mexer na página 3.
+- A equipe mudou a área do painel de "2 a 2,5 m²" para "2 a 2,6 m²", para bater com o exemplo da Intelbras.
+
 ## Pendências
 
 - Os autores do material da USP continuam desconhecidos (o arquivo exige login). A referência segue o padrão ABNT para obra sem autor.

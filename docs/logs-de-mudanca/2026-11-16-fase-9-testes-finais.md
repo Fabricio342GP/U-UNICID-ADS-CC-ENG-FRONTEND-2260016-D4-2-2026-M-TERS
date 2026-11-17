@@ -70,6 +70,11 @@ A equipe autorizou com "Pode validar.". As 10 páginas foram enviadas, uma de ca
 | **ai-usage:** revisão por um integrante antes do commit | depende da equipe | O campo "Responsável pela revisão" está em branco em todos os logs |
 | **git:** branches, commits e PR | depois | Fora deste prompt, como a equipe pediu |
 
+## O que foi aceito
+
+- O resultado do W3C (0 erros e 0 avisos nas 10 páginas, às 19:48) foi aceito e está em `docs/testes.md`.
+- **Atenção:** depois das 19:48, todas as páginas mudaram (menu lateral e rodapé) e foi criada `orcamento_hospedagem.html`. Por isso o W3C foi rodado de novo, à noite, nas 11 páginas: 0 erros e 0 avisos (veja `2026-11-16-ajustes-entrega-final.md`).
+
 ## Pendências da equipe (resumo)
 
 1. (Feito: o W3C validou as 10 páginas sem erros.)

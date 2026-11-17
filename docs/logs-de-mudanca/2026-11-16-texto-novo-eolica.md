@@ -1,7 +1,7 @@
 # 2026-11-16: Texto novo da equipe nas páginas de eólica
 
 - **Data:** 2026-11-16
-- **Responsável pela revisão:** (preencher)
+- **Responsável pela revisão:** Thiago Roberto de Oliveira
 - **Feito com IA?** Sim (Claude Code)
 
 ## Pedido / prompt usado
@@ -43,11 +43,13 @@ Não mudaram: cabeçalho, menus, trilha, chamada final ("Ficou com dúvida sobre
 
 ## O que foi aceito
 
-- (preencher após a revisão)
+- O texto da equipe está nas duas páginas, com a fonte do Ipea (2023) no trecho do MDL. Enviado nos commits `8873c4e` e `5fbd8c1` (João Vitor).
+
+_Conferido pela IA em 16/11/2026, à noite: a mudança está no código atual e na versão enviada ao GitHub._
 
 ## O que foi corrigido pela equipe
 
-- (preencher após a revisão)
+- Nada registrado. As decisões da tabela abaixo continuam abertas: o catálogo WEG ainda está nas Referências, e os cards "Sistema híbrido" e "Parques eólicos e arrendamento de terras" ainda levam a páginas que não falam desses assuntos.
 
 ## Pendências
 

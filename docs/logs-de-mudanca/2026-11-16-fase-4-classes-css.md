@@ -50,7 +50,11 @@ As capturas foram feitas em 1280 px pelo servidor local e comparadas linha por l
 
 ## O que foi aceito
 
-- (preencher após a revisão)
+- As 4 páginas não usam mais `.subtitulo` nem `.comparacao-texto`, e a caixa de risco usa `class="caixa caixa-risco"` em `solar-fotovoltaica`, `solar-termica` e `hidraulica-funcionamento`.
+- Enviado nos commits `71b3252` e `846e180` (Gustavo), `3db2bbb` (Fabricio) e `5abfeda` (CSS, Evandro).
+- As pequenas mudanças de aparência da tabela "Comparação antes × depois" foram mantidas.
+
+_Conferido pela IA em 16/11/2026, à noite: a mudança está no código atual e na versão enviada ao GitHub._
 
 ## O que foi corrigido
 

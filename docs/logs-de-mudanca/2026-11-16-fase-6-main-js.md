@@ -46,7 +46,10 @@ O script de regras não acusa mais nenhum aviso em nenhuma página. Antes, o avi
 
 ## O que foi aceito
 
-- (preencher após a revisão)
+- `js/main.js` foi enviado no commit `7cf668f` (Fabricio). Todas as páginas carregam `<script src="js/main.js" defer>`, e nenhuma cita mais `script.js`.
+- Os testes de 16/11/2026, à noite, repetiram o menu, o filtro, a calculadora e o formulário: todos passaram (veja `docs/testes.md`).
+
+_Conferido pela IA em 16/11/2026, à noite: a mudança está no código atual e na versão enviada ao GitHub._
 
 ## O que foi corrigido
 

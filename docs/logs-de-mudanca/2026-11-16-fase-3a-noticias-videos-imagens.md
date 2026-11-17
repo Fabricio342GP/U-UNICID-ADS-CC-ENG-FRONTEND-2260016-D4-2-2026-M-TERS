@@ -1,7 +1,7 @@
 # 2026-11-16: Fase 3 (parte 1), notícias, vídeos e imagens
 
 - **Data:** 2026-11-16
-- **Responsável pela revisão:** (preencher)
+- **Responsável pela revisão:** Thiago Roberto de Oliveira
 - **Feito com IA?** Sim (Claude Code)
 
 ## Pedido / prompt usado
@@ -56,7 +56,7 @@ As fotos foram tiradas do Wikimedia Commons, todas com licença livre: domínio 
 
 ## O que foi aceito
 
-- (preencher após a revisão)
+- Após a assistirmos os vídeos aceitamos as sugestões que ela propôs junto de suas notícias, mas as que haviam permissão para serem adicionadas.
 
 ## O que foi corrigido
 

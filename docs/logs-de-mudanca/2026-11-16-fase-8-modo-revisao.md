@@ -35,6 +35,15 @@ Ele serve para a equipe deixar no código um aviso ou um dado sem fonte, que o p
 
 **Recomendação da IA:** opção 3, assim que a imagem da home for trocada por uma foto de licença livre ou ganhar o crédito completo. Assim o site fica só com o que foi pedido nas regras.
 
+## O que foi aceito
+
+- Esta documentação foi enviada ao GitHub no commit `7cf668f` (Fabricio).
+- O código do modo revisão continua no site (bloco 5 do `js/main.js` e regras `.so-revisao` e `.modo-revisao` do CSS).
+
+## O que mudou depois
+
+- Em 16/11/2026, à noite, a foto da home foi trocada por uma foto CC0, e o selo "Pendente" que usava `so-revisao` saiu do `index.html`. **Agora nenhuma página usa o modo revisão.** Isso cumpre a condição da opção 3 (veja `2026-11-16-ajustes-entrega-final.md`).
+
 ## Pendências
 
 - A equipe escolhe uma das 3 opções.

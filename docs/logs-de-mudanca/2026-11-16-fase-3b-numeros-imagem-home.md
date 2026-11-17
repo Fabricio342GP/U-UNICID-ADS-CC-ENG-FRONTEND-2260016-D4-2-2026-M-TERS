@@ -35,7 +35,13 @@ Cada fonte foi lida no documento original, não só no resultado da busca.
 
 ## O que foi aceito
 
-- (preencher após a revisão)
+- Fonte do DOE (2007) em `eolica-residencial.html` e ficha da Intelbras (2023) em `solar-fotovoltaica.html`: continuam nas páginas e nas Referências (commits `8873c4e`, João Vitor, e `71b3252`, Gustavo).
+- Catálogo WEG (2026) nas Referências de `eolica-grandes-parques.html` (commit `5fbd8c1`, João Vitor).
+- Crédito da imagem da home (`.hero .hero-credito`), enviado no commit `5abfeda` (Evandro).
+
+_Conferido pela IA em 16/11/2026, à noite: a mudança está no código atual e na versão enviada ao GitHub._
+
+**Mudança posterior:** em 16/11/2026, à noite, a foto do Canal Bioenergia foi trocada por uma foto CC0 que já estava no site. Com isso, a pendência de autor, ano e licença da home acabou (veja `2026-11-16-ajustes-entrega-final.md`).
 
 ## O que foi corrigido
 

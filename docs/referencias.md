@@ -19,8 +19,9 @@ A regra `.github/content-rules.md` pede que esta lista fique na pasta `/docs`.
 | [Eólica Residencial](#eólica-residencial-eolica-residencialhtml) | 3 | Completa (texto novo da equipe e seção de formas caseiras, 16/11/2026) |
 | [Eólica em Grandes Parques](#eólica-em-grandes-parques-eolica-grandes-parqueshtml) | 2 | 1 decisão da equipe (manter ou não o catálogo WEG) |
 | [Notícias e Eco-Inovação](#notícias-e-eco-inovação-noticiashtml) | 17 (6 notícias, 5 vídeos, 6 imagens) | 1 pendência (nome do autor de uma foto) |
-| [Outras páginas](#outras-páginas) | 0 | Imagem da home sem autor, ano e licença. Veja abaixo |
-| **Total** | **114** | |
+| [Orçamento e hospedagem](#orçamento-e-hospedagem-orcamento_hospedagemhtml) | 3 | Completa (preços consultados em 16/11/2026) |
+| [Outras páginas](#outras-páginas) | 0 | Completa (a foto da home foi trocada por uma foto CC0 em 16/11/2026). Veja abaixo |
+| **Total** | **117** | |
 
 ## Solar Fotovoltaica (`solar-fotovoltaica.html`)
 
@@ -226,10 +227,18 @@ As fotos foram baixadas em 960 px de largura e guardadas em `img/noticias/`. A d
 
 - CHEUNG, Lance. **Solar Power Water Pump (1075)**. Contra Costa County, CA: USDA, 2015. 1 fotografia. Domínio público. Disponível em: <https://commons.wikimedia.org/wiki/File:Solar_Power_Water_Pump_(1075).jpg>. Acesso em: 16 nov. 2026. (Arquivo: `img/noticias/bomba-solar-poco.jpg`.)
 - EDITORTECH20. **Usina de energia solar no município de Pilar (PB) da HostDime Brasil**. 2025. 1 fotografia. Licença CC BY-SA 4.0. Disponível em: <https://commons.wikimedia.org/wiki/File:Usina_de_energia_solar_no_munic%C3%ADpio_de_Pilar_(PB)_da_HostDime_Brasil.png>. Acesso em: 16 nov. 2026. (Arquivo: `img/noticias/usina-solar-pilar-pb.jpg`.)
-- COPEL. **Parque Cutia Freire Neto DJI 0048**. 2019. 1 fotografia. Licença CC0. Disponível em: <https://commons.wikimedia.org/wiki/File:Parque_Cutia_Freire_Neto_DJI_0048.jpg>. Acesso em: 16 nov. 2026. (Arquivo: `img/noticias/parque-eolico-cutia-rn.jpg`.)
+- COPEL. **Parque Cutia Freire Neto DJI 0048**. 2019. 1 fotografia. Licença CC0. Disponível em: <https://commons.wikimedia.org/wiki/File:Parque_Cutia_Freire_Neto_DJI_0048.jpg>. Acesso em: 16 nov. 2026. (Arquivo: `img/noticias/parque-eolico-cutia-rn.jpg`. Desde 16/11/2026, também é a foto do banner do `index.html`.)
 - OLIVEIRA JÚNIOR, Marcos Elias de. **Parque Eólico Mel 2, Areia Branca (RN)**. 2017. 1 fotografia. Licença CC0. Disponível em: <https://commons.wikimedia.org/wiki/File:Parque_E%C3%B3lico_Mel_2,_Areia_Branca_(RN).jpg>. Acesso em: 16 nov. 2026. (Arquivo: `img/noticias/parque-eolico-mel2-rn.jpg`.)
 - CARLOSPEIXOTTODF. **Mata ciliar próxima a nascente**. 2016. 1 fotografia. Licença CC BY-SA 4.0. Disponível em: <https://commons.wikimedia.org/wiki/File:Mata_ciliar_pr%C3%B3xima_a_nascente.jpg>. Acesso em: 16 nov. 2026. (Arquivo: `img/noticias/mata-ciliar-nascente.jpg`.)
 - ⚠️ MARCO AURÉLIO ESPARZ… (nome cortado na própria fonte, que importou a foto do Panoramio). **Pequena Central Hidrelétrica-PCH Palmeiras no Rio Sapucai 16000 kW - 1 turbina**. 2011. 1 fotografia. Licença CC BY-SA 3.0. Disponível em: <https://commons.wikimedia.org/wiki/File:Pequena_Central_Hidrel%C3%A9trica-PCH_Palmeiras_no_Rio_Sapucai_16000_kW_-_1_turbina_-_panoramio.jpg>. Acesso em: 16 nov. 2026. (Arquivo: `img/noticias/pch-palmeiras-sapucai.jpg`.)
+
+## Orçamento e hospedagem (`orcamento_hospedagem.html`)
+
+3 referências, acrescentadas em 16/11/2026 com a página nova.
+
+- GITHUB. **GitHub Pages limits**. GitHub Docs. Disponível em: <https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits>. Acesso em: 16 nov. 2026.
+- GITHUB. **Securing your GitHub Pages site with HTTPS**. GitHub Docs. Disponível em: <https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https>. Acesso em: 16 nov. 2026.
+- RAILWAY. **Pricing**. Disponível em: <https://railway.com/pricing>. Acesso em: 16 nov. 2026. Os preços estão em dólar e podem mudar.
 
 ## Outras páginas
 
@@ -237,7 +246,7 @@ Esta tabela mostra como ficaram, depois da Fase 3 (16/11/2026), os itens que nã
 
 | Página | O que precisava de fonte | Situação |
 |---|---|---|
-| `index.html` | Imagem do banner, carregada de `https://canalbioenergia.com.br/wp-content/uploads/energia_renovavel.jpg` | Crédito "Imagem: Canal Bioenergia" acrescentado abaixo da foto, com link. ⚠️ Faltam o autor, o ano e a licença, que não foram encontrados. Desde 16/11/2026, o aviso só aparece no modo revisão (`?revisao`). A pesquisa no Wikimedia Commons não achou foto livre parecida (campo de painéis com turbinas ao fundo). As saídas são pedir a licença ao site ou trocar a foto |
+| `index.html` | Imagem do banner, carregada de `https://canalbioenergia.com.br/wp-content/uploads/energia_renovavel.jpg` | Crédito "Imagem: Canal Bioenergia" acrescentado abaixo da foto, com link. ⚠️ Faltam o autor, o ano e a licença, que não foram encontrados. Desde 16/11/2026, o aviso só aparece no modo revisão (`?revisao`). A pesquisa no Wikimedia Commons não achou foto livre parecida (campo de painéis com turbinas ao fundo). As saídas são pedir a licença ao site ou trocar a foto. **Resolvido em 16/11/2026, à noite:** a foto foi trocada pela do Parque Eólico Cutia (Copel, 2019, CC0), que já estava em `img/noticias/`. O crédito agora tem autor, ano e licença, e a imagem carrega do próprio site |
 | `eolica-residencial.html` | Vento de 4 a 5 m/s, 9 m e de 12 a 30 m | Vento e regra de 9 m/90 m com fonte (DOE, 2007). Em 16/11/2026, o texto novo da equipe tirou esses números da página, e a pendência de 12 a 30 m deixou de existir |
 | `eolica-grandes-parques.html` | Torres acima de 100 m | Resolvido com o catálogo WEG (2026). Em 16/11/2026, o texto novo da equipe tirou o número da página. O trecho do MDL ganhou fonte (Ipea, 2023) |
 | `solar-fotovoltaica.html` | De 2 a 2,5 m² por painel | Resolvido em 16/11/2026: a equipe mudou a faixa para 2 a 2,6 m², de acordo com o exemplo com fonte (Intelbras, 2023) |

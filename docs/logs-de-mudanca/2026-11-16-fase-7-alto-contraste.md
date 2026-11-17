@@ -41,7 +41,14 @@ A regra `.github/accessibility-rules.md` pede: "Manter o botão de alto contrast
 
 ## O que foi aceito
 
-- (preencher após a revisão)
+- O botão de alto contraste está em todas as páginas, e o bloco 6 do `js/main.js` e a seção 16 do CSS foram mantidos.
+- Teste de 16/11/2026, à noite: o botão liga o modo, muda `aria-pressed` para `true`, grava `ters-alto-contraste` e o modo continua em outra página.
+
+_Conferido pela IA em 16/11/2026, à noite: a mudança está no código atual e na versão enviada ao GitHub._
+
+## O que foi corrigido
+
+- Os 2 problemas achados nas capturas: os links do menu ficavam brancos (resolvido com `:where()`) e o botão "Conheça nossas soluções" parecia um link (ganhou borda amarela).
 
 ## Pendências
 
