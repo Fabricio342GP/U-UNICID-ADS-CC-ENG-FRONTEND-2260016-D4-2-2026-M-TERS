@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de informações e novidades sobre energia solar, eólica e hidráulica e o mercado de sustentabilidade.">
+
+    <title>Notícias e Eco-Inovação | TERS</title>
+
+    <!-- Folha de estilos e JavaScript compartilhados por todas as páginas -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ================= CABEÇALHO ================= -->
+    <header>
+        <div class="container">
+
+            <!-- Botão hambúrguer + logo -->
+            <div class="header-esquerda">
+                <button class="botao-menu" id="botao-menu" type="button"
+                        aria-label="Abrir menu de energias"
+                        aria-controls="menu-lateral"
+                        aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">TERS</a>
+            </div>
+
+            <!-- Menu horizontal (telas grandes) -->
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Quem somos</a></li>
+                    <li><a href="noticias.html" aria-current="page">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Fase 7 (16/11/2026): botão de alto contraste (regra de acessibilidade).
+                 O main.js liga/desliga a classe "alto-contraste" no <html> e lembra a escolha. -->
+            <button class="botao-contraste" id="botao-contraste" type="button" aria-pressed="false">
+                <span aria-hidden="true">◐</span> Alto contraste
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ================= MENU LATERAL ================= -->
+    <!-- Fundo escuro: ao clicar, fecha o menu -->
+    <div class="menu-fundo" id="menu-fundo"></div>
+
+    <aside class="menu-lateral" id="menu-lateral" aria-label="Menu de energias">
+        <div class="menu-topo">
+            <span class="menu-logo">TERS</span>
+            <button class="menu-fechar" id="menu-fechar" type="button" aria-label="Fechar menu">✕</button>
+        </div>
+
+        <nav aria-label="Páginas de energia">
+                <p class="menu-grupo-titulo" id="grupo-solar">ENERGIA SOLAR</p>
+                <ul aria-labelledby="grupo-solar">
+                    <li><a href="solar-fotovoltaica.html"><span aria-hidden="true">☀️</span> Fotovoltaica</a></li>
+                    <li><a href="solar-termica.html"><span aria-hidden="true">🚿</span> Térmica</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-eolica">ENERGIA EÓLICA</p>
+                <ul aria-labelledby="grupo-eolica">
+                    <li><a href="eolica-residencial.html"><span aria-hidden="true">🌬️</span> Residencial</a></li>
+                    <li><a href="eolica-grandes-parques.html"><span aria-hidden="true">🏞️</span> Grandes parques</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-hidraulica">ENERGIA HIDRÁULICA</p>
+                <ul aria-labelledby="grupo-hidraulica">
+                    <li><a href="hidraulica-funcionamento.html"><span aria-hidden="true">💧</span> Funcionamento</a></li>
+                    <li><a href="hidraulica-impactos.html"><span aria-hidden="true">🌿</span> Impactos</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-mais">MAIS</p>
+                <ul aria-labelledby="grupo-mais">
+                    <li><a href="noticias.html" aria-current="page"><span aria-hidden="true">📰</span> Notícias e Eco-Inovação</a></li>
+                    <li><a href="contato.html"><span aria-hidden="true">✉️</span> Contato e Diagnóstico</a></li>
+                </ul>
+        </nav>
+    </aside>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main id="conteudo" tabindex="-1">
+        <section class="pagina-topo">
+            <div class="container">
+                <nav class="trilha" aria-label="Você está em">
+                    <ol>
+                    <li><a href="index.html">Início</a></li>
+                    <li aria-current="page">Notícias e Eco-Inovação</li>
+                    </ol>
+                </nav>
+
+                <div class="pagina-topo-conteudo">
+                    <div class="pagina-icone" aria-hidden="true">📰</div>
+                    <div>
+                        <span class="destaque">NOVIDADES</span>
+                        <h1>Notícias e Eco-Inovação</h1>
+                        <p>Informações e novidades sobre energia renovável, com foco em quem vive e produz no campo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="secao">
+            <div class="container">
+                <h2>Escolha um assunto</h2>
+                <!-- Explica ao leitor os três tipos de card da página,
+                     como pede a regra de conteúdo (notícias com link e fonte; textos da equipe identificados). -->
+                <p>Aqui há notícias e vídeos de outros sites, com o nome do veículo, a data e o link para o original, e textos curtos escritos pela nossa equipe. Os resumos das notícias e dos vídeos são nossos; para ver o conteúdo completo, abra o link.</p>
+                <div class="filtros" role="group" aria-label="Filtrar por tipo de energia">
+                    <button type="button" class="filtro" data-filtro="todas" aria-pressed="true">Todas</button>
+                    <button type="button" class="filtro" data-filtro="solar" aria-pressed="false">Solar</button>
+                    <button type="button" class="filtro" data-filtro="eolica" aria-pressed="false">Eólica</button>
+                    <button type="button" class="filtro" data-filtro="hidrica" aria-pressed="false">Hidráulica</button>
+                    <button type="button" class="filtro" data-filtro="geral" aria-pressed="false">Geral</button>
+                </div>
+                <p class="filtro-status" id="filtro-status" role="status" aria-live="polite">Mostrando 20 informações.</p>
+                <div class="grade-3">
+                    <!-- ===== NOTÍCIAS DE OUTROS SITES =====
+                         Cada card usa as classes que já existiam (.noticia, .noticia-tag) e o mesmo
+                         data-categoria, então o filtro do js/main.js continua funcionando sem mudança.
+                         - .noticia-figura: imagem com crédito (autor, ano e licença), como pede a regra de conteúdo.
+                           As imagens são de licença livre (Wikimedia Commons) e estão em img/noticias/.
+                         - .noticia-fonte: tipo (Notícia, Vídeo ou Texto da equipe), veículo e data.
+                         - O resumo é escrito pela equipe; o texto completo fica no link do veículo. -->
+                    <article class="noticia" data-categoria="solar">
+                        <figure class="noticia-figura">
+                            <img src="img/noticias/bomba-solar-poco.jpg" width="960" height="639" loading="lazy" alt="Produtor rural abre a caixa de controle de uma bomba de poço instalada embaixo de painéis solares, num pasto.">
+                            <figcaption class="noticia-credito">Foto ilustrativa (Califórnia, EUA): Lance Cheung/USDA, 2015. Domínio público, via <a href="https://commons.wikimedia.org/wiki/File:Solar_Power_Water_Pump_(1075).jpg">Wikimedia Commons</a>.</figcaption>
+                        </figure>
+                        <span class="noticia-tag">Energia solar</span>
+                        <h3>Sistemas de irrigação com energia solar serão utilizados para impulsionar agricultura familiar</h3>
+                        <p class="noticia-fonte"><strong>Notícia</strong> · Canal Solar · Henrique Hein · <time datetime="2025-02-07">7 fev. 2025</time></p>
+                        <p>Um acordo entre quatro ministérios e a Codevasf prevê usinas solares para irrigar lavouras da agricultura familiar onde a rede elétrica é fraca ou falha. A ação começou pelo Rio Grande do Norte e deve chegar a outras áreas do Norte e do Nordeste.</p>
+                        <a href="https://canalsolar.com.br/irrigacao-com-energia-solar-agricultura-familiar/">Ler a notícia no Canal Solar →</a>
+                    </article>
+                    <article class="noticia" data-categoria="geral">
+                        <figure class="noticia-figura">
+                            <img src="img/noticias/usina-solar-pilar-pb.jpg" width="960" height="540" loading="lazy" alt="Vista aérea de uma usina solar, com fileiras de painéis ao lado de casas, roças e estradas de terra na zona rural.">
+                            <figcaption class="noticia-credito">Foto ilustrativa (Pilar, PB): EditorTech20, 2025. <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Usina_de_energia_solar_no_munic%C3%ADpio_de_Pilar_(PB)_da_HostDime_Brasil.png">Wikimedia Commons</a>.</figcaption>
+                        </figure>
+                        <span class="noticia-tag">Geral</span>
+                        <h3>Mercado de energia limpa avança no campo e ajuda produtores a economizar</h3>
+                        <p class="noticia-fonte"><strong>Notícia</strong> · Brasil 61 · Álvaro Couto · <time datetime="2026-01-07">7 jan. 2026</time></p>
+                        <p>Com dados da Aneel, a reportagem mostra que a geração própria de energia no meio rural passou de 3,5 GW para 5,6 GW entre junho de 2023 e junho de 2025. Um especialista ouvido estima que esses sistemas se pagam em 3 a 5 anos.</p>
+                        <a href="https://brasil61.com/n/mercado-de-energia-limpa-avanca-no-campo-e-ajuda-produtores-a-economizar-bras2615507">Ler a notícia no Brasil 61 →</a>
+                    </article>
+                    <article class="noticia" data-categoria="eolica">
+                        <figure class="noticia-figura">
+                            <img src="img/noticias/parque-eolico-cutia-rn.jpg" width="960" height="640" loading="lazy" alt="Aerogeradores brancos espalhados por uma área de vegetação baixa, ligados por uma estrada de terra vermelha.">
+                            <figcaption class="noticia-credito">Foto ilustrativa (Parque Cutia, RN): Copel, 2019. <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br">CC0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Parque_Cutia_Freire_Neto_DJI_0048.jpg">Wikimedia Commons</a>.</figcaption>
+                        </figure>
+                        <span class="noticia-tag">Energia eólica</span>
+                        <h3>MPF aponta nulidade de contratos fundiários em projetos de energia renovável</h3>
+                        <p class="noticia-fonte"><strong>Notícia</strong> · Ministério Público Federal · <time datetime="2026-01-08">8 jan. 2026</time></p>
+                        <p>O MPF diz que contratos de arrendamento de terras rurais para parques eólicos e solares podem ser nulos e pediu que a Aneel e o Incra fiscalizem melhor. O órgão também propôs modelos de contrato com regras mínimas para proteger as comunidades rurais.</p>
+                        <a href="https://www.mpf.mp.br/o-mpf/unidades/pr-pb/noticias/mpf-aponta-nulidade-de-contratos-fundiarios-em-projetos-de-energia-renovavel">Ler a notícia no site do MPF →</a>
+                    </article>
+                    <article class="noticia" data-categoria="eolica">
+                        <figure class="noticia-figura">
+                            <img src="img/noticias/parque-eolico-mel2-rn.jpg" width="960" height="480" loading="lazy" alt="Aerogeradores ao fundo de dunas de areia clara, sob céu azul.">
+                            <figcaption class="noticia-credito">Foto ilustrativa (Areia Branca, RN): Marcos Elias de Oliveira Júnior, 2017. <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br">CC0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Parque_E%C3%B3lico_Mel_2,_Areia_Branca_(RN).jpg">Wikimedia Commons</a>.</figcaption>
+                        </figure>
+                        <span class="noticia-tag">Energia eólica</span>
+                        <h3>Mário Araripe: a fortuna do senhor dos ventos vem dos territórios do semiárido</h3>
+                        <p class="noticia-fonte"><strong>Notícia</strong> · Agência Pública · Hevilla Wanderley · <time datetime="2026-04-23">23 abr. 2026</time></p>
+                        <p>A reportagem conta que a maioria das famílias de um assentamento em Remígio (PB) recusou propostas de arrendamento para eólicas. Antes das torres, o pagamento fica entre R$ 1 e R$ 3 por hectare ao mês, pago uma vez por ano, e os contratos podem durar até 50 anos.</p>
+                        <a href="https://apublica.org/2026/04/mario-araripe-a-fortuna-do-senhor-dos-ventos-vem-dos-territorios-do-semiarido/">Ler a reportagem na Agência Pública →</a>
+                    </article>
+                    <article class="noticia" data-categoria="hidrica">
+                        <figure class="noticia-figura">
+                            <img src="img/noticias/mata-ciliar-nascente.jpg" width="960" height="720" loading="lazy" alt="Mata fechada, com árvores e capim alto, perto de uma nascente.">
+                            <figcaption class="noticia-credito">Foto ilustrativa (cerrado, DF): Carlospeixottodf, 2016. <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Mata_ciliar_pr%C3%B3xima_a_nascente.jpg">Wikimedia Commons</a>.</figcaption>
+                        </figure>
+                        <span class="noticia-tag">Energia hidráulica</span>
+                        <h3>Programa Produtor de Água alcança quase 1,3 mil produtores rurais e investe R$ 144,4 milhões em ações de conservação de água e solo pelo Brasil</h3>
+                        <p class="noticia-fonte"><strong>Notícia</strong> · Agência Nacional de Águas (ANA) · <time datetime="2026-03-24">24 mar. 2026</time></p>
+                        <p>O programa da ANA paga produtores rurais que protegem nascentes, recuperam mata ciliar e conservam o solo. Desde 2001, foram R$ 24,2 milhões pagos a 1.283 produtores em 76 projetos, com 4.180 hectares de vegetação nativa recuperados.</p>
+                        <a href="https://www.gov.br/ana/pt-br/assuntos/noticias-e-eventos/noticias/programa-produtor-de-agua-alcanca-quase-1-3-mil-produtores-rurais-e-investe-r-144-4-milhoes-em-acoes-de-conservacao-de-agua-e-solo-pelo-brasil">Ler a notícia no site da ANA →</a>
+                    </article>
+                    <article class="noticia" data-categoria="hidrica">
+                        <figure class="noticia-figura">
+                            <img src="img/noticias/pch-palmeiras-sapucai.jpg" width="960" height="720" loading="lazy" alt="Casa de força de uma pequena central hidrelétrica à beira de um rio, cercada por plantações e capim.">
+                            <figcaption class="noticia-credito">Foto ilustrativa (PCH Palmeiras, rio Sapucaí): MARCO AURÉLIO ESPARZ… (nome cortado na fonte), 2011. <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt-br">CC BY-SA 3.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Pequena_Central_Hidrel%C3%A9trica-PCH_Palmeiras_no_Rio_Sapucai_16000_kW_-_1_turbina_-_panoramio.jpg">Wikimedia Commons</a>.</figcaption>
+                        </figure>
+                        <span class="noticia-tag">Energia hidráulica</span>
+                        <h3>Sociedade civil se manifesta pelo fim de novas hidrelétricas na Amazônia</h3>
+                        <p class="noticia-fonte"><strong>Notícia</strong> · ((o))eco · Júlia Mendes · <time datetime="2023-11-21">21 nov. 2023</time></p>
+                        <p>Mais de 270 organizações e especialistas pediram uma pausa em novas grandes hidrelétricas na Amazônia. Segundo o manifesto, várias pequenas centrais (PCHs) num mesmo rio podem somar um impacto até quatro vezes maior que o de uma usina grande, porque cortam o caminho dos peixes que migram.</p>
+                        <a href="https://oeco.org.br/salada-verde/sociedade-civil-se-manifesta-pelo-fim-de-novas-hidreletricas-na-amazonia/">Ler a notícia no ((o))eco →</a>
+                    </article>
+
+                    <!-- ===== VÍDEOS =====
+                         O <iframe> mostra o vídeo do YouTube dentro do card.
+                         - title: obrigatório pela regra de acessibilidade (o leitor de tela anuncia o vídeo).
+                         - youtube-nocookie.com: versão do player que não grava cookies antes de o vídeo tocar.
+                         - cc_load_policy=1 e cc_lang_pref=pt: ligam a legenda em português, quando o vídeo tiver.
+                         - loading="lazy": o vídeo só carrega quando o card aparece na tela, deixando a página mais leve.
+                         - O link abaixo do vídeo leva ao original no YouTube. -->
+                    <article class="noticia" data-categoria="solar">
+                        <iframe class="noticia-video" src="https://www.youtube-nocookie.com/embed/Vtu6TCcwO-A?cc_load_policy=1&amp;cc_lang_pref=pt&amp;hl=pt-BR" title="Vídeo: Projeto Ser Tão Sol auxilia agricultura familiar com uso de energia solar (TV Alepi)" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <span class="noticia-tag">Energia solar</span>
+                        <h3>Projeto Ser Tão Sol auxilia agricultura familiar com uso de energia solar</h3>
+                        <p class="noticia-fonte"><strong>Vídeo</strong> · TV Alepi (TV Assembleia do Piauí) · <time datetime="2024-07-08">8 jul. 2024</time> · 4 min 22 s</p>
+                        <p>Reportagem sobre um projeto que leva energia solar a agricultores familiares de baixa renda no Piauí, com foco no bombeamento de água.</p>
+                        <a href="https://www.youtube.com/watch?v=Vtu6TCcwO-A">Assistir no canal da TV Alepi →</a>
+                    </article>
+                    <article class="noticia" data-categoria="solar">
+                        <iframe class="noticia-video" src="https://www.youtube-nocookie.com/embed/ocQ2lKh2lDA?cc_load_policy=1&amp;cc_lang_pref=pt&amp;hl=pt-BR" title="Vídeo: Aquecedor solar de baixo custo, Sociedade do Sol (Gerasol BH)" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <span class="noticia-tag">Energia solar</span>
+                        <h3>Aquecedor solar baixo custo (Gerasol) - Sociedade do Sol - Belo Horizonte</h3>
+                        <p class="noticia-fonte"><strong>Vídeo</strong> · Gerasol BH · <time datetime="2013-09-04">4 set. 2013</time> · 4 min 04 s</p>
+                        <p>Um monitor da Sociedade do Sol apresenta o Aquecedor Solar de Baixo Custo (ASBC) e os cursos para aprender a fabricar e instalar o equipamento.</p>
+                        <a href="https://www.youtube.com/watch?v=ocQ2lKh2lDA">Assistir no canal Gerasol BH →</a>
+                    </article>
+                    <article class="noticia" data-categoria="eolica">
+                        <iframe class="noticia-video" src="https://www.youtube-nocookie.com/embed/7gqlcWhuqE4?cc_load_policy=1&amp;cc_lang_pref=pt&amp;hl=pt-BR" title="Vídeo: Nordeste tem segundo recorde na produção eólica em 2024 (CNN Brasil)" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <span class="noticia-tag">Energia eólica</span>
+                        <h3>Nordeste tem segundo recorde na produção eólica em 2024</h3>
+                        <p class="noticia-fonte"><strong>Vídeo</strong> · CNN Brasil · <time datetime="2024-08-15">15 ago. 2024</time> · 3 min 35 s</p>
+                        <p>Reportagem sobre o recorde histórico de produção de energia eólica no sistema elétrico brasileiro, alcançado no Nordeste em 2024.</p>
+                        <a href="https://www.youtube.com/watch?v=7gqlcWhuqE4">Assistir no canal CNN Brasil →</a>
+                    </article>
+                    <article class="noticia" data-categoria="eolica">
+                        <iframe class="noticia-video" src="https://www.youtube-nocookie.com/embed/Lbc4euRaH6I?cc_load_policy=1&amp;cc_lang_pref=pt&amp;hl=pt-BR" title="Vídeo: Moradores do Nordeste relatam impactos das torres eólicas próximas de casa (UOL Prime)" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <span class="noticia-tag">Energia eólica</span>
+                        <h3>Moradores do Nordeste relatam impactos das torres eólicas próximas de casa</h3>
+                        <p class="noticia-fonte"><strong>Vídeo</strong> · UOL Prime · <time datetime="2025-12-26">26 dez. 2025</time> · 9 min 05 s</p>
+                        <p>Moradores do interior de Pernambuco contam problemas como insônia e abandono de casas por causa de torres eólicas instaladas perto das moradias.</p>
+                        <a href="https://www.youtube.com/watch?v=Lbc4euRaH6I">Assistir no canal UOL Prime →</a>
+                    </article>
+                    <article class="noticia" data-categoria="hidrica">
+                        <iframe class="noticia-video" src="https://www.youtube-nocookie.com/embed/tickLg_XUXU?cc_load_policy=1&amp;cc_lang_pref=pt&amp;hl=pt-BR" title="Vídeo: Carneiro hidráulico leva água com facilidade e baixo custo (Rio Grande Rural, Emater/RS)" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <span class="noticia-tag">Energia hidráulica</span>
+                        <h3>Carneiro hidráulico leva água com facilidade e baixo custo - Rio Grande Rural</h3>
+                        <p class="noticia-fonte"><strong>Vídeo</strong> · Rio Grande Rural (Emater/RS-Ascar) · <time datetime="2017-05-07">7 maio 2017</time> · 7 min 03 s</p>
+                        <p>Mostra carneiros hidráulicos instalados com apoio de técnicos da Emater/RS-Ascar em Senador Salgado Filho (RS), levando água encanada a pontos que sofriam com a falta dela.</p>
+                        <a href="https://www.youtube.com/watch?v=tickLg_XUXU">Assistir no canal Rio Grande Rural →</a>
+                    </article>
+
+                    <!-- ===== TEXTOS DA EQUIPE (já existiam) =====
+                         Cada card tem a linha "Texto da equipe Eco Inovação",
+                         porque a regra de conteúdo pede identificar os textos escritos pela equipe. -->
+
+                    <article class="noticia" data-categoria="solar">
+                        <span class="noticia-tag">Energia solar</span>
+                        <h3>Bomba d'água solar: água para irrigação e gado sem conta de luz</h3>
+                        <p class="noticia-fonte"><strong>Texto da equipe Eco Inovação</strong></p>
+                        <p>Painéis ligados direto à bomba enchem a caixa d'água durante o dia, sem bateria. É uma das aplicações mais úteis da energia solar no campo.</p>
+                        <a href="solar-fotovoltaica.html">Saiba mais →</a>
+                    </article>
+                    <article class="noticia" data-categoria="solar">
+                        <span class="noticia-tag">Energia solar</span>
+                        <h3>Marco legal da geração distribuída</h3>
+                        <p class="noticia-fonte"><strong>Texto da equipe Eco Inovação</strong></p>
+                        <p>A Lei 14.300, de 2022, define as regras para quem produz a própria energia e envia o excedente para a rede, incluindo como funcionam os créditos.</p>
+                        <a href="solar-fotovoltaica.html">Saiba mais →</a>
+                    </article>
+                    <article class="noticia" data-categoria="solar">
+                        <span class="noticia-tag">Energia solar</span>
+                        <h3>Aquecedor solar: água quente sem gastar eletricidade</h3>
+                        <p class="noticia-fonte"><strong>Texto da equipe Eco Inovação</strong></p>
+                        <p>Coletores no telhado esquentam a água do banho. Em muitas casas, o aquecedor solar reduz o uso do chuveiro elétrico.</p>
+                        <a href="solar-termica.html">Saiba mais →</a>
+                    </article>
+                    <article class="noticia" data-categoria="eolica">
+                        <span class="noticia-tag">Energia eólica</span>
+                        <h3>Sistema híbrido: vento e sol juntos</h3>
+                        <p class="noticia-fonte"><strong>Texto da equipe Eco Inovação</strong></p>
+                        <p>Combinar gerador de vento e painéis solares pode ser uma boa ideia onde o vento é forte, porque uma fonte cobre os períodos em que a outra gera pouco.</p>
+                        <a href="eolica-residencial.html">Saiba mais →</a>
+                    </article>
+                    <article class="noticia" data-categoria="eolica">
+                        <span class="noticia-tag">Energia eólica</span>
+                        <h3>Parques eólicos e arrendamento de terras</h3>
+                        <p class="noticia-fonte"><strong>Texto da equipe Eco Inovação</strong></p>
+                        <p>Proprietários rurais podem arrendar áreas para torres de parques eólicos e continuar usando o restante do terreno. O contrato exige atenção.</p>
+                        <a href="eolica-grandes-parques.html">Saiba mais →</a>
+                    </article>
+                    <article class="noticia" data-categoria="hidrica">
+                        <span class="noticia-tag">Energia hidráulica</span>
+                        <h3>Carneiro hidráulico: sobe água sem eletricidade</h3>
+                        <p class="noticia-fonte"><strong>Texto da equipe Eco Inovação</strong></p>
+                        <p>Um equipamento antigo e simples usa a energia da queda de água para empurrar parte dela até uma caixa mais alta, sem gastar combustível.</p>
+                        <a href="hidraulica-funcionamento.html">Saiba mais →</a>
+                    </article>
+                    <article class="noticia" data-categoria="hidrica">
+                        <span class="noticia-tag">Energia hidráulica</span>
+                        <h3>Mata ciliar protege a água e a geração de energia</h3>
+                        <p class="noticia-fonte"><strong>Texto da equipe Eco Inovação</strong></p>
+                        <p>Preservar a vegetação das margens evita erosão e assoreamento, mantém a água limpa e ajuda o riacho a ter vazão por mais tempo.</p>
+                        <a href="hidraulica-impactos.html">Saiba mais →</a>
+                    </article>
+                    <article class="noticia" data-categoria="geral">
+                        <span class="noticia-tag">Geral</span>
+                        <h3>Como ler a conta de luz para dimensionar um sistema</h3>
+                        <p class="noticia-fonte"><strong>Texto da equipe Eco Inovação</strong></p>
+                        <p>O consumo em kWh dos últimos meses é o primeiro número que qualquer empresa vai pedir. Veja como encontrá-lo na sua conta.</p>
+                        <a href="contato.html">Saiba mais →</a>
+                    </article>
+                    <article class="noticia" data-categoria="geral">
+                        <span class="noticia-tag">Geral</span>
+                        <h3>Crédito rural para energia renovável</h3>
+                        <p class="noticia-fonte"><strong>Texto da equipe Eco Inovação</strong></p>
+                        <p>Existem linhas de financiamento para produtores rurais instalarem sistemas de energia renovável. Consulte o banco para saber as condições atuais.</p>
+                        <a href="contato.html">Saiba mais →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="chamada">
+            <div class="container">
+                <h2>Ficou com dúvida sobre o seu terreno?</h2>
+                <p>Conte o que você tem na propriedade e veja por onde começar.</p>
+                <a href="contato.html" class="botao">Fazer meu diagnóstico</a>
+            </div>
+        </section>
+        <div class="container">
+            <nav class="nav-paginas" aria-label="Navegação entre páginas">
+            <a href="hidraulica-impactos.html" class="anterior"><small>Página anterior</small>← Hidráulica: impactos</a>
+            <a href="contato.html" class="proxima"><small>Próxima página</small>Contato e Diagnóstico →</a>
+            </nav>
+        </div>
+
+    </main>
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer>
+        <nav aria-label="Mapa do site">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Quem somos</a></li>
+                <li><a href="solar-fotovoltaica.html">Solar fotovoltaica</a></li>
+                <li><a href="solar-termica.html">Solar térmica</a></li>
+                <li><a href="eolica-residencial.html">Eólica residencial</a></li>
+                <li><a href="eolica-grandes-parques.html">Eólica em grandes parques</a></li>
+                <li><a href="hidraulica-funcionamento.html">Hidráulica: funcionamento</a></li>
+                <li><a href="hidraulica-impactos.html">Hidráulica: impactos</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html">Contato e diagnóstico</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 - TERS | Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

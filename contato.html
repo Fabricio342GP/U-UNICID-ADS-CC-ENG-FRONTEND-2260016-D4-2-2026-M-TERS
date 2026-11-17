@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Envie sua dúvida e receba uma indicação de qual energia renovável combina com a sua propriedade.">
+
+    <title>Contato e Diagnóstico | TERS</title>
+
+    <!-- Folha de estilos e JavaScript compartilhados por todas as páginas -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ================= CABEÇALHO ================= -->
+    <header>
+        <div class="container">
+
+            <!-- Botão hambúrguer + logo -->
+            <div class="header-esquerda">
+                <button class="botao-menu" id="botao-menu" type="button"
+                        aria-label="Abrir menu de energias"
+                        aria-controls="menu-lateral"
+                        aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">TERS</a>
+            </div>
+
+            <!-- Menu horizontal (telas grandes) -->
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Quem somos</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html" aria-current="page">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Fase 7 (16/11/2026): botão de alto contraste (regra de acessibilidade).
+                 O main.js liga/desliga a classe "alto-contraste" no <html> e lembra a escolha. -->
+            <button class="botao-contraste" id="botao-contraste" type="button" aria-pressed="false">
+                <span aria-hidden="true">◐</span> Alto contraste
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ================= MENU LATERAL ================= -->
+    <!-- Fundo escuro: ao clicar, fecha o menu -->
+    <div class="menu-fundo" id="menu-fundo"></div>
+
+    <aside class="menu-lateral" id="menu-lateral" aria-label="Menu de energias">
+        <div class="menu-topo">
+            <span class="menu-logo">TERS</span>
+            <button class="menu-fechar" id="menu-fechar" type="button" aria-label="Fechar menu">✕</button>
+        </div>
+
+        <nav aria-label="Páginas de energia">
+                <p class="menu-grupo-titulo" id="grupo-solar">ENERGIA SOLAR</p>
+                <ul aria-labelledby="grupo-solar">
+                    <li><a href="solar-fotovoltaica.html"><span aria-hidden="true">☀️</span> Fotovoltaica</a></li>
+                    <li><a href="solar-termica.html"><span aria-hidden="true">🚿</span> Térmica</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-eolica">ENERGIA EÓLICA</p>
+                <ul aria-labelledby="grupo-eolica">
+                    <li><a href="eolica-residencial.html"><span aria-hidden="true">🌬️</span> Residencial</a></li>
+                    <li><a href="eolica-grandes-parques.html"><span aria-hidden="true">🏞️</span> Grandes parques</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-hidraulica">ENERGIA HIDRÁULICA</p>
+                <ul aria-labelledby="grupo-hidraulica">
+                    <li><a href="hidraulica-funcionamento.html"><span aria-hidden="true">💧</span> Funcionamento</a></li>
+                    <li><a href="hidraulica-impactos.html"><span aria-hidden="true">🌿</span> Impactos</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-mais">MAIS</p>
+                <ul aria-labelledby="grupo-mais">
+                    <li><a href="noticias.html"><span aria-hidden="true">📰</span> Notícias e Eco-Inovação</a></li>
+                    <li><a href="contato.html" aria-current="page"><span aria-hidden="true">✉️</span> Contato e Diagnóstico</a></li>
+                </ul>
+        </nav>
+    </aside>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main id="conteudo" tabindex="-1">
+        <section class="pagina-topo">
+            <div class="container">
+                <nav class="trilha" aria-label="Você está em">
+                    <ol>
+                    <li><a href="index.html">Início</a></li>
+                    <li aria-current="page">Contato e Diagnóstico</li>
+                    </ol>
+                </nav>
+
+                <div class="pagina-topo-conteudo">
+                    <div class="pagina-icone" aria-hidden="true">💬</div>
+                    <div>
+                        <span class="destaque">FALE COM A GENTE</span>
+                        <h1>Contato e Diagnóstico</h1>
+                        <p>Conte o que você tem na propriedade e receba uma indicação de por onde começar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="secao secao-branca">
+            <div class="container">
+                <h2>Como podemos ajudar?</h2>
+                <div class="contato-layout">
+                    <div>
+                        <div class="resultado" id="resultado" tabindex="-1" role="region" aria-label="Resultado do diagnóstico" hidden></div>
+
+                        <form id="form-contato" novalidate aria-labelledby="titulo-form">
+                            <h3 id="titulo-form">Envie sua dúvida</h3>
+                            <p id="rascunho-aviso" class="rascunho-aviso" hidden>Recuperamos o que você tinha digitado antes.</p>
+                            <div id="resumo-erros" class="resumo-erros" role="alert" tabindex="-1" hidden></div>
+
+                            <div class="campo">
+                                <label for="nome">Nome completo <span class="obrigatorio">(obrigatório)</span></label>
+                                <input type="text" id="nome" name="nome" required autocomplete="name" aria-describedby="erro-nome">
+                                <span class="erro-msg" id="erro-nome"></span>
+                            </div>
+
+                            <div class="campo">
+                                <label for="email">E-mail <span class="obrigatorio">(obrigatório)</span></label>
+                                <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="erro-email">
+                                <span class="erro-msg" id="erro-email"></span>
+                            </div>
+
+                            <div class="campo">
+                                <label for="cidade">Cidade e estado <span class="opcional">(opcional)</span></label>
+                                <input type="text" id="cidade" name="cidade" autocomplete="address-level2" aria-describedby="erro-cidade">
+                                <span class="erro-msg" id="erro-cidade"></span>
+                            </div>
+
+                            <div class="campo">
+                                <label for="recurso">O que você tem na propriedade? <span class="obrigatorio">(obrigatório)</span></label>
+                                <select id="recurso" name="recurso" required aria-describedby="erro-recurso">
+                                    <option value="">Escolha uma opção</option>
+                                    <option value="agua">Água correndo (nascente, córrego ou riacho)</option>
+                                    <option value="vento">Terreno alto e com bastante vento</option>
+                                    <option value="sol">Bastante sol, e quero economizar ou esquentar água</option>
+                                    <option value="nao-sei">Ainda não sei</option>
+                                </select>
+                                <span class="erro-msg" id="erro-recurso"></span>
+                            </div>
+
+                            <div class="campo">
+                                <label for="mensagem">Sua dúvida <span class="obrigatorio">(obrigatório)</span></label>
+                                <textarea id="mensagem" name="mensagem" required aria-describedby="erro-mensagem"></textarea>
+                                <span class="erro-msg" id="erro-mensagem"></span>
+                            </div>
+
+                            <div class="form-botoes">
+                                <button type="submit" class="botao">Enviar e ver diagnóstico</button>
+                                <button type="button" class="botao botao-contorno" id="limpar-form">Limpar formulário</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div>
+                        <div class="card">
+                            <h3>Como funciona o diagnóstico</h3>
+                            <p>Você conta o que existe no seu terreno e indicamos a energia que merece mais atenção, com links para as páginas do site.</p>
+                        </div>
+                        <div class="caixa">
+                            <p><strong>Dica:</strong> se souber, escreva o consumo de energia em kWh da sua conta de luz, a vazão e a queda do seu riacho ou a velocidade média do vento no terreno.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <nav class="nav-paginas" aria-label="Navegação entre páginas">
+            <a href="noticias.html" class="anterior"><small>Página anterior</small>← Notícias e Eco-Inovação</a>
+            </nav>
+        </div>
+
+    </main>
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer>
+        <nav aria-label="Mapa do site">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Quem somos</a></li>
+                <li><a href="solar-fotovoltaica.html">Solar fotovoltaica</a></li>
+                <li><a href="solar-termica.html">Solar térmica</a></li>
+                <li><a href="eolica-residencial.html">Eólica residencial</a></li>
+                <li><a href="eolica-grandes-parques.html">Eólica em grandes parques</a></li>
+                <li><a href="hidraulica-funcionamento.html">Hidráulica: funcionamento</a></li>
+                <li><a href="hidraulica-impactos.html">Hidráulica: impactos</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html">Contato e diagnóstico</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 - TERS | Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
