@@ -1,96 +1,1853 @@
-header{
-    text-align: center;
-    padding: 40px 20px; /* <--- Criando espaço para não ficar encostado na parte superior da tela */
-    background: linear-gradient(to bottom, #c5e7ff, #f0f4f8); /* <-- Faz o degrade das cores no header*/
-    margin-bottom: 0px; /* <--- Criando um pequeno espaço antes dos botões*/
-    color: #2c3e50; /* <--- Cor do titulo do header*/
-}
-.subtitulo {
-    color: #7f8c8d; 
-    font-size: 17px;
-}
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* <--- Fonte do corpo todo*/
-    margin: 0; /* <-- Faz a pagina não ter espaços em brancos nas laterais*/
+/* =====================================================
+   TERS - Folha de estilos principal (todas as páginas)
+   Organização:
+    1. Configurações gerais e cores
+    2. Temas por tipo de energia
+    3. Cabeçalho e menu superior
+    4. Botão hambúrguer e menu lateral
+    5. Banner da home (hero)
+    6. Banner das páginas internas
+    7. Seções de conteúdo e textos
+    8. Cards
+    9. Passos, tabelas e caixas de destaque
+   10. Chamada para ação e navegação entre páginas
+   11. Calculadora de potência (hidráulica)
+   12. Notícias e filtros
+   13. Quem somos (equipe)
+   14. Formulário de contato
+   15. Rodapé
+   16. Acessibilidade
+   17. Responsividade (Mobile First: tablet e computador)
+   18. Seções novas: no sítio, comparação, referências e pendências
+   ===================================================== */
+
+
+/* =====================================================
+   1. CONFIGURAÇÕES GERAIS E CORES
+   ===================================================== */
+
+/* Zera margens/espaçamentos e faz o tamanho incluir padding e borda */
+* {
+    margin: 0;
     padding: 0;
-    background-color: #fcfcfc;
-    color: #333333;
-}
-nav {
-    background: linear-gradient(to bottom, #eef3f7); /*<-- continuação do degrade do header*/
-    padding: 35px; /* <--- Cria um espaço dentro da caixa de navegaçao*/
-    display: flex; /* <--- Faz as tags virar flexível e aqui coloca as tags uma do lado da outra*/
-    gap: 30px; /* <--- Cria um espaço de 200px entre as tags, tanto do lado quanto abaixo */
-    justify-content: center; /* <-- Deixa no centro */
-}
-.menu-navegacao a {
-    text-decoration: none; /* <-- Remove o sublinhado azul */
-    color: #2c3e50; 
-    font-weight: bold; /* ? */
-    padding: 20px 30px; /* <-- altura e largura do botão */
-    border-radius: 20px;  /* <-- deixa as bordas arredondadas */
-    transition: all 0.7s ease; /* <--- tempo de efeito na hora de passar o mouse*/
-    background-color: #ffffff; /*<-- cor dos botões*/
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* <--- sombra no botão parado*/
-}
-.menu-navegacao a:hover { 
-    transform: translateY(-3px); /* <-- efeito de passar o mouse nos botões */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /*<-- cor do fundo do botão */
-}
-img{
-    object-fit: cover; /* <--- Faz a imagem encaixar dentro do tamanho width e height*/
-    width: 550px;
-    height: 400px;
-    border-radius: 12px;
-    box-shadow: 0 30px 20px rgba(0,0,0,0.08); /* <--- Sombrinha abaixo da img */
-}
-.bloco_texto_eolica, .bloco_texto_hidraulica, .bloco_texto_solar { /* <--- Faz as tags de parágrafo dentro do bloco ficarem uma embaixo da outra */
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Espaço entre os parágrafos */
-    max-width: 600px; /* Evita que o texto estique demais para os lados */
-}
-.container-energia {
-    padding: 60px 10%;
-    display: flex; 
-    gap: 80px; /* coloca espaço entre a imagem e o bloco de texto */
-    justify-content: center;
-    align-items: center; /* Alinha verticalmente a imagem e o texto no meio */
-}
-#secao-eolica {
-    background-color: #f0f4f8; /* <--- cor de fundo do container eolica */ 
-}
-#secao-eolica h2, #secao-eolica a { 
-    color: #34495e; /*<-- cor do h2*/ 
-} 
-#secao-hidraulica {
-    background-color: #e3f2fd; /*<-- fundo do container hidraulica */
-}
-#secao-hidraulica h2 { 
-    color: #1e88e5; /* <-- cor do h2*/ 
-} 
-#secao-solar {
-    background-color: #fffde7; /*<--- fundo do container solar */
-}
-#secao-solar h2 {
-    color: #f57f17; /*<--- cor do h2*/ 
-}
-.bloco_texto_eolica, .bloco_texto_hidraulica, .bloco_texto_solar { 
-    display: flex;
-    flex-direction: column; /* <-- deixa o texto em uma coluna*/
-    gap: 11px; /* <--- espaçamento entre os paragrafos*/
-    max-width: 650px; /* <-- largura do bloco de texto*/
-    line-height: 1.6; /* <-- espaço entre as linhas*/
+    box-sizing: border-box;
 }
 
-.bloco_texto_eolica h2, .bloco_texto_hidraulica h2, .bloco_texto_solar h2 {
-    font-size: 30px;
-    margin-bottom: 5px; /*<-- cria um pequeno espaço do h2 para o texto*/ 
+/* Variáveis do site (usadas com var(--nome)).
+   Fase 5 (16/11/2026): todas as cores, a fonte, os tamanhos de texto, os cantos
+   arredondados e as larguras/espaços que se repetem ficam aqui, num lugar só.
+   Para mudar uma cor no site inteiro, basta mudar o valor dela neste bloco.
+   Os valores são os mesmos que estavam espalhados pelo arquivo: a aparência não mudou.
+   Obs.: variáveis não funcionam dentro de @media (...), por isso os pontos de quebra
+   (769px e 1001px) continuam escritos com número. */
+:root {
+    /* --- Cores principais --- */
+    --verde: #286C45;
+    --verde-escuro: #1F5436;
+    --verde-claro: #E8F1EA;
+    --verde-borda: #D3E3D8;
+    --azul: #28618A;
+    --azul-escuro: #1B4668;
+    --azul-claro: #E5F0F8;
+    --azul-borda: #C7DCEB;
+    --azul-nevoa: #EAF2F7;
+    --amarelo: #B77A20;
+    --amarelo-claro: #FBF1DE;
+    --amarelo-borda: #EBD9B4;
+    --ocre: #8A5A12;
+    --cinza-azulado: #4B5E70;
+    --cinza-azulado-claro: #E9EEF3;
+    --cinza-azulado-borda: #D3DCE5;
+    --branco: #FFFFFF;
+    --fundo: #F5F7F5;
+    --fundo-card: #F7FAF7;
+    --borda-suave: #E4ECE5;
+    --borda-campo: #AFBBB3;
+
+    /* --- Textos (do mais escuro para o mais claro) --- */
+    --texto: #26332B;
+    --texto-titulo: #263B2E;
+    --texto-menu: #34443A;
+    --texto-corpo: #404E45;
+    --texto-topo: #4A5750;
+    --texto-suave: #55625A;
+    --texto-hero: #59665E;
+    --texto-card: #68756C;
+
+    /* --- Menu lateral (fundo escuro) --- */
+    --menu-escuro: #1E2B24;
+    --menu-titulo: #9FB3A7;
+    --menu-link: #D5E0D9;
+    --menu-destaque: #7FD0A0;
+    --foco-menu: #FFD27A;
+
+    /* --- Erros e avisos --- */
+    --erro: #B3261E;
+    --erro-escuro: #7A1A14;
+    --erro-claro: #FDF2F1;
+    --pendencia-fundo: #FFF8E8;
+    --pendencia-texto: #6B4A0F;
+
+    /* --- Preto e branco transparentes (sombras e camadas).
+           O número é a opacidade em %: --preto-08 = preto com 8% de opacidade --- */
+    --preto-04: rgba(0, 0, 0, 0.04);
+    --preto-05: rgba(0, 0, 0, 0.05);
+    --preto-08: rgba(0, 0, 0, 0.08);
+    --preto-12: rgba(0, 0, 0, 0.12);
+    --preto-50: rgba(0, 0, 0, 0.5);
+    --branco-10: rgba(255, 255, 255, 0.1);
+    --branco-12: rgba(255, 255, 255, 0.12);
+
+    /* --- Cores do tema da página (mudam em cada tipo de energia, veja a seção 2) --- */
+    --tema: var(--verde);
+    --tema-claro: var(--verde-claro);
+    --tema-borda: var(--verde-borda);
+
+    /* --- Fonte e tamanhos de texto (do menor para o maior) --- */
+    --fonte-principal: Arial, Helvetica, sans-serif;
+    --tamanho-minimo: 12px;
+    --tamanho-legenda: 13px;
+    --tamanho-pequeno: 14px;
+    --tamanho-reduzido: 15px;
+    --tamanho-medio: 16px;
+    --tamanho-texto: 17px;
+    --tamanho-destaque: 18px;
+
+    /* --- Cantos arredondados (border-radius) --- */
+    --raio-minimo: 6px;
+    --raio-pequeno: 8px;
+    --raio-medio: 10px;
+    --raio-caixa: 12px;
+    --raio-card: 14px;
+
+    /* --- Larguras máximas e espaçamentos padrão --- */
+    --largura-intro: 700px;
+    --largura-texto: 760px;
+    --largura-caixa: 800px;
+    --largura-lista: 860px;
+    --espaco-grade: 25px;
+    --espaco-secao: 64px;
+    --espaco-secao-grande: 80px;
+    --espaco-secao-celular: 48px;
+    --espaco-secao-grande-celular: 55px;
+
+    /* --- Modo alto contraste (Fase 7, botão do cabeçalho; veja a seção 16) --- */
+    --contraste-fundo: #000000;
+    --contraste-texto: #FFFFFF;
+    --contraste-destaque: #FFD700;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* Centraliza o conteúdo com largura máxima */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   2. TEMAS POR TIPO DE ENERGIA
+   (azul = água, amarelo/laranja = sol, cinza-azulado = vento)
+   Cada página troca as 3 variáveis do tema pelas cores do seu tipo de energia.
+   As cores em si estão no :root (seção 1).
+   ===================================================== */
+
+body.tema-solar {
+    --tema: var(--ocre);
+    --tema-claro: var(--amarelo-claro);
+    --tema-borda: var(--amarelo-borda);
+}
+
+body.tema-eolica {
+    --tema: var(--cinza-azulado);
+    --tema-claro: var(--cinza-azulado-claro);
+    --tema-borda: var(--cinza-azulado-borda);
+}
+
+body.tema-hidraulica {
+    --tema: var(--azul);
+    --tema-claro: var(--azul-claro);
+    --tema-borda: var(--azul-borda);
+}
+
+
+/* =====================================================
+   3. CABEÇALHO E MENU SUPERIOR
+   ===================================================== */
+
+header {
+    background-color: var(--branco);
+    padding: 20px 0;
+    box-shadow: 0 2px 12px var(--preto-05);
+    position: relative;
+    z-index: 10;
+}
+
+/* Botão + logo à esquerda, menu à direita */
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    color: var(--verde);
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Menu horizontal (aparece em telas grandes) */
+/* Fase 7 (16/11/2026): botão "Alto contraste" à direita do cabeçalho.
+   margin-left: auto empurra o menu horizontal para perto do botão. */
+header nav {
+    margin-left: auto;
+}
+
+.botao-contraste {
+    margin-left: 20px;
+    padding: 8px 14px;
+    background-color: var(--branco);
+    color: var(--verde);
+    border: 2px solid var(--verde);
+    border-radius: var(--raio-pequeno);
+    font-family: inherit;
+    font-size: var(--tamanho-pequeno);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-contraste:hover {
+    background-color: var(--verde-claro);
+}
+
+/* No celular o menu horizontal fica escondido; usa-se o menu lateral (botão ☰).
+   Ele aparece a partir de 769px (seção 17). */
+header nav {
+    display: none;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+header nav a {
+    color: var(--texto-menu);
+    text-decoration: none;
+    font-size: var(--tamanho-reduzido);
+    font-weight: 600;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+header nav a:hover,
+header nav a[aria-current="page"] {
+    color: var(--verde);
+    border-bottom-color: var(--verde);
+}
+
+/* Link "pular para o conteúdo" (só aparece ao usar o teclado) */
+.pular-conteudo {
+    position: absolute;
+    left: 16px;
+    top: -60px;
+    background-color: var(--verde);
+    color: var(--branco);
+    padding: 10px 16px;
+    border-radius: 0 0 8px 8px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 200;
+}
+
+.pular-conteudo:focus {
+    top: 0;
+}
+
+
+/* =====================================================
+   4. BOTÃO HAMBÚRGUER E MENU LATERAL
+   ===================================================== */
+
+/* Botão com as três linhas */
+.botao-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background: none;
+    border: 2px solid var(--verde);
+    border-radius: var(--raio-pequeno);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-menu span {
+    display: block;
+    height: 3px;
+    background-color: var(--verde);
+    border-radius: 2px;
+}
+
+.botao-menu:hover {
+    background-color: var(--verde-claro);
+}
+
+/* Fundo escurecido atrás do menu (clicar nele fecha o menu) */
+.menu-fundo {
+    position: fixed;
+    inset: 0;
+    background-color: var(--preto-50);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 90;
+}
+
+.menu-fundo.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Painel lateral: fica escondido à esquerda até receber a classe "aberto" */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 290px;
+    max-width: 88%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: var(--menu-escuro);
+    color: var(--branco);
+    padding: 24px 16px;
+    transform: translateX(-100%);
+    visibility: hidden; /* impede foco por teclado quando fechado */
+    transition: transform 0.3s ease, visibility 0.3s;
+    z-index: 100;
+}
+
+.menu-lateral.aberto {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+/* Topo do menu: logo + botão fechar */
+.menu-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px 20px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--branco-12);
+}
+
+.menu-logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu-fechar {
+    background: none;
+    border: none;
+    color: var(--branco);
+    font-size: 22px;
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: var(--raio-minimo);
+}
+
+.menu-fechar:hover {
+    background-color: var(--branco-12);
+}
+
+/* Título de cada grupo (Energia Solar, Eólica...) */
+.menu-grupo-titulo {
+    margin: 20px 14px 6px;
+    font-size: var(--tamanho-minimo);
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--menu-titulo);
+}
+
+.menu-lateral ul {
+    list-style: none;
+}
+
+.menu-lateral li + li {
+    margin-top: 2px;
+}
+
+.menu-lateral li a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 11px 14px;
+    color: var(--menu-link);
+    text-decoration: none;
+    font-size: var(--tamanho-reduzido);
+    font-weight: 600;
+    border-radius: var(--raio-pequeno);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-lateral li a:hover,
+.menu-lateral li a[aria-current="page"] {
+    background-color: var(--branco-10);
+    color: var(--branco);
+}
+
+.menu-lateral li a[aria-current="page"] {
+    box-shadow: inset 3px 0 0 var(--menu-destaque);
+}
+
+/* Evita rolagem da página enquanto o menu está aberto */
+body.menu-aberto {
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   5. BANNER DA HOME (HERO)
+   ===================================================== */
+
+.hero {
+    background: linear-gradient(135deg, var(--verde-claro), var(--azul-nevoa));
+    padding: 100px 0;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column; /* celular; tablet e computador: row (seção 17) */
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: var(--largura-intro);
+}
+
+/* Pequeno texto acima do título */
+.destaque {
+    color: var(--verde);
+    font-size: var(--tamanho-pequeno);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    color: var(--texto);
+    font-size: 32px; /* celular; tablet e computador: 46px (seção 17) */
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero p {
+    color: var(--texto-hero);
+    font-size: var(--tamanho-destaque);
+    margin-bottom: 30px;
+}
+
+/* Botão principal do site */
+.botao {
+    display: inline-block;
+    background-color: var(--verde);
+    color: var(--branco);
+    padding: 14px 28px;
+    border-radius: var(--raio-minimo);
+    border: none;
+    font-size: var(--tamanho-medio);
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: var(--azul);
+}
+
+/* Botão com contorno (ação secundária) */
+.botao-contorno {
+    background-color: transparent;
+    color: var(--verde);
+    border: 2px solid var(--verde);
+}
+
+.botao-contorno:hover {
+    background-color: var(--verde);
+    color: var(--branco);
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 260px; /* celular; tablet e computador: 380px (seção 17) */
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--preto-12);
+}
+
+/* Fase 3 (16/11/2026): crédito da imagem do banner, pequeno e discreto logo abaixo da foto.
+   ".hero .hero-credito" é mais específico que ".hero p" (18px e margem de 30px), por isso vence. */
+.hero .hero-credito {
+    margin: 8px 0 0;
+    font-size: var(--tamanho-legenda);
+    color: var(--texto-suave);
+}
+
+/* O selo .pendencia usa 0.8em; aqui ele herda os 13px para não ficar pequeno demais para ler */
+.hero .hero-credito .pendencia {
+    font-size: inherit;
+}
+
+.hero .hero-credito a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   6. BANNER DAS PÁGINAS INTERNAS
+   ===================================================== */
+
+.pagina-topo {
+    background: linear-gradient(135deg, var(--tema-claro), var(--branco));
+    padding: 50px 0 60px;
+    border-bottom: 1px solid var(--tema-borda);
+}
+
+/* Trilha "Início > Energia Solar > ..." */
+.trilha {
+    font-size: var(--tamanho-pequeno);
+    color: var(--texto-suave);
+    margin-bottom: 28px;
+}
+
+.trilha ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+.trilha li + li::before {
+    content: "›";
+    margin-right: 8px;
+}
+
+.trilha a {
+    color: var(--tema);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.trilha a:hover {
+    text-decoration: underline;
+}
+
+.pagina-topo-conteudo {
+    display: flex;
+    flex-direction: column; /* celular; tablet e computador: row (seção 17) */
+    align-items: flex-start; /* celular; tablet e computador: center (seção 17) */
+    gap: 20px; /* celular; tablet e computador: 36px (seção 17) */
+}
+
+.pagina-icone {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px; /* celular; tablet e computador: 120px (seção 17) */
+    height: 90px; /* celular; tablet e computador: 120px (seção 17) */
+    font-size: 44px; /* celular; tablet e computador: 58px (seção 17) */
+    background-color: var(--branco);
+    border: 2px solid var(--tema-borda);
+    border-radius: 50%;
+}
+
+.pagina-topo .destaque {
+    color: var(--tema);
+}
+
+.pagina-topo h1 {
+    font-size: 29px; /* celular; tablet e computador: 38px (seção 17) */
+    line-height: 1.2;
+    margin: 12px 0 14px;
+    max-width: 780px;
+}
+
+.pagina-topo p {
+    font-size: var(--tamanho-medio); /* celular; tablet e computador: var(--tamanho-destaque) (seção 17) */
+    color: var(--texto-topo);
+    max-width: 720px;
+}
+
+
+/* =====================================================
+   7. SEÇÕES DE CONTEÚDO E TEXTOS
+   ===================================================== */
+
+.secao {
+    padding: var(--espaco-secao-celular) 0; /* celular; tablet e computador: var(--espaco-secao) (seção 17) */
+}
+
+.secao-branca {
+    background-color: var(--branco);
+}
+
+.secao h2 {
+    color: var(--tema);
+    font-size: 25px; /* celular; tablet e computador: 30px (seção 17) */
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.secao h3 {
+    color: var(--texto);
+    font-size: 20px;
+    margin: 6px 0 8px;
+}
+
+.secao p {
+    color: var(--texto-corpo);
+    font-size: var(--tamanho-texto);
+    margin-bottom: 14px;
+}
+
+/* Texto corrido com largura confortável para leitura */
+.texto-coluna {
+    max-width: var(--largura-texto);
+}
+
+.secao-intro {
+    max-width: var(--largura-texto);
+    margin-bottom: 34px;
+}
+
+.secao ul.lista {
+    margin: 0 0 16px 22px;
+    color: var(--texto-corpo);
+    font-size: var(--tamanho-medio); /* celular; tablet e computador: var(--tamanho-texto) (fim da seção 18) */
+}
+
+.secao ul.lista li {
+    margin-bottom: 8px;
+}
+
+/* Grades de colunas */
+.grade-2,
+.grade-3 {
+    margin-top: 22px;
+}
+
+.grade-2 {
+    display: grid;
+    grid-template-columns: 1fr; /* celular; tablet e computador: 2 colunas (seção 17) */
+    gap: var(--espaco-grade);
+}
+
+.grade-3 {
+    display: grid;
+    grid-template-columns: 1fr; /* celular; tablet e computador: 3 colunas (seção 17) */
+    gap: var(--espaco-grade);
+}
+
+
+/* =====================================================
+   8. CARDS
+   ===================================================== */
+
+.card,
+.card-energia {
+    background-color: var(--fundo-card);
+    border: 1px solid var(--borda-suave);
+    border-radius: var(--raio-card);
+    padding: 30px 26px;
+    transition: 0.3s;
+}
+
+.secao-branca .card {
+    background-color: var(--tema-claro);
+    border-color: var(--tema-borda);
+}
+
+.card h3 {
+    margin-top: 12px;
+}
+
+.card p {
+    font-size: var(--tamanho-medio);
+    margin-bottom: 0;
+}
+
+/* Cards da home sobem um pouco ao passar o mouse */
+.card-energia:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px var(--preto-08);
+}
+
+.icone-energia {
+    font-size: 38px;
+}
+
+.card-energia h3 {
+    color: var(--verde);
+    font-size: 22px;
+    margin: 20px 0 12px;
+}
+
+.card-energia p {
+    color: var(--texto-card);
+    font-size: var(--tamanho-reduzido);
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.card-energia a {
+    color: var(--verde);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card-energia a:hover {
+    text-decoration: underline;
+}
+
+.card-icone {
+    font-size: 34px;
+    line-height: 1;
+}
+
+/* Cards da home (seção de fontes) */
+.fontes {
+    background-color: var(--branco);
+    padding: var(--espaco-secao-grande-celular) 0; /* celular; tablet e computador: var(--espaco-secao-grande) (seção 17) */
+}
+
+.fontes-titulo {
+    text-align: center;
+    max-width: var(--largura-intro);
+    margin: 0 auto 45px;
+}
+
+.fontes-titulo span {
+    color: var(--verde);
+    font-size: var(--tamanho-legenda);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.fontes-titulo h2 {
+    color: var(--texto-titulo);
+    font-size: 27px; /* celular; tablet e computador: 34px (seção 17) */
+    margin: 15px 0;
+}
+
+.fontes-titulo p {
+    color: var(--texto-card);
+    font-size: var(--tamanho-medio);
+    line-height: 1.6;
+}
+
+.fontes-cards {
+    display: grid;
+    grid-template-columns: 1fr; /* celular; tablet e computador: 3 colunas (seção 17) */
+    gap: var(--espaco-grade);
+}
+
+/* Seção "perguntas do dono de sítio" (home) */
+.perguntas {
+    padding: var(--espaco-secao-grande-celular) 0; /* celular; tablet e computador: var(--espaco-secao-grande) (seção 17) */
+}
+
+.perguntas-grade {
+    display: grid;
+    grid-template-columns: 1fr; /* celular; tablet: 2 colunas; computador: 4 colunas (seção 17) */
+    gap: var(--espaco-grade);
+    margin-top: 40px;
+}
+
+.pergunta {
+    background-color: var(--branco);
+    border-left: 5px solid var(--verde);
+    border-radius: var(--raio-medio);
+    padding: 22px 22px 24px;
+    box-shadow: 0 4px 16px var(--preto-04);
+}
+
+.pergunta h3 {
+    color: var(--verde);
+    font-size: var(--tamanho-destaque);
+    margin-bottom: 8px;
+}
+
+.pergunta p {
+    color: var(--texto-suave);
+    font-size: var(--tamanho-reduzido);
+}
+
+
+/* =====================================================
+   9. PASSOS, TABELAS E CAIXAS DE DESTAQUE
+   ===================================================== */
+
+/* Lista numerada de montagem (a ordem importa) */
+.passos {
+    list-style: none;
+    counter-reset: passo;
+    max-width: var(--largura-caixa);
+}
+
+.passos li {
+    counter-increment: passo;
+    position: relative;
+    padding: 4px 0 22px 62px;
+    color: var(--texto-corpo);
+    font-size: var(--tamanho-texto);
+}
+
+.passos li::before {
+    content: counter(passo);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--tema);
+    color: var(--branco);
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Linha que liga um passo ao próximo */
+.passos li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 44px;
+    bottom: 2px;
+    width: 2px;
+    background-color: var(--tema-borda);
+}
+
+.passos strong {
+    display: block;
+    color: var(--texto);
+    font-size: var(--tamanho-destaque);
+    margin-bottom: 2px;
+}
+
+/* Tabelas (rolam para o lado no celular) */
+.tabela-rolagem {
+    overflow-x: auto;
+    border: 1px solid var(--tema-borda);
+    border-radius: var(--raio-caixa);
+    background-color: var(--branco);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--tamanho-medio);
+}
+
+caption {
+    text-align: left;
+    padding: 14px 18px;
+    font-weight: bold;
+    color: var(--tema);
+}
+
+th,
+td {
+    padding: 14px 18px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid var(--tema-borda);
+    color: var(--texto-corpo);
+}
+
+th {
+    background-color: var(--tema-claro);
+    color: var(--texto);
+}
+
+/* Caixas de destaque: dica (cor do tema) e atenção (amarelo) */
+.caixa {
+    max-width: var(--largura-caixa);
+    margin: 26px 0 6px;
+    padding: 20px 24px;
+    border-radius: var(--raio-caixa);
+    border-left: 6px solid var(--tema);
+    background-color: var(--tema-claro);
+}
+
+.caixa p {
+    margin-bottom: 0;
+    font-size: var(--tamanho-medio);
+}
+
+.caixa strong {
+    color: var(--texto);
+}
+
+.caixa-atencao {
+    border-left-color: var(--amarelo);
+    background-color: var(--amarelo-claro);
+}
+
+/* Fórmula / exemplo de cálculo */
+.exemplo {
+    max-width: var(--largura-caixa);
+    margin: 20px 0;
+    padding: 18px 24px;
+    background-color: var(--branco);
+    border: 2px dashed var(--tema-borda);
+    border-radius: var(--raio-caixa);
+    font-size: var(--tamanho-texto);
+    color: var(--texto);
+}
+
+
+/* =====================================================
+   10. CHAMADA PARA AÇÃO E NAVEGAÇÃO ENTRE PÁGINAS
+   ===================================================== */
+
+.chamada {
+    background-color: var(--tema);
+    color: var(--branco);
+    padding: 54px 0;
+    text-align: center;
+}
+
+.chamada h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.chamada p {
+    max-width: 640px;
+    margin: 0 auto 24px;
+    font-size: var(--tamanho-texto);
+}
+
+.chamada .botao {
+    background-color: var(--branco);
+    color: var(--tema);
+}
+
+.chamada .botao:hover {
+    background-color: var(--fundo);
+}
+
+/* Anterior / Próxima página */
+.nav-paginas {
+    display: flex;
+    flex-direction: column; /* celular; tablet e computador: row (seção 17) */
+    justify-content: space-between;
+    gap: 20px;
+    padding: 34px 0 50px;
+}
+
+.nav-paginas a {
+    flex: 1;
+    max-width: 100%; /* celular; tablet e computador: 48% (seção 17) */
+    padding: 18px 22px;
+    background-color: var(--branco);
+    border: 1px solid var(--tema-borda);
+    border-radius: var(--raio-caixa);
+    color: var(--tema);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-paginas a:hover {
+    box-shadow: 0 8px 22px var(--preto-08);
+}
+
+.nav-paginas small {
+    display: block;
+    color: var(--texto-suave);
+    font-weight: normal;
+    font-size: var(--tamanho-legenda);
+}
+
+.nav-paginas .proxima {
+    text-align: right;
+    margin-left: auto;
+}
+
+
+/* =====================================================
+   11. CALCULADORA DE POTÊNCIA (HIDRÁULICA)
+   ===================================================== */
+
+.calculadora {
+    max-width: var(--largura-caixa);
+    padding: 28px;
+    background-color: var(--branco);
+    border: 2px solid var(--tema-borda);
+    border-radius: var(--raio-card);
+}
+
+.calculadora-campos {
+    display: grid;
+    grid-template-columns: 1fr; /* celular; tablet e computador: 3 colunas (seção 17) */
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.calculadora-resultado {
+    margin-top: 22px;
+    padding: 18px 22px;
+    background-color: var(--tema-claro);
+    border-radius: var(--raio-medio);
+    font-size: var(--tamanho-texto);
+    color: var(--texto);
+}
+
+.calculadora-resultado strong {
+    color: var(--tema);
+    font-size: 24px;
+}
+
+
+/* =====================================================
+   12. NOTÍCIAS E FILTROS
+   ===================================================== */
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 26px;
+}
+
+.filtro {
+    padding: 10px 20px;
+    background-color: var(--branco);
+    color: var(--verde);
+    border: 2px solid var(--verde);
+    border-radius: 30px;
+    font-size: var(--tamanho-reduzido);
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtro:hover {
+    background-color: var(--verde-claro);
+}
+
+/* Botão do filtro que está ativo */
+.filtro[aria-pressed="true"] {
+    background-color: var(--verde);
+    color: var(--branco);
+}
+
+.filtro-status {
+    margin-bottom: 20px;
+    color: var(--texto-suave);
+    font-size: var(--tamanho-reduzido);
+}
+
+.noticia {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--branco);
+    border: 1px solid var(--borda-suave);
+    border-radius: var(--raio-card);
+    padding: 26px;
+    border-top: 6px solid var(--verde);
+}
+
+.noticia[data-categoria="solar"] {
+    border-top-color: var(--amarelo);
+}
+
+.noticia[data-categoria="eolica"] {
+    border-top-color: var(--cinza-azulado);
+}
+
+.noticia[data-categoria="hidrica"] {
+    border-top-color: var(--azul);
+}
+
+.noticia-tag {
+    align-self: flex-start;
+    padding: 3px 12px;
+    margin-bottom: 14px;
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+    border-radius: 20px;
+    font-size: var(--tamanho-legenda);
+    font-weight: bold;
+}
+
+.noticia h3 {
+    font-size: 19px;
+    margin: 0 0 10px;
+}
+
+.noticia p {
+    flex: 1;
+    font-size: var(--tamanho-reduzido);
+    color: var(--texto-suave);
+}
+
+.noticia a {
+    color: var(--verde);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.noticia a:hover {
+    text-decoration: underline;
+}
+
+/* --- Fase 3 (16/11/2026): imagem, vídeo, fonte e crédito nos cards de notícia --- */
+
+/* Imagem do card com o crédito logo abaixo (figure + figcaption) */
+.noticia-figura {
+    margin: 0 0 16px;
+}
+
+/* aspect-ratio + object-fit deixam todas as imagens com a mesma altura,
+   cortando as bordas em vez de esticar a foto */
+.noticia-figura img,
+.noticia-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 0;
+    border-radius: var(--raio-medio);
+}
+
+.noticia-video {
+    margin-bottom: 16px;
+}
+
+/* Linha "Notícia · Veículo · Data" ou "Texto da equipe".
+   flex: none impede que estas linhas estiquem como o resumo (.noticia p tem flex: 1) */
+.noticia .noticia-fonte {
+    flex: none;
+    margin: 0 0 10px;
+    font-size: var(--tamanho-pequeno);
+    color: var(--texto-suave);
+}
+
+/* Crédito da imagem: autor, ano e licença */
+.noticia .noticia-credito {
+    margin-top: 6px;
+    font-size: var(--tamanho-minimo);
+    line-height: 1.4;
+    color: var(--texto-suave);
+}
+
+/* Os links do crédito não precisam do destaque em negrito dos links "Ler a notícia" */
+.noticia .noticia-credito a {
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+/* O atributo hidden precisa vencer o display dos cards */
+[hidden] {
+    display: none !important;
+}
+
+
+/* =====================================================
+   13. QUEM SOMOS (EQUIPE)
+   ===================================================== */
+
+.equipe {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* celular; tablet: 3 colunas; computador: 5 colunas (seção 17) */
+    gap: 20px;
+    list-style: none;
+}
+
+.integrante {
+    text-align: center;
+    padding: 26px 14px;
+    background-color: var(--branco);
+    border: 1px solid var(--borda-suave);
+    border-radius: var(--raio-card);
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 14px;
+    background-color: var(--verde);
+    color: var(--branco);
+    border-radius: 50%;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.integrante:nth-child(2n) .avatar {
+    background-color: var(--azul);
+}
+
+.integrante:nth-child(3n) .avatar {
+    background-color: var(--ocre);
+}
+
+.integrante strong {
+    display: block;
+    font-size: var(--tamanho-medio);
+    line-height: 1.35;
+}
+
+.integrante span {
+    font-size: var(--tamanho-pequeno);
+    color: var(--texto-suave);
+}
+
+.ods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.ods li {
+    padding: 8px 16px;
+    background-color: var(--branco);
+    border: 1px solid var(--borda-suave);
+    border-radius: var(--raio-pequeno);
+    font-size: var(--tamanho-reduzido);
+    color: var(--texto);
+}
+
+
+/* =====================================================
+   14. FORMULÁRIO DE CONTATO
+   ===================================================== */
+
+.contato-layout {
+    display: grid;
+    grid-template-columns: 1fr; /* celular; tablet e computador: 1.4fr 1fr (seção 17) */
+    gap: 36px;
+    align-items: start;
+}
+
+form {
+    padding: 22px 18px; /* celular; tablet e computador: 30px (seção 17) */
+    background-color: var(--branco);
+    border: 1px solid var(--borda-suave);
+    border-radius: var(--raio-card);
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: var(--tamanho-reduzido);
+    color: var(--texto);
+}
+
+.opcional,
+.obrigatorio {
+    font-weight: normal;
+    font-size: var(--tamanho-legenda);
+    color: var(--texto-suave);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: var(--tamanho-medio);
+    color: var(--texto);
+    background-color: var(--branco);
+    border: 2px solid var(--borda-campo);
+    border-radius: var(--raio-pequeno);
+}
+
+.campo textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 3px solid var(--amarelo);
+    outline-offset: 2px;
+    border-color: var(--verde);
+}
+
+/* Campo com erro: borda vermelha em destaque */
+.campo .invalido {
+    border-color: var(--erro);
+    background-color: var(--erro-claro);
+}
+
+.erro-msg {
+    display: block;
+    min-height: 0;
+    margin-top: 6px;
+    color: var(--erro);
+    font-size: var(--tamanho-pequeno);
+    font-weight: bold;
+}
+
+.resumo-erros {
+    margin-bottom: 22px;
+    padding: 14px 18px;
+    background-color: var(--erro-claro);
+    border: 2px solid var(--erro);
+    border-radius: var(--raio-medio);
+    color: var(--erro-escuro);
+    font-size: var(--tamanho-reduzido);
+}
+
+.form-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.rascunho-aviso {
+    margin-bottom: 18px;
+    padding: 10px 14px;
+    background-color: var(--azul-claro);
+    border-radius: var(--raio-pequeno);
+    font-size: var(--tamanho-pequeno);
+    color: var(--azul-escuro);
+}
+
+/* Resultado do diagnóstico (aparece depois de enviar) */
+.resultado {
+    margin-bottom: 26px;
+    padding: 26px;
+    background-color: var(--verde-claro);
+    border: 2px solid var(--verde);
+    border-radius: var(--raio-card);
+}
+
+.resultado h2 {
+    color: var(--verde);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.resultado p {
+    margin-bottom: 12px;
+}
+
+.resultado .nota {
+    font-size: var(--tamanho-pequeno);
+    color: var(--texto-suave);
+}
+
+.resultado-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 14px 0 12px;
+}
+
+
+/* =====================================================
+   15. RODAPÉ
+   ===================================================== */
+
 footer {
     text-align: center;
     padding: 30px;
-    background-color: #343f49;
-    color: #ffffff;
-    font-size: 13px;
+    background-color: var(--cinza-azulado);
+    color: var(--branco);
+    font-size: var(--tamanho-legenda);
+}
+
+footer nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 24px;
+    list-style: none;
+    margin-bottom: 14px;
+}
+
+footer nav a {
+    color: var(--branco);
+    font-size: var(--tamanho-pequeno);
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   16. ACESSIBILIDADE
+   ===================================================== */
+
+/* Modo ALTO CONTRASTE (Fase 7, 16/11/2026): ligado pelo botão do cabeçalho,
+   que põe a classe "alto-contraste" no <html> (bloco 6 do main.js).
+   Fundo preto, texto branco e links/botões amarelos (contraste 21:1 e 14,9:1).
+   O !important é necessário aqui para vencer as cores de todos os componentes
+   do site de uma vez, sem repetir cada regra. As imagens não mudam. */
+/* :where() deixa esta regra geral com especificidade baixa, para as regras
+   de links e botões logo abaixo (que vêm depois) conseguirem trocar a cor. */
+html.alto-contraste :where(body, body *:not(img):not(iframe)) {
+    background-color: var(--contraste-fundo) !important;
+    background-image: none !important;
+    color: var(--contraste-texto) !important;
+    border-color: var(--contraste-texto) !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+html.alto-contraste a,
+html.alto-contraste a *,
+html.alto-contraste button,
+html.alto-contraste button *,
+html.alto-contraste .botao {
+    color: var(--contraste-destaque) !important;
+    border-color: var(--contraste-destaque) !important;
+}
+
+html.alto-contraste a {
+    text-decoration: underline !important;
+}
+
+/* Botões com borda, para não parecerem um link comum */
+html.alto-contraste .botao {
+    border: 2px solid var(--contraste-destaque) !important;
+}
+
+/* Sem animação de cor: a troca de modo é imediata */
+html.alto-contraste * {
+    transition: none !important;
+}
+
+/* As 3 linhas do botão hambúrguer são desenhadas com fundo, então ficam amarelas */
+html.alto-contraste .botao-menu span {
+    background-color: var(--contraste-destaque) !important;
+}
+
+html.alto-contraste :focus-visible {
+    outline: 3px solid var(--contraste-destaque) !important;
+    outline-offset: 3px;
+}
+
+/* Botão ligado: amarelo com texto preto, para mostrar que o modo está ativo */
+html.alto-contraste .botao-contraste[aria-pressed="true"] {
+    background-color: var(--contraste-destaque) !important;
+}
+
+html.alto-contraste .botao-contraste[aria-pressed="true"],
+html.alto-contraste .botao-contraste[aria-pressed="true"] * {
+    color: var(--contraste-fundo) !important;
+}
+
+/* Contorno visível ao navegar com o teclado (Tab) */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--amarelo);
+    outline-offset: 4px;
+}
+
+/* No fundo escuro o contorno amarelo continua visível */
+.menu-lateral a:focus-visible,
+.menu-lateral button:focus-visible,
+.chamada a:focus-visible {
+    outline-color: var(--foco-menu);
+}
+
+/* Respeita quem prefere menos animações */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .menu-lateral,
+    .menu-fundo,
+    .card-energia,
+    .botao {
+        transition: none;
+    }
+}
+
+
+/* =====================================================
+   17. RESPONSIVIDADE (Mobile First: tablet e computador)
+   ===================================================== */
+
+/* Mobile First (Fase 5, 16/11/2026): as regras lá de cima já são as do celular.
+   Os blocos abaixo só acrescentam o que muda em telas maiores.
+   - min-width: 769px  -> tablet e computador (era o que ficava fora do antigo "max-width: 768px")
+   - min-width: 1001px -> computador (era o que ficava fora do antigo "max-width: 1000px")
+   O bloco de 1001px vem depois, para vencer o de 769px quando os dois valem. */
+
+@media (min-width: 769px) {
+
+    /* O menu horizontal aparece; no celular ele fica escondido */
+    header nav {
+        display: block;
+    }
+
+    .hero-content {
+        flex-direction: row;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero-image img {
+        height: 380px;
+    }
+
+    .fontes-cards,
+    .grade-3,
+    .calculadora-campos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grade-2,
+    .perguntas-grade {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contato-layout {
+        grid-template-columns: 1.4fr 1fr;
+    }
+
+    .equipe {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fontes-titulo h2 {
+        font-size: 34px;
+    }
+
+    .fontes,
+    .perguntas {
+        padding: var(--espaco-secao-grande) 0;
+    }
+
+    .secao {
+        padding: var(--espaco-secao) 0;
+    }
+
+    .secao h2 {
+        font-size: 30px;
+    }
+
+    .pagina-topo-conteudo {
+        flex-direction: row;
+        align-items: center;
+        gap: 36px;
+    }
+
+    .pagina-icone {
+        width: 120px;
+        height: 120px;
+        font-size: 58px;
+    }
+
+    .pagina-topo h1 {
+        font-size: 38px;
+    }
+
+    .pagina-topo p {
+        font-size: var(--tamanho-destaque);
+    }
+
+    .nav-paginas {
+        flex-direction: row;
+    }
+
+    .nav-paginas a {
+        max-width: 48%;
+    }
+
+    form {
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1001px) {
+    .perguntas-grade {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .equipe {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+
+/* =====================================================
+   18. SEÇÕES NOVAS: NO SÍTIO, COMPARAÇÃO, REFERÊNCIAS
+       E PENDÊNCIAS PARA O EDITOR
+   Adicionado em 15/11/2026 para as seções 7, 8 e 9 das
+   páginas Solar Fotovoltaica, Solar Térmica e Hidráulica
+   (Funcionamento e Impactos). Nada acima desta linha foi
+   alterado, exceto o item 18 no índice do topo.
+   (Depois, as Fases 3 e 4, em 16/11/2026, mexeram nas seções 5 e 12;
+   veja docs/logs-de-mudanca/.)
+   Classes novas usadas no HTML:
+   - ol.lista .......... listas numeradas de conteúdo
+   - .caixa-risco ...... avisos de risco, sempre visíveis; usada junto
+                         com .caixa (class="caixa caixa-risco")
+   Retiradas na Fase 4 (16/11/2026), porque repetiam classes que já existiam:
+   - .subtitulo ........ agora é um h3 comum (estilo ".secao h3")
+   - .comparacao-texto . agora é .texto-coluna
+   - .item-risco ....... um risco destacado no meio de uma lista
+   - .card-comparacao .. cartões da seção 8
+   - .ver-tambem ....... linha "Veja também as páginas"
+   - .referencias ...... seção 9, formato ABNT
+   - .pendencia ........ etiqueta "Pendente: ..." do documento
+   - .so-revisao ....... só aparece com ?revisao no endereço
+   ===================================================== */
+
+/* Subtítulos (h3) dentro de uma seção longa.
+   Fase 4 (16/11/2026): a classe .subtitulo foi retirada do HTML, porque o h3 já usa o estilo
+   de ".secao h3" (seção 7). Esta regra não cria classe nova: ela só dá um espaço maior ao h3
+   que vem logo depois de uma lista, para separar bem um assunto do outro. */
+.secao .lista + h3 {
+    margin-top: 34px;
+}
+
+/* Listas numeradas e listas dentro de listas */
+.secao ol.lista {
+    margin: 0 0 16px 24px;
+    color: var(--texto-corpo);
+    font-size: var(--tamanho-medio); /* celular; tablet e computador: var(--tamanho-texto) (fim da seção 18) */
+    max-width: var(--largura-lista);
+}
+
+.secao ol.lista > li {
+    margin-bottom: 10px;
+    padding-left: 4px;
+}
+
+.secao ul.lista {
+    max-width: var(--largura-lista);
+}
+
+.secao .lista .lista {
+    margin: 8px 0 4px 22px;
+}
+
+.secao .lista .lista li {
+    margin-bottom: 6px;
+}
+
+/* Parágrafos com rótulo em negrito (ex.: "Guardar água...") */
+.texto-coluna p strong:first-child {
+    color: var(--texto);
+}
+
+/* Caixa de riscos: sempre visível e em destaque.
+   Fase 4 (16/11/2026): agora é uma variação da .caixa, do mesmo jeito que a .caixa-atencao
+   (no HTML: class="caixa caixa-risco"). Tamanho, cantos e espaçamento vêm da .caixa (seção 9);
+   aqui fica só o que é próprio do risco. Ela é vermelha, e não amarela como a de atenção,
+   porque avisa de perigo para a pessoa (choque, queda, incêndio). */
+.caixa-risco {
+    border-left-color: var(--erro);
+    background-color: var(--erro-claro);
+    padding-bottom: 8px; /* a lista de dentro já tem margem embaixo */
+}
+
+.secao .caixa-risco h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 12px;
+    color: var(--erro-escuro);
+}
+
+.secao .caixa-risco .lista {
+    color: var(--texto);
+}
+
+.caixa-risco p {
+    color: var(--texto);
+}
+
+/* Item de risco no meio de uma lista comum */
+.secao .lista li.item-risco {
+    list-style: none;
+    margin-left: -22px;
+    padding: 12px 16px;
+    border-left: 6px solid var(--erro);
+    border-radius: var(--raio-pequeno);
+    background-color: var(--erro-claro);
+    color: var(--texto);
+}
+
+/* Texto depois dos cartões da comparação (seção 8).
+   Fase 4 (16/11/2026): a classe .comparacao-texto foi trocada por .texto-coluna, que já existia.
+   Esta regra só mantém o espaço entre a grade de cartões e o texto. */
+.secao .grade-3 + .texto-coluna {
+    margin-top: 26px;
+}
+
+.ver-tambem {
+    max-width: var(--largura-lista);
+    margin-top: 10px;
+    padding-top: 16px;
+    border-top: 1px solid var(--tema-borda);
+}
+
+.ver-tambem a,
+.secao .texto-coluna a,
+.secao .lista a,
+.secao .caixa a {
+    color: var(--tema);
+    font-weight: bold;
+}
+
+.ver-tambem a[aria-current="page"] {
+    color: var(--texto);
+    text-decoration: none;
+}
+
+/* Referências no formato ABNT */
+.referencias {
+    max-width: 900px;
+}
+
+.secao .referencias h3 {
+    margin: 30px 0 10px;
+    font-size: var(--tamanho-texto);
+    font-style: italic;
+    font-weight: normal;
+    color: var(--texto-suave);
+}
+
+.secao .referencias h3:first-child {
+    margin-top: 6px;
+}
+
+.lista-referencias {
+    list-style: none;
+}
+
+.lista-referencias li {
+    margin-bottom: 14px;
+    font-size: var(--tamanho-reduzido);
+    line-height: 1.55;
+    color: var(--texto-corpo);
+    overflow-wrap: anywhere; /* links longos quebram no celular */
+}
+
+.lista-referencias a {
+    color: var(--tema);
+}
+
+/* Pendência ([confirmar], [completar]...): discreta, mas visível */
+.pendencia {
+    padding: 1px 7px;
+    border: 1px dashed var(--amarelo);
+    border-radius: var(--raio-minimo);
+    background-color: var(--pendencia-fundo);
+    color: var(--pendencia-texto);
+    font-size: 0.8em;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.pendencia b {
+    font-weight: bold;
+}
+
+/* Modo revisão: trechos que não vão ao ar sem fonte.
+   Ficam escondidos do público; aparecem com ?revisao no endereço. */
+body:not(.modo-revisao) .so-revisao {
+    display: none !important;
+}
+
+body.modo-revisao .so-revisao {
+    outline: 2px dashed var(--erro);
+    outline-offset: 3px;
+    background-color: var(--erro-claro);
+}
+
+body.modo-revisao::after {
+    content: "Modo revisão: os trechos com contorno vermelho não aparecem para o público.";
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 300;
+    padding: 10px 16px;
+    background-color: var(--erro);
+    color: var(--branco);
+    font-size: var(--tamanho-pequeno);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Mobile First (Fase 5): no celular as listas usam --tamanho-medio (regras acima);
+   em telas maiores voltam ao tamanho do texto. (Na Fase 4 saiu daqui o ajuste da .caixa-risco.) */
+@media (min-width: 769px) {
+    .secao ol.lista,
+    .secao ul.lista {
+        font-size: var(--tamanho-texto);
+    }
+}
+
+/* Cartões da comparação: o rótulo em negrito faz papel de título */
+.card-comparacao strong:first-child {
+    display: block;
+    margin: 12px 0 6px;
+    color: var(--texto);
+    font-size: 20px;
 }

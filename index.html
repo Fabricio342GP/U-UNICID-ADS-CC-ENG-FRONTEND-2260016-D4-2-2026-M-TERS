@@ -1,88 +1,246 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TERS</title>
-    <link rel="stylesheet" href="css/style.CSS">
+    <meta name="description" content="Conheça soluções de energia renovável para sítios e fazendas e descubra como contribuir para um futuro mais sustentável.">
+
+    <title>Energia Renovável Sustentável | TERS</title>
+
+    <!-- Folha de estilos e JavaScript compartilhados por todas as páginas -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <header class="caixatex">
-        <h1>Seja Bem-vindos à TERS</h1>
-        <p class="subtitulo"> 
-            Aqui mostraremos como funciona as energia renováveis e seus impactos no meio ambiente.
-        </p>
+
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ================= CABEÇALHO ================= -->
+    <header>
+        <div class="container">
+
+            <!-- Botão hambúrguer + logo -->
+            <div class="header-esquerda">
+                <button class="botao-menu" id="botao-menu" type="button"
+                        aria-label="Abrir menu de energias"
+                        aria-controls="menu-lateral"
+                        aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">TERS</a>
+            </div>
+
+            <!-- Menu horizontal (telas grandes) -->
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Início</a></li>
+                    <li><a href="sobre.html">Quem somos</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Fase 7 (16/11/2026): botão de alto contraste (regra de acessibilidade).
+                 O main.js liga/desliga a classe "alto-contraste" no <html> e lembra a escolha. -->
+            <button class="botao-contraste" id="botao-contraste" type="button" aria-pressed="false">
+                <span aria-hidden="true">◐</span> Alto contraste
+            </button>
+
+        </div>
     </header>
 
-    <nav class="menu-navegacao"> <!-- Usamos a nav aqui para a navegação-->
-        <div id="eolica" class="vento">
-            <h3><a href="#secao-eolica">Energia Eólica</a></h3>
-        </div>
-        <div id="hidraulica" class="gota">
-            <h3><a href="#secao-hidraulica">Energia Hidraúlica</a></h3>
-        </div>
-        <div id="solar" class="caixa">
-            <h3><a href="#secao-solar">Energia Solar</a></h3>
-        </div>
-    </nav>
-    <main> <!-- <-- Main aqui está abraçando todo principal conteudo-->
-        <section id="secao-eolica" class="container-energia"> <!-- Para organizar abrimos uma seção para cada container, essa é a sessão eólica-->
-            <a href="colocar um link aqui depois" target="_blank">
-            <img src="https://s3.static.brasilescola.uol.com.br/be/2021/09/energia-eolica.jpg" alt="[Imagem Turbina Eólica]">
-            </a>
+    <!-- ================= MENU LATERAL ================= -->
+    <!-- Fundo escuro: ao clicar, fecha o menu -->
+    <div class="menu-fundo" id="menu-fundo"></div>
 
-            <div class="bloco_texto_eolica">
-                <h2>Energia Eólica</h2>
-                <p>
-                    A energia eólica refere-se à conversão do vento em energia cinética e, posteriormente, em eletricidade por meio de dispositivos chamados aerogeradores ou turbinas eólicas. Nesse processo, a força das massas de ar movimenta grandes lâminas aerodinâmicas, cujo movimento mecânico é transformado em corrente elétrica ao ativar um gerador interno.
-                </p>
-                <p>
-                    Curiosamente, a energia eólica provém indiretamente da energia solar, pois a absorção irregular do calor do sol provoca mudanças de temperatura e pressão na atmosfera, resultando na formação dos ventos. O ser humano emprega essa força desde a antiguidade em métodos tradicionais, como o bombeamento de água, a moagem de cereais e a movimentação de barcos a vela.
-                </p>
-                <p>
-                    Para a produção em larga escala, diversas turbinas são posicionadas em locais estrategicamente selecionados, chamados de parques eólicos, levando em consideração a constância e a velocidade dos ventos na área. Devido ao seu caráter sustentável, a ONU (Organização das Nações Unidas) categoriza essa tecnologia como um Mecanismo de Desenvolvimento Limpo (MDL).
-                </p>
-                <p>
-                    Por fim, a organização a enfatiza como uma das grandes prioridades para investimentos globais voltados a promover a denominada economia verde. Trata-se de uma alternativa limpa e renovável indispensável para o futuro energético do planeta.
-                </p>
+    <aside class="menu-lateral" id="menu-lateral" aria-label="Menu de energias">
+        <div class="menu-topo">
+            <span class="menu-logo">TERS</span>
+            <button class="menu-fechar" id="menu-fechar" type="button" aria-label="Fechar menu">✕</button>
+        </div>
+
+        <nav aria-label="Páginas de energia">
+                <p class="menu-grupo-titulo" id="grupo-solar">ENERGIA SOLAR</p>
+                <ul aria-labelledby="grupo-solar">
+                    <li><a href="solar-fotovoltaica.html"><span aria-hidden="true">☀️</span> Fotovoltaica</a></li>
+                    <li><a href="solar-termica.html"><span aria-hidden="true">🚿</span> Térmica</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-eolica">ENERGIA EÓLICA</p>
+                <ul aria-labelledby="grupo-eolica">
+                    <li><a href="eolica-residencial.html"><span aria-hidden="true">🌬️</span> Residencial</a></li>
+                    <li><a href="eolica-grandes-parques.html"><span aria-hidden="true">🏞️</span> Grandes parques</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-hidraulica">ENERGIA HIDRÁULICA</p>
+                <ul aria-labelledby="grupo-hidraulica">
+                    <li><a href="hidraulica-funcionamento.html"><span aria-hidden="true">💧</span> Funcionamento</a></li>
+                    <li><a href="hidraulica-impactos.html"><span aria-hidden="true">🌿</span> Impactos</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-mais">MAIS</p>
+                <ul aria-labelledby="grupo-mais">
+                    <li><a href="noticias.html"><span aria-hidden="true">📰</span> Notícias e Eco-Inovação</a></li>
+                    <li><a href="contato.html"><span aria-hidden="true">✉️</span> Contato e Diagnóstico</a></li>
+                </ul>
+        </nav>
+    </aside>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main id="conteudo" tabindex="-1">
+        <!-- Banner principal -->
+        <section class="hero">
+            <div class="container hero-content">
+
+                <!-- Texto do banner -->
+                <div class="hero-text">
+                    <span class="destaque">ENERGIA PARA O FUTURO</span>
+
+                    <h1>Seu futuro mais sustentável começa com energia renovável.</h1>
+
+                    <p>
+                        Descubra como as fontes de energia limpa podem
+                        transformar nosso dia a dia e contribuir para
+                        um planeta mais sustentável.
+                    </p>
+
+                    <a href="#fontes" class="botao">Conheça nossas soluções</a>
+                </div>
+
+                <!-- Imagem do banner -->
+                <!-- Crédito da imagem (regra: indicar a fonte de toda imagem) e alt descritivo.
+                     16/11/2026: autor, ano e licença continuam sem resposta. A pedido do usuário, o aviso
+                     saiu da vista do público e só aparece no modo revisão (?revisao no endereço).
+                     Sem licença, a foto pode ser protegida: a saída é pedir a licença ao Canal Bioenergia
+                     ou trocar por uma foto de licença livre (veja o log de 16/11/2026). -->
+                <div class="hero-image">
+                    <img
+                        src="https://canalbioenergia.com.br/wp-content/uploads/energia_renovavel.jpg"
+                        alt="Fileiras de painéis solares num campo verde, com turbinas eólicas ao fundo e o sol se pondo.">
+                    <p class="hero-credito">Imagem: <a href="https://canalbioenergia.com.br/">Canal Bioenergia</a>. <span class="pendencia so-revisao"><b>Pendente:</b> autor, ano e licença da imagem</span></p>
+                </div>
+
             </div>
         </section>
-        <section id="secao-hidraulica" class="container-energia"> <!--Sessão hidraulica-->
-            <img src="https://s4.static.brasilescola.uol.com.br/be/2021/09/usinas-hidreletricas.jpg" alt="[Usina_Hidraulica">
-            <div class="bloco_texto_hidraulica">
-                <h2>Energia hidraulica</h2>
-                <p>
-                    A energia gerada pela movimentação da água é a energia hidrelétrica. Essa energia é gerada através da utilização da energia potencial da água. Também conhecida como hidroeletricidade, é conseguida por meio de diversas transformações energéticas nas quais a energia potencial é transformada em cinética e, posteriormente, em eletricidade.
-                </p>
-                <p>
-                    A energia potencial está relacionada à massa e à altura, portanto, a hidroeletricidade depende de grandes volumes de água e da altura de queda ou desnível. Para isso, são erguidas represas em rios, que retêm e preservam a água.
-                </p>
-                <p>
-                    A transformação para energia elétrica ocorre nas turbinas que se movem ao receber água despejada por comportas. A energia cinética da água em queda faz girar as turbinas associadas a geradores elétricos, que aproveitam essa rotação para gerar energia elétrica.
-                </p>
-                <p>
-                    Reconhecida como uma fonte de energia renovável, depende do ciclo da água, que é potencializado pela energia solar, por meio da evaporação, condensação e precipitação da água. Entretanto, por conta de as barragens formarem reservatórios, elas conseguem oferecer energia de maneira constante, inclusive em épocas de seca.
-                </p>
+
+        <!-- Fontes de energia -->
+        <section class="fontes" id="fontes">
+            <div class="container">
+
+                <!-- Título da seção -->
+                <div class="fontes-titulo">
+                    <span>ENERGIA LIMPA PARA VOCÊ</span>
+                    <h2>Conheça as fontes de energia renovável</h2>
+                    <p>
+                        Descubra como diferentes fontes naturais podem
+                        gerar energia e contribuir para seu futuro sustentável.
+                    </p>
+                </div>
+
+                <!-- Cards -->
+                <div class="fontes-cards">
+
+                    <!-- Energia solar -->
+                    <div class="card-energia">
+                        <span class="icone-energia" aria-hidden="true">☀️</span>
+                        <h3>Energia Solar</h3>
+                        <p>
+                            Aproveita a luz e o calor do sol para produzir
+                            eletricidade ou aquecer água.
+                        </p>
+                        <a href="solar-fotovoltaica.html">Conheça mais →</a>
+                    </div>
+
+                    <!-- Energia eólica -->
+                    <div class="card-energia">
+                        <span class="icone-energia" aria-hidden="true">🌬️</span>
+                        <h3>Energia Eólica</h3>
+                        <p>
+                            Utiliza a força dos ventos para movimentar
+                            turbinas e gerar eletricidade.
+                        </p>
+                        <a href="eolica-residencial.html">Conheça mais →</a>
+                    </div>
+
+                    <!-- Energia hidráulica -->
+                    <div class="card-energia">
+                        <span class="icone-energia" aria-hidden="true">💧</span>
+                        <h3>Energia Hidráulica</h3>
+                        <p>
+                            Utiliza a movimentação da água para produzir
+                            energia elétrica.
+                        </p>
+                        <a href="hidraulica-funcionamento.html">Conheça mais →</a>
+                    </div>
+
+                </div>
             </div>
         </section>
-        <section id="secao-solar" class="container-energia"> <!-- Sessão solar -->
-            <img src="https://www.enelx.com/content/dam/local-brazil/conteudos/energia-solar-foto-desktop.png" alt="[Usina_solar]">
-            <div class="bloco_texto_solar">
-                <h2>Energia Solar</h2>
-                <p>
-                    A energia solar refere-se à transformação da radiação emitida pelo Sol em eletricidade ou calor. Esse método de geração energética destaca-se por ser totalmente sustentável, ecológico e infinito, características que transformaram o recurso em uma das principais opções alternativas em comparação ao uso dos combustíveis fósseis.
-                </p>
-                <p>
-                    Empregada tanto como fonte direta de eletricidade quanto para o aquecimento de água (energia térmica), sua utilização tem se tornado cada vez mais comum em nossas rotinas. Esse avanço acontece à medida que o desenvolvimento de novas tecnologias torna os painéis solares mais eficientes e financeiramente acessíveis para residências e indústrias.
-                </p>
-                <p>
-                    Tal como a energia eólica, a energia solar se consolidou como uma das fontes limpas de geração que mais se expande globalmente. Ela representa um pilar fundamental para a transição rumo a uma matriz energética mundial mais limpa e renovável.
-                </p>
+
+        <!-- Perguntas de quem tem sítio ou fazenda -->
+        <section class="perguntas">
+            <div class="container">
+
+                <div class="fontes-titulo">
+                    <span>PARA QUEM TEM SÍTIO OU FAZENDA</span>
+                    <h2>O que você precisa saber antes de começar</h2>
+                    <p>
+                        Aqui você não vai encontrar usinas gigantes. Mostramos como
+                        aproveitar, em pequena escala, o que o seu terreno já tem:
+                        sol, vento ou água correndo.
+                    </p>
+                </div>
+
+                <div class="perguntas-grade">
+                    <div class="pergunta">
+                        <h3>Como funciona?</h3>
+                        <p>Cada página explica, em linguagem simples, como a energia é gerada.</p>
+                    </div>
+                    <div class="pergunta">
+                        <h3>Onde funciona?</h3>
+                        <p>Mostramos o que o terreno precisa ter: sol sem sombra, vento constante ou água com desnível.</p>
+                    </div>
+                    <div class="pergunta">
+                        <h3>Tem espaço?</h3>
+                        <p>Informamos quanto espaço cada solução costuma ocupar, do telhado ao riacho.</p>
+                    </div>
+                    <div class="pergunta">
+                        <h3>Como é a montagem?</h3>
+                        <p>Passo a passo do que dá para fazer sozinho e do que precisa de um profissional.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
+
+        <section class="chamada">
+            <div class="container">
+                <h2>Quer saber qual energia combina com o seu terreno?</h2>
+                <p>Responda poucas perguntas e receba uma indicação de por onde começar.</p>
+                <a href="contato.html" class="botao">Fazer meu diagnóstico</a>
+            </div>
+        </section>
+
     </main>
+
+    <!-- ================= RODAPÉ ================= -->
     <footer>
+        <nav aria-label="Mapa do site">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Quem somos</a></li>
+                <li><a href="solar-fotovoltaica.html">Solar fotovoltaica</a></li>
+                <li><a href="solar-termica.html">Solar térmica</a></li>
+                <li><a href="eolica-residencial.html">Eólica residencial</a></li>
+                <li><a href="eolica-grandes-parques.html">Eólica em grandes parques</a></li>
+                <li><a href="hidraulica-funcionamento.html">Hidráulica: funcionamento</a></li>
+                <li><a href="hidraulica-impactos.html">Hidráulica: impactos</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html">Contato e diagnóstico</a></li>
+            </ul>
+        </nav>
         <p>&copy; 2026 - TERS | Todos os direitos reservados.</p>
     </footer>
+
 </body>
 </html>

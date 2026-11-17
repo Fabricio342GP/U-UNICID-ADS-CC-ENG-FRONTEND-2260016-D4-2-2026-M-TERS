@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a Equipe Eco Inovação e a história do projeto TERS, que explica energia renovável de pequena escala para quem vive no campo.">
+
+    <title>Quem somos | TERS</title>
+
+    <!-- Folha de estilos e JavaScript compartilhados por todas as páginas -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ================= CABEÇALHO ================= -->
+    <header>
+        <div class="container">
+
+            <!-- Botão hambúrguer + logo -->
+            <div class="header-esquerda">
+                <button class="botao-menu" id="botao-menu" type="button"
+                        aria-label="Abrir menu de energias"
+                        aria-controls="menu-lateral"
+                        aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">TERS</a>
+            </div>
+
+            <!-- Menu horizontal (telas grandes) -->
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html" aria-current="page">Quem somos</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Fase 7 (16/11/2026): botão de alto contraste (regra de acessibilidade).
+                 O main.js liga/desliga a classe "alto-contraste" no <html> e lembra a escolha. -->
+            <button class="botao-contraste" id="botao-contraste" type="button" aria-pressed="false">
+                <span aria-hidden="true">◐</span> Alto contraste
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ================= MENU LATERAL ================= -->
+    <!-- Fundo escuro: ao clicar, fecha o menu -->
+    <div class="menu-fundo" id="menu-fundo"></div>
+
+    <aside class="menu-lateral" id="menu-lateral" aria-label="Menu de energias">
+        <div class="menu-topo">
+            <span class="menu-logo">TERS</span>
+            <button class="menu-fechar" id="menu-fechar" type="button" aria-label="Fechar menu">✕</button>
+        </div>
+
+        <nav aria-label="Páginas de energia">
+                <p class="menu-grupo-titulo" id="grupo-solar">ENERGIA SOLAR</p>
+                <ul aria-labelledby="grupo-solar">
+                    <li><a href="solar-fotovoltaica.html"><span aria-hidden="true">☀️</span> Fotovoltaica</a></li>
+                    <li><a href="solar-termica.html"><span aria-hidden="true">🚿</span> Térmica</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-eolica">ENERGIA EÓLICA</p>
+                <ul aria-labelledby="grupo-eolica">
+                    <li><a href="eolica-residencial.html"><span aria-hidden="true">🌬️</span> Residencial</a></li>
+                    <li><a href="eolica-grandes-parques.html"><span aria-hidden="true">🏞️</span> Grandes parques</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-hidraulica">ENERGIA HIDRÁULICA</p>
+                <ul aria-labelledby="grupo-hidraulica">
+                    <li><a href="hidraulica-funcionamento.html"><span aria-hidden="true">💧</span> Funcionamento</a></li>
+                    <li><a href="hidraulica-impactos.html"><span aria-hidden="true">🌿</span> Impactos</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-mais">MAIS</p>
+                <ul aria-labelledby="grupo-mais">
+                    <li><a href="noticias.html"><span aria-hidden="true">📰</span> Notícias e Eco-Inovação</a></li>
+                    <li><a href="contato.html"><span aria-hidden="true">✉️</span> Contato e Diagnóstico</a></li>
+                </ul>
+        </nav>
+    </aside>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main id="conteudo" tabindex="-1">
+        <section class="pagina-topo">
+            <div class="container">
+                <nav class="trilha" aria-label="Você está em">
+                    <ol>
+                    <li><a href="index.html">Início</a></li>
+                    <li aria-current="page">Quem somos</li>
+                    </ol>
+                </nav>
+
+                <div class="pagina-topo-conteudo">
+                    <div class="pagina-icone" aria-hidden="true">👥</div>
+                    <div>
+                        <span class="destaque">EQUIPE ECO INOVAÇÃO</span>
+                        <h1>Quem somos</h1>
+                        <p>Somos estudantes que querem tornar a energia renovável mais fácil de entender para quem vive e produz no campo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="secao">
+            <div class="container">
+                <h2>Por que criamos o TERS</h2>
+                <div class="texto-coluna">
+                    <p>O TERS (Transição Energética Renovável Sustentável) nasceu de uma percepção simples: muita gente ainda depende de fontes de energia tradicionais só porque não conhece as alternativas que cabem na sua realidade.</p>
+                    <p>A maioria das pessoas associa energia limpa apenas aos painéis solares. Mas um sítio com um córrego, um morro ventilado ou um telhado ensolarado pode ter soluções diferentes, e nem sempre a mais conhecida é a melhor.</p>
+                    <p>Por isso o nosso foco é a pequena escala: em vez de falar em usina hidrelétrica para quem tem um riacho na propriedade, mostramos como aproveitar essa água de um jeito possível, como com uma roda d'água.</p>
+                </div>
+            </div>
+        </section>
+        <section class="secao secao-branca">
+            <div class="container">
+                <h2>O que você encontra no site</h2>
+                <div class="grade-3">
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">🔍</span>
+                        <h3>Explicação simples</h3>
+                        <p>Como cada energia funciona, sem termos difíceis.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">📍</span>
+                        <h3>Onde e quanto espaço</h3>
+                        <p>O que o terreno precisa ter e quanto espaço a instalação ocupa.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">🛠️</span>
+                        <h3>Como montar</h3>
+                        <p>Passo a passo do que fazer e do que deixar para um profissional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="secao">
+            <div class="container">
+                <h2>Nossa equipe</h2>
+                <ul class="equipe">
+                    <li class="integrante">
+                        <div class="avatar" aria-hidden="true">TO</div>
+                        <strong>Thiago Roberto de Oliveira</strong>
+                        <span>Equipe Eco Inovação</span>
+                    </li>
+                    <li class="integrante">
+                        <div class="avatar" aria-hidden="true">FO</div>
+                        <strong>Fabricio de Oliveira</strong>
+                        <span>Equipe Eco Inovação</span>
+                    </li>
+                    <li class="integrante">
+                        <div class="avatar" aria-hidden="true">EC</div>
+                        <strong>Evandro Evair Condori Colque</strong>
+                        <span>Equipe Eco Inovação</span>
+                    </li>
+                    <li class="integrante">
+                        <div class="avatar" aria-hidden="true">JR</div>
+                        <strong>João Vitor Ferreira Ramos</strong>
+                        <span>Equipe Eco Inovação</span>
+                    </li>
+                    <li class="integrante">
+                        <div class="avatar" aria-hidden="true">GB</div>
+                        <strong>Gustavo Augusto Barbara</strong>
+                        <span>Equipe Eco Inovação</span>
+                    </li>
+                </ul>
+                <div class="texto-coluna">
+                    <p>Projeto desenvolvido na disciplina de Desenvolvimento Front-End para Web, na UNICID, com orientação do professor Paulo Fratta.</p>
+                </div>
+            </div>
+        </section>
+        <section class="secao secao-branca">
+            <div class="container">
+                <h2>Objetivos de Desenvolvimento Sustentável</h2>
+                <div class="texto-coluna">
+                    <p>O TERS se relaciona com metas da ONU para 2030:</p>
+                </div>
+                <ul class="ods">
+                    <li><strong>ODS 7:</strong> Energia limpa e acessível</li>
+                    <li><strong>ODS 13:</strong> Ação contra a mudança global do clima</li>
+                    <li><strong>ODS 6:</strong> Água potável e saneamento</li>
+                </ul>
+            </div>
+        </section>
+        <section class="chamada">
+            <div class="container">
+                <h2>Quer conversar com a gente?</h2>
+                <p>Mande sua dúvida e conte o que você tem no terreno.</p>
+                <a href="contato.html" class="botao">Fazer meu diagnóstico</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer>
+        <nav aria-label="Mapa do site">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Quem somos</a></li>
+                <li><a href="solar-fotovoltaica.html">Solar fotovoltaica</a></li>
+                <li><a href="solar-termica.html">Solar térmica</a></li>
+                <li><a href="eolica-residencial.html">Eólica residencial</a></li>
+                <li><a href="eolica-grandes-parques.html">Eólica em grandes parques</a></li>
+                <li><a href="hidraulica-funcionamento.html">Hidráulica: funcionamento</a></li>
+                <li><a href="hidraulica-impactos.html">Hidráulica: impactos</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html">Contato e diagnóstico</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 - TERS | Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
