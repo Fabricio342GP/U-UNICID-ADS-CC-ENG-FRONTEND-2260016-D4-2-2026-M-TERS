@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entenda a importância dos reservatórios, como a geração se comporta na seca e como preservar rios e nascentes ao usar a água para gerar energia.">
+
+    <title>Energia Hidráulica: Impactos | TERS</title>
+
+    <!-- Folha de estilos e JavaScript compartilhados por todas as páginas -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body class="tema-hidraulica">
+
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ================= CABEÇALHO ================= -->
+    <header>
+        <div class="container">
+
+            <!-- Botão hambúrguer + logo -->
+            <div class="header-esquerda">
+                <button class="botao-menu" id="botao-menu" type="button"
+                        aria-label="Abrir menu de energias"
+                        aria-controls="menu-lateral"
+                        aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">TERS</a>
+            </div>
+
+            <!-- Menu horizontal (telas grandes) -->
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Quem somos</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Fase 7 (16/11/2026): botão de alto contraste (regra de acessibilidade).
+                 O main.js liga/desliga a classe "alto-contraste" no <html> e lembra a escolha. -->
+            <button class="botao-contraste" id="botao-contraste" type="button" aria-pressed="false">
+                <span aria-hidden="true">◐</span> Alto contraste
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ================= MENU LATERAL ================= -->
+    <!-- Fundo escuro: ao clicar, fecha o menu -->
+    <div class="menu-fundo" id="menu-fundo"></div>
+
+    <aside class="menu-lateral" id="menu-lateral" aria-label="Menu de energias">
+        <div class="menu-topo">
+            <span class="menu-logo">TERS</span>
+            <button class="menu-fechar" id="menu-fechar" type="button" aria-label="Fechar menu">✕</button>
+        </div>
+
+        <nav aria-label="Páginas de energia">
+                <p class="menu-grupo-titulo" id="grupo-solar">ENERGIA SOLAR</p>
+                <ul aria-labelledby="grupo-solar">
+                    <li><a href="solar-fotovoltaica.html"><span aria-hidden="true">☀️</span> Fotovoltaica</a></li>
+                    <li><a href="solar-termica.html"><span aria-hidden="true">🚿</span> Térmica</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-eolica">ENERGIA EÓLICA</p>
+                <ul aria-labelledby="grupo-eolica">
+                    <li><a href="eolica-residencial.html"><span aria-hidden="true">🌬️</span> Residencial</a></li>
+                    <li><a href="eolica-grandes-parques.html"><span aria-hidden="true">🏞️</span> Grandes parques</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-hidraulica">ENERGIA HIDRÁULICA</p>
+                <ul aria-labelledby="grupo-hidraulica">
+                    <li><a href="hidraulica-funcionamento.html"><span aria-hidden="true">💧</span> Funcionamento</a></li>
+                    <li><a href="hidraulica-impactos.html" aria-current="page"><span aria-hidden="true">🌿</span> Impactos</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-mais">MAIS</p>
+                <ul aria-labelledby="grupo-mais">
+                    <li><a href="noticias.html"><span aria-hidden="true">📰</span> Notícias e Eco-Inovação</a></li>
+                    <li><a href="contato.html"><span aria-hidden="true">✉️</span> Contato e Diagnóstico</a></li>
+                </ul>
+        </nav>
+    </aside>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main id="conteudo" tabindex="-1">
+        <!-- PÁGINA 4 – HIDRÁULICA: IMPACTOS (seções 1 a 9).
+             Cabeçalho, menus, chamada, navegação e rodapé são iguais aos das outras páginas. -->
+        <section class="pagina-topo">
+            <div class="container">
+                <nav class="trilha" aria-label="Você está em">
+                    <ol>
+                    <li><a href="index.html">Início</a></li>
+                    <li>Energia Hidráulica</li>
+                    <li aria-current="page">Impactos</li>
+                    </ol>
+                </nav>
+
+                <div class="pagina-topo-conteudo">
+                    <div class="pagina-icone" aria-hidden="true">🌿</div>
+                    <div>
+                        <span class="destaque">ENERGIA HIDRÁULICA</span>
+                        <!-- Título e resumo vindos do documento (antes: "Reservatórios, secas e preservação dos rios") -->
+                        <h1>Energia Hidráulica – Impactos</h1>
+                        <p><strong>Resumo:</strong> os reservatórios guardam água para a geração de energia e para outros usos, como controle de cheias, abastecimento e irrigação. Em secas severas, como a de 2021, esse estoque é posto à prova e as escolhas de operação têm custo para o consumidor e para os rios. Preservar um rio exige deixar nele uma vazão mínima e regras claras de uso.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 1. POR QUE OS RESERVATÓRIOS SÃO IMPORTANTES ===== -->
+        <section class="secao" id="reservatorios">
+            <div class="container">
+                <h2>1. Por que os reservatórios são importantes</h2>
+                <div class="texto-coluna">
+                    <p><strong>Guardar água de um período para outro.</strong> Reservatórios de acumulação costumam encher nos meses mais chuvosos e esvaziar nos mais secos, o que permite produção de energia hidrelétrica e complementação térmica mais constantes e baratas ao longo do ano. A isso se chama regularização de vazões.</p>
+                    <p><strong>Regularização plurianual.</strong> Sobradinho e Três Marias, no rio São Francisco, têm regularização plurianual: seus ciclos de enchimento e esvaziamento são maiores que um ano.</p>
+                    <p><strong>Usos múltiplos.</strong> O reservatório não serve só à usina. Material da Agência Nacional de Águas e Saneamento Básico (ANA) destaca a importância dos reservatórios para os usos múltiplos, tanto em cheias quanto em secas. A Lei das Águas (Lei 9.433/1997) manda que o uso da água atenda abastecimento, energia e irrigação em conjunto. A utilização de um reservatório para fins múltiplos pode impor restrições de nível e reduzir a energia que a usina garante.</p>
+                    <p><strong>Controle de cheias e volume de espera.</strong> Parte do volume útil é mantida vazia, o chamado volume de espera, para amortecer cheias; isso diminui a água armazenada, a regularização e a energia gerada. Com isso, o pico de vazão cai, e o mesmo volume de água demora mais para escoar. No Brasil, o cálculo dos volumes de espera faz parte do Plano Anual de Prevenção de Cheias, elaborado pelo ONS.</p>
+                    <p><strong>Regras de operação.</strong> Reservatórios de múltiplos usos seguem curvas-guia, que definem as vazões de saída ao longo do ano em função do volume armazenado. A operação das usinas é definida em articulação entre a ANA e o Operador Nacional do Sistema Elétrico (ONS).</p>
+                    <p><strong>Perda de capacidade.</strong> O assoreamento, que é o acúmulo de sedimentos, reduz o volume disponível ao longo dos anos. Segundo um guia da ANEEL, à medida que os sedimentos se acumulam no lago, a capacidade de armazenar água vai diminuindo (Carvalho et al., 2000).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 2. FUNCIONAMENTO EM ÉPOCAS DE SECA ===== -->
+        <section class="secao secao-branca" id="seca">
+            <div class="container">
+                <h2>2. Funcionamento em épocas de seca</h2>
+                <div class="texto-coluna">
+                    <p><strong>O caso de 2021.</strong> Segundo o ONS, em junho de 2021 os reservatórios do Sudeste e do Centro-Oeste, que respondem por 70% da capacidade de armazenamento do país, passavam pela pior seca desde o início das medições, em 1931. Em agosto de 2021 o nível desse subsistema estava em 24,64%, contra 28,92% em junho. Em junho, um artigo apontava níveis comparáveis aos que levaram ao racionamento de 2001.</p>
+                    <p><strong>O que o sistema faz.</strong> Quando a água falta, o sistema recorre a termelétricas para poupar os reservatórios. Um artigo de opinião de junho de 2021 afirma que as térmicas passaram de 9,4% da geração em maio de 2020 para cerca de 15% em maio de 2021. O diretor-geral da Aneel admitiu que o uso de termelétricas deveria elevar a conta de luz.</p>
+                    <p><strong>Decisões extraordinárias.</strong> A Medida Provisória nº 1.055, de 28 de junho de 2021, criou a Câmara de Regras Excepcionais para Gestão Hidroenergética (CREG), que passou a controlar a vazão das hidrelétricas, sobrepondo-se a outras instâncias, como a ANA. O governo recomendou reter mais água nos reservatórios do Sudeste e do Centro-Oeste, em crise descrita como a maior em 91 anos. Usos como navegação, turismo e irrigação podem ser afetados quando a prioridade é guardar água para a geração.</p>
+                    <p><strong>Aprendizado regulatório.</strong> Um relatório da ANA sobre medidas de 2022 menciona ganhos de 28% a 50% nos volumes úteis dos reservatórios de regularização do Plano de Contingência durante o período chuvoso de 2022/2023. A ANA informou que estabeleceria regras de operação perenes para reservatórios estratégicos (rios Grande, Paranaíba e Paranapanema), a fim de garantir segurança hídrica e evitar crises. Os reservatórios da bacia do rio Grande correspondem a 18% da capacidade de armazenamento do SIN.</p>
+                    <p><strong>Há debate sobre as causas.</strong> Não há consenso sobre se a crise foi um evento isolado ou um novo regime de chuvas; parte dos especialistas considera a redução permanente. Um artigo do GESEL/UFRJ afirma que eventos extremos estão aumentando. Também há discussão sobre o momento de acionar as térmicas: especialistas criticaram o acionamento tardio, e o governo defendeu o consumo racional.</p>
+                </div>
+                <div class="caixa"><p><strong>O que isso ensina.</strong> A hidreletricidade depende da chuva. Reservatórios amortecem a variação, mas não a eliminam. Por isso a matriz combina fontes (veja a <a href="#comparacao">seção 8</a>).</p></div>
+            </div>
+        </section>
+
+        <!-- ===== 3. PRESERVAÇÃO DOS RIOS ===== -->
+        <section class="secao" id="preservacao">
+            <div class="container">
+                <h2>3. Preservação dos rios</h2>
+                <div class="texto-coluna">
+                    <p><strong>Vazão ecológica (ou remanescente).</strong> É a água que a usina precisa deixar correr no rio. A literatura a chama de vazão residual, remanescente, ambiental ou ecológica, e fixar um valor envolve definir condições ecológicas e usos concorrentes. Ela deve garantir condições adequadas ao ecossistema a jusante.</p>
+                    <p><strong>Não há um método único.</strong> Os métodos de Tennant, de curva de permanência e do perímetro molhado, por exemplo, podem resultar em valores diferentes, e o perímetro molhado define uma vazão maior que os outros dois no caso de Capim Branco I. Esse resultado vem de um único estudo de caso e não vale como regra para outros rios.</p>
+                    <p><strong>Hidrograma ecológico.</strong> Estudos atuais apontam para um hidrograma ecológico, que reproduz a variação das vazões ao longo do ano, em vez de um valor fixo, que não condiz com o regime natural. As Declarações de Reserva de Disponibilidade Hídrica (DRDH) emitidas pela ANA especificam a vazão remanescente nas fases de enchimento e operação.</p>
+                    <p><strong>Trecho de vazão reduzida (TVR).</strong> É o trecho entre a barragem e o ponto em que a água turbinada volta ao rio; nele escoa apenas a vazão remanescente, que deve oferecer condições ao rio. Uma usina a fio d'água, como a UHE São José no rio Ijuí, pode funcionar sem provocar TVR.</p>
+                    <p><strong>Um caso de debate: Belo Monte.</strong> Um dossiê independente (MATI-VGX, 2025) afirma que, na Volta Grande do Xingu, as vazões médias mensais chegaram a cair 89% em comparação com a série histórica após o desvio da água pela usina, e recomenda rejeitar o "Hidrograma de Consenso". Esse é um documento de monitoramento independente. O Ibama, que licencia a usina, decidiu em setembro de 2025 que a Norte Energia, dona da usina, deve apresentar um novo hidrograma para a Volta Grande (Agência Pública, set. 2025). A Norte Energia defende o hidrograma atual, diz que ele foi feito com base em 11 cenários hidrológicos e afirma que mudá-lo poria em risco a segurança energética do país (Agência Pública, ago. 2025; Agência iNFRA, out. 2025). Em abril de 2026 a empresa ainda não tinha apresentado a nova proposta e contestava a exigência na Justiça (Folhapress, 2026).</p>
+                    <p><strong>Peixes.</strong> Barragens bloqueiam a migração. Dissertações sobre PCHs tratam de sistemas de transposição de peixes e do resgate de peixes no tubo de sucção. Um levantamento de PCHs gaúchas indicou escadas para peixes em 80% das usinas que adotaram algum sistema de passagem (Arrais; Costa; Köhler, 2012).</p>
+                    <p><strong>Mudança no regime natural.</strong> Reservatórios alteram a sazonalidade e a magnitude das cheias; nas cheias naturais, o rio se liga às lagoas marginais, que os peixes jovens usam para crescer (Agostinho; Pelicice; Gomes, 2008).</p>
+                    <p><strong>Outros impactos.</strong> Grandes usinas alagam áreas extensas e deslocam famílias. Segundo Bermann (2007), as usinas construídas no Brasil até aquele ano inundaram mais de 34 mil km² e atingiram diretamente cerca de 200 mil famílias, todas ribeirinhas. A vegetação que fica debaixo d'água se decompõe e libera gases de efeito estufa, sobretudo metano. Há contrapontos: a EPE afirma que mesmo as hidrelétricas que mais emitem ficam bem abaixo das fontes fósseis e que casos como o de Balbina são exceção; o IPCC reconhece os impactos, mas considera que a fonte fornece eletricidade flexível e com baixas emissões (Aos Fatos, 2023).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 4. QUEM DECIDE ===== -->
+        <section class="secao secao-branca" id="quem-decide">
+            <div class="container">
+                <h2>4. Quem decide: outorga, licenciamento e operação</h2>
+                <ul class="lista">
+                    <li><strong>Outorga e DRDH.</strong> O uso da água para gerar energia depende de outorga. A ANA outorga o direito de uso em rios federais e emite a DRDH. Em rios estaduais, o órgão estadual faz o mesmo.</li>
+                    <!-- <abbr> lembra o significado de TVR, já explicado mais acima na página. -->
+                    <li><strong>Licenciamento ambiental.</strong> É emitido por órgão ambiental (federal ou estadual). Estudos de vazão em <abbr title="trecho de vazão reduzida">TVR</abbr> integram o licenciamento.</li>
+                    <li><strong>Operação.</strong> ANA e ONS articulam as condições de operação dos reservatórios.</li>
+                    <li><strong>Segurança de barragens.</strong> Regida pela Lei 12.334/2010. O TCU decidiu que a ANEEL deve fiscalizar barragens de CGH.</li>
+                    <li><strong>Gestão da bacia.</strong> Comitês de bacia e planos de bacia orientam o uso da água. A ANEEL recomenda ao empreendedor consultar os gestores de recursos hídricos e verificar a existência de comitê e plano de bacia antes do registro.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== 5. DADOS DO BRASIL ===== -->
+        <section class="secao" id="dados">
+            <div class="container">
+                <h2>5. Dados do Brasil</h2>
+                <ul class="lista">
+                    <li>Os reservatórios do Sudeste e do Centro-Oeste respondem por 70% da capacidade de armazenamento do país.</li>
+                    <li>Os do rio Grande têm 18% da capacidade de armazenamento do SIN.</li>
+                    <li>Em 2011 a hidráulica respondia por 81% da matriz elétrica nacional. Em 2025, respondeu por 51,2% da oferta interna de energia elétrica, contra 55,3% em 2024 (EPE, Balanço Energético Nacional 2026).</li>
+                    <li>Segundo o Comitê Permanente de Energia (2024), desde os anos 1980 restrições ao licenciamento de hidrelétricas com reservatório de regularização levaram os novos reservatórios a serem projetados para operar a fio d'água, quase sem variação de nível, ou seja, com menor capacidade de regularização.</li>
+                    <li>Dados de 2021 são históricos: não indicam a situação atual dos reservatórios. Para o nível atual consulte o ONS.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== 6. VANTAGENS E CUIDADOS ===== -->
+        <section class="secao secao-branca" id="vantagens">
+            <div class="container">
+                <h2>6. Vantagens e cuidados</h2>
+                <div class="grade-2">
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">✅</span>
+                        <p><strong>Vantagens:</strong> armazena energia na forma de água; ajuda no controle de cheias; apoia abastecimento, irrigação e navegação; usina com reservatório pode ser acionada quando o sistema precisa.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">⚠️</span>
+                        <p><strong>Cuidados:</strong> a operação tem de equilibrar geração, outros usos e o rio; secas reduzem a capacidade e podem exigir térmicas, com custo ao consumidor; a vazão ecológica e a passagem de peixes precisam ser planejadas e monitoradas; os impactos sociais e ambientais da construção estão na <a href="#preservacao">seção 3</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 7. NO SÍTIO OU NA FAZENDA =====
+             .item-risco: cuidados com o vizinho a jusante e riscos jurídicos,
+             destacados no lugar original da lista (sem acordeão). -->
+        <section class="secao" id="no-sitio">
+            <div class="container">
+                <h2>7. No sítio ou na fazenda: rios, outorga e cuidados</h2>
+                <div class="texto-coluna">
+                    <p>Esta seção complementa a da <a href="hidraulica-funcionamento.html#no-sitio">página 3</a>, que trata de como fazer. Aqui o foco é o rio.</p>
+                </div>
+                <ul class="lista">
+                    <li><strong>Prefira o menor impacto.</strong> A microcentral não exige represar o rio. Estudos brasileiros também avaliam microcentrais que aproveitam barragem já existente na propriedade (por exemplo, um estudo em Gurupi, TO, de 2017).</li>
+                    <li><strong>Deixe água no rio.</strong> Mesmo em escala pequena, um desvio cria um trecho de vazão reduzida. Em uma CGH mineira, esse trecho tem cerca de 540 m e se encontra dentro da propriedade do empreendedor. A vazão remanescente deve ser prevista no projeto. O valor é definido pelo órgão que concede a outorga (a ANA, nos rios federais, ou o órgão estadual), e o critério muda de um estado para outro (Melo, 2011).</li>
+                    <li><strong>Peça orientação antes.</strong> Consulte gestores de recursos hídricos e verifique comitê e plano de bacia antes de registrar. O registro na ANEEL não substitui outorga e licenciamento.</li>
+                    <li class="item-risco"><span aria-hidden="true">⚠️</span> <strong>Pense no vizinho a jusante.</strong> Em estiagem, o desvio ou a bomba podem tirar água de quem está abaixo. Seu uso deve caber na outorga.</li>
+                    <li><strong>Proteja nascentes e margens.</strong> Um trabalho da UnB uniu a conservação de nascentes à construção de uma bomba d'água do tipo carneiro hidráulico, com produtores. Mata ciliar e nascente protegidas sustentam a vazão que o sistema usa.</li>
+                    <li class="item-risco"><span aria-hidden="true">⚠️</span> <strong>Riscos jurídicos.</strong> O titular de outorga de CGH em Goiás assume responsabilidade civil e criminal por danos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== 8. COMPARANDO AS FONTES (texto igual nas 4 páginas) =====
+             Os cartões usam .card-comparacao: o rótulo em negrito faz papel de título.
+             No "Veja também", o link da página atual leva aria-current="page". -->
+        <section class="secao secao-branca" id="comparacao">
+            <div class="container">
+                <h2>8. Comparando as fontes de energia deste site</h2>
+                <div class="grade-3">
+                    <div class="card card-comparacao">
+                        <span class="card-icone" aria-hidden="true">☀️</span>
+                        <p><strong>Fotovoltaica:</strong> transforma luz em eletricidade, sem peças móveis; produz em corrente contínua, e o inversor a converte. Depende do sol e, para uso noturno, de baterias ou da rede.</p>
+                    </div>
+                    <div class="card card-comparacao">
+                        <span class="card-icone" aria-hidden="true">🚿</span>
+                        <p><strong>Solar térmica:</strong> transforma luz em calor para aquecer água. É a mais simples de montar e de manter, mas não gera eletricidade.</p>
+                    </div>
+                    <div class="card card-comparacao">
+                        <span class="card-icone" aria-hidden="true">💧</span>
+                        <p><strong>Hidráulica (páginas 3 e 4):</strong> transforma a queda e a vazão da água em eletricidade. Pode ser controlada pelo operador quando há reservatório, mas depende de rio, de licenças e de gestão do uso da água.</p>
+                    </div>
+                </div>
+                <div class="texto-coluna">
+                    <p><strong>No campo:</strong> a térmica é a de menor risco elétrico; a fotovoltaica exige cuidado com corrente contínua e arco elétrico; a hidráulica é a que mais depende de autorizações e de cuidados com o rio.</p>
+                    <p><strong>Em comum:</strong> as três usam fontes renováveis. Fontes que variam com o clima, como a solar, podem ser complementadas por usinas controláveis, como as hidrelétricas com reservatório. A própria hidráulica também varia com a chuva, como mostra a <a href="#seca">página 4</a>.</p>
+                </div>
+                <p class="ver-tambem">→ Veja também as páginas: <a href="solar-fotovoltaica.html">Solar Fotovoltaica</a>, <a href="solar-termica.html">Solar Térmica</a>, <a href="hidraulica-funcionamento.html">Hidráulica – Funcionamento</a> e <a href="hidraulica-impactos.html" aria-current="page">Hidráulica – Impactos</a>.</p>
+            </div>
+        </section>
+
+        <!-- ===== 9. REFERÊNCIAS (ABNT) =====
+             Cada fonte foi conferida no documento original. -->
+        <section class="secao" id="referencias">
+            <div class="container">
+                <h2>9. Referências (ABNT)</h2>
+                <div class="referencias">
+                    <h3>Legislação</h3>
+                    <ul class="lista-referencias">
+                        <li>BRASIL. <strong>Lei nº 9.433, de 8 de janeiro de 1997</strong>. Institui a Política Nacional de Recursos Hídricos, cria o Sistema Nacional de Gerenciamento de Recursos Hídricos, regulamenta o inciso XIX do art. 21 da Constituição Federal, e altera o art. 1º da Lei nº 8.001, de 13 de março de 1990, que modificou a Lei nº 7.990, de 28 de dezembro de 1989. Brasília, DF: Presidência da República, 1997. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/leis/l9433.htm">https://www.planalto.gov.br/ccivil_03/leis/l9433.htm</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>BRASIL. <strong>Lei nº 12.334, de 20 de setembro de 2010</strong>. Estabelece a Política Nacional de Segurança de Barragens destinadas à acumulação de água para quaisquer usos, à disposição final ou temporária de rejeitos e à acumulação de resíduos industriais, cria o Sistema Nacional de Informações sobre Segurança de Barragens e altera a redação do art. 35 da Lei nº 9.433, de 8 de janeiro de 1997, e do art. 4º da Lei nº 9.984, de 17 de julho de 2000. Brasília, DF: Presidência da República, 2010. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12334.htm">https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12334.htm</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>BRASIL. <strong>Medida Provisória nº 1.055, de 28 de junho de 2021</strong>. Institui a Câmara de Regras Excepcionais para Gestão Hidroenergética (CREG) com o objetivo de estabelecer medidas emergenciais para a otimização do uso dos recursos hidroenergéticos e para o enfrentamento da atual situação de escassez hídrica, a fim de garantir a continuidade e a segurança do suprimento eletroenergético no País. Brasília, DF: Presidência da República, 2021. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/mpv/mpv1055.htm">https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/mpv/mpv1055.htm</a>. Acesso em: 15 nov. 2026.</li>
+                    </ul>
+
+                    <h3>Governo e órgãos reguladores</h3>
+                    <ul class="lista-referencias">
+                        <li>CARVALHO, Newton de Oliveira; FILIZOLA JÚNIOR, Naziano Pantoja; SANTOS, Paulo Marcos Coutinho dos; LIMA, Jorge Enoch Furquim Werneck. <strong>Guia de avaliação de assoreamento de reservatórios</strong>. Brasília, DF: ANEEL, Superintendência de Estudos e Informações Hidrológicas, 2000. 140 p. Disponível em: <a href="https://www.gov.br/ana/pt-br/assuntos/monitoramento-e-eventos-criticos/monitoramento-hidrologico/orientacoes-manuais/entidades/guia-avaliacao-assoreamento-reservatorios-aneel-2000.pdf">https://www.gov.br/ana/pt-br/assuntos/monitoramento-e-eventos-criticos/monitoramento-hidrologico/orientacoes-manuais/entidades/guia-avaliacao-assoreamento-reservatorios-aneel-2000.pdf</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>EMPRESA DE PESQUISA ENERGÉTICA. <strong>Balanço Energético Nacional 2026</strong>: relatório síntese, ano base 2025. Rio de Janeiro: EPE, 2026. Capítulo 4, Repartição da Oferta Interna de Energia Elétrica. Disponível em: <a href="https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-975/topico-847/BEN_S%C3%ADntese_2026_PT.pdf">https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-975/topico-847/BEN_S%C3%ADntese_2026_PT.pdf</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>AGÊNCIA NACIONAL DE ÁGUAS E SANEAMENTO BÁSICO. <strong>Voto nº 140/2023/DIREC</strong>: condições de operação dos reservatórios da bacia do rio Grande. Relator: Mauricio Abijaodi. Disponível em: <a href="https://www.gov.br/ana/pt-br/assuntos/governanca-regulatoria/analise-de-impacto-regulatorio-air/air-realizadas/VOTON140_2023_DIRECdoMaurcioAbijaodi.pdf">https://www.gov.br/ana/pt-br/assuntos/governanca-regulatoria/analise-de-impacto-regulatorio-air/air-realizadas/VOTON140_2023_DIRECdoMaurcioAbijaodi.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>AGÊNCIA NACIONAL DE ÁGUAS E SANEAMENTO BÁSICO. <strong>Análise de resultado regulatório</strong>: Resoluções ANA nº 140, 141 e 142/2022. Disponível em: <a href="https://www.gov.br/ana/pt-br/assuntos/governanca-regulatoria/agenda-de-arr/ARR_Res.140141142.2022.pdf">https://www.gov.br/ana/pt-br/assuntos/governanca-regulatoria/agenda-de-arr/ARR_Res.140141142.2022.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>THOMAS, Patrick (ANA, Diretor Interino). Planejamento da expansão e inserção das UHEs, com ou sem reservatório, na matriz. In: V CONFERÊNCIA NACIONAL DE PCHs E CGHs, Brasília, 24 mar. 2022. ABRAPCH. Disponível em: <a href="https://abrapch.org.br/wp-content/uploads/2022/03/20220324_ConferenciaNacional_PATRICK-THOMAS-ANA.pdf">https://abrapch.org.br/wp-content/uploads/2022/03/20220324_ConferenciaNacional_PATRICK-THOMAS-ANA.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>CARVALHO, Carlos Eduardo Cabral (ANEEL, Superintendente de Concessões e Autorizações de Geração). Apresentação na mesma conferência. Disponível em: <a href="https://abrapch.org.br/wp-content/uploads/2022/03/20220324_ConferenciaNacional__CarlosEduardoCabral_ANEEL.pdf">https://abrapch.org.br/wp-content/uploads/2022/03/20220324_ConferenciaNacional__CarlosEduardoCabral_ANEEL.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>GOIÁS. Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável. <strong>Portaria nº 104/2022 – SRH</strong>. Disponível em: <a href="https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2025/09/PORTARIA-No-104-2022-Outorga-Disponibilidade-Hidrica-Luiz-Carlos-Tiecher.pdf">https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2025/09/PORTARIA-No-104-2022-Outorga-Disponibilidade-Hidrica-Luiz-Carlos-Tiecher.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA. <strong>Processo nº 48500.000121/2018-84</strong>: consulta sobre segurança de barragens de usinas com capacidade reduzida – CGHs. Aberto em 9 fev. 2018. Inclui o Parecer nº 363/2017/PF-ANA/PGF/AGU, encaminhado pelo Ofício nº 207/2017/AA-ANA, de 21 set. 2017. Disponível em: <a href="https://www.snirh.gov.br/portal/snisb/Entenda_Mais/legislacao-aplicada/arquivos/parecer-aneel-seguranca-de-barragens-pchs.pdf">https://www.snirh.gov.br/portal/snisb/Entenda_Mais/legislacao-aplicada/arquivos/parecer-aneel-seguranca-de-barragens-pchs.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>BRASIL. Senado Federal. Comissão Temporária Externa para Averiguar as Causas e Efeitos da Crise Hidroenergética (CTECRHE). <strong>Plano de trabalho</strong> (minuta). Relator: Sen. José Aníbal. Brasília: Senado Federal, [2021]. Disponível em: <a href="https://legis.senado.leg.br/sdleg-getter/documento/download/ad198685-9e87-4568-ade0-e29bfcea5e14">https://legis.senado.leg.br/sdleg-getter/documento/download/ad198685-9e87-4568-ade0-e29bfcea5e14</a>. Acesso em: 15 nov. 2026.</li>
+                    </ul>
+
+                    <h3>Artigos, dissertações e trabalhos</h3>
+                    <ul class="lista-referencias">
+                        <li>RAUPP, Igor Pinheiro. <strong>Minimização do conflito entre a geração de energia elétrica e o controle de cheias no planejamento da operação de reservatórios</strong>. 2008. Dissertação (Mestrado em Engenharia Civil) – COPPE/UFRJ, Rio de Janeiro, 2008. Disponível em: <a href="https://coc.ufrj.br/wp-content/uploads/tainacan-items/6908/23530/Igor-Pinheiro-Raupp.pdf">https://coc.ufrj.br/wp-content/uploads/tainacan-items/6908/23530/Igor-Pinheiro-Raupp.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>JUNQUEIRA, Felipe Augusto Ribeiro; CHAN, Priscilla Dafne Shu. <strong>PAVES</strong>: ferramenta para acompanhamento da utilização dos volumes de espera dos reservatórios das usinas hidrelétricas do Sistema Interligado Nacional para controle de cheias. 2013. Projeto de graduação (Engenharia Civil) – Escola Politécnica, UFRJ, Rio de Janeiro, 2013. Disponível em: <a href="https://pantheon.ufrj.br/bitstream/11422/10823/1/monopoli10008418.pdf">https://pantheon.ufrj.br/bitstream/11422/10823/1/monopoli10008418.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>FERREIRA, João Paulo Mendes; KEUM, Oh Sung; BOZZINI, Pedro Ludovico. <strong>Avaliação de restrições operativas na produção de energia em um sistema de usinas hidrelétricas</strong>. 2012. Projeto de Formatura (Engenharia Ambiental) – Escola Politécnica, Universidade de São Paulo, São Paulo, 2012. Disponível em: <a href="https://bdta.abcd.usp.br/bitstreams/38ec3dbb-f76b-4342-a59b-0f30b3db4c2c">https://bdta.abcd.usp.br/bitstreams/38ec3dbb-f76b-4342-a59b-0f30b3db4c2c</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>GHISLENI, Jordana; MARTINEZ, Carlos Barreira; GUIMARÃES, Adinele Gomes. Regra operativa da bacia do rio Tocantins. In: SIMPÓSIO NACIONAL DE MECÂNICA DOS FLUIDOS E HIDRÁULICA, 1., 2022, Ouro Preto. Associação Brasileira de Recursos Hídricos. Disponível em: <a href="https://files.abrhidro.org.br/Eventos/Trabalhos/179/I-FLUHIDROS0069-1-0-20220612-215012.pdf">https://files.abrhidro.org.br/Eventos/Trabalhos/179/I-FLUHIDROS0069-1-0-20220612-215012.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>ROCHA, Maria de Jesus Delmiro; MACHADO, Ana Costa Marques; GHIRARDI, Angela de Oliveira; GARRIDO NETO, Pedro de Souza; SILVA, Simone Borim da (ONS). Atualização de série de vazão natural para o controle de cheias em bacia do Sistema Interligado Nacional. In: SIMPÓSIO BRASILEIRO DE RECURSOS HÍDRICOS, 26., 2025, Vitória. Disponível em: <a href="https://files.abrhidro.org.br/Eventos/Trabalhos/248/XXVI-SBRH0877-1-20250623-182017.pdf">https://files.abrhidro.org.br/Eventos/Trabalhos/248/XXVI-SBRH0877-1-20250623-182017.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>COMITÊ PERMANENTE DE ENERGIA. <strong>Posicionamento sobre a importância das usinas hidroelétricas para o SIN</strong>. Coordenação: Flavio Miguez. Redação: Altino Ventura Filho, Eduardo Serra, Flavio Miguez, Jerson Kelman, José Eduardo Moreira, Maria Elvira Maceira, Mário Menel, Nelson Martins, Paulo Gomes e Paulo Sehn. Nov. 2024. Disponível em: <a href="https://kelman.com.br/HIDROELETRICAS_NOVEMBRO.pdf">https://kelman.com.br/HIDROELETRICAS_NOVEMBRO.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>LOPES, João Eduardo Gonçalves; BARROS, Mario Thadeu Leme de; BRANDÃO, João Luiz Boccia. <strong>Determinação de subsídios para procedimentos operacionais dos principais reservatórios da bacia do São Francisco</strong>: resumo executivo do relatório final. Coordenação: Marcos Airton de Sousa Freitas (ANA). São Paulo: Projeto de Gerenciamento Integrado das Atividades Desenvolvidas em Terra na Bacia do São Francisco – ANA/GEF/PNUMA/OEA, Subprojeto 4.4, nov. 2002. Disponível em: <a href="https://cdn.agenciapeixevivo.org.br/media/2019/06/Detemina%C3%A7%C3%A3o-de-Subs%C3%ADdios-para-procedimentos-operacionais-dos-Principais-Reservat%C3%B3rios-do-SF.pdf">https://cdn.agenciapeixevivo.org.br/media/2019/06/Detemina%C3%A7%C3%A3o-de-Subs%C3%ADdios-para-procedimentos-operacionais-dos-Principais-Reservat%C3%B3rios-do-SF.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>AZEVEDO, Amanda; MACHADO, Ana; GONÇALVES, Felipe; TELES, João; CUNHA, Paulo. <strong>Perspectivas da crise hídrica em 2022</strong>: risco além dos modelos. FGV Energia, set. 2021. Disponível em: <a href="https://fgvenergia.fgv.br/sites/fgvenergia.fgv.br/files/artigos/artigo_crise_hidrica_rev4.pdf">https://fgvenergia.fgv.br/sites/fgvenergia.fgv.br/files/artigos/artigo_crise_hidrica_rev4.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>FONSECA, Enio. <strong>Geração hidráulica de energia, crises hídricas e Plano de Recuperação de Reservatórios do MME</strong>. GESEL/UFRJ, 2024. Disponível em: <a href="https://gesel.ie.ufrj.br/wp-content/uploads/2024/03/Artigo_crisehidrica.pdf">https://gesel.ie.ufrj.br/wp-content/uploads/2024/03/Artigo_crisehidrica.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>MELO, Luciana de Deus. <strong>Análise de critérios para definição de vazão remanescente em projetos de usinas hidrelétricas</strong>. 2011. Dissertação (Mestrado) – Universidade do Estado do Rio de Janeiro, Rio de Janeiro, 2011. Disponível em: <a href="https://www.bdtd.uerj.br:8443/bitstream/1/10977/1/Luciana%20de%20Deus%20Melo.pdf">https://www.bdtd.uerj.br:8443/bitstream/1/10977/1/Luciana%20de%20Deus%20Melo.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>PAULO, Robélia Gabriela Firmiano de. <strong>Ferramentas para a determinação de vazões ecológicas em trechos de vazão reduzida</strong>: destaque para aplicação do método do perímetro molhado no caso de Capim Branco I. 2007. Dissertação (Mestrado) – Programa de Pós-Graduação em Saneamento, Meio Ambiente e Recursos Hídricos, Universidade Federal de Minas Gerais, Belo Horizonte, 2007. Disponível em: <a href="https://repositorio.ufmg.br/bitstream/1843/REPA-7BSEDC/1/288m.pdf">https://repositorio.ufmg.br/bitstream/1843/REPA-7BSEDC/1/288m.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>SILVEIRA, Geraldo Lopes da; SILVA, Régis Leandro Lopes da; WASTOWSKI, Arci Dirceu. <strong>Licenciamento ambiental em trecho de vazão reduzida por usina hidrelétrica</strong>. In: SIMPÓSIO DE RECURSOS HÍDRICOS DO NORDESTE, 11., 2012, João Pessoa. Disponível em: <a href="https://files.abrhidro.org.br/Eventos/Trabalhos/236/PAP012114.pdf">https://files.abrhidro.org.br/Eventos/Trabalhos/236/PAP012114.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>UTSUNOMIYA, R. et al. <strong>Nota técnica MATI-VGX</strong>: análise hidrológica e proposta de um hidrograma de vazão ambiental para a Volta Grande do Xingu. Monitoramento Ambiental Territorial Independente da Volta Grande do Xingu, 2025. p. 1-49. Disponível em: <a href="https://acervo.socioambiental.org/sites/default/files/documents/Dossi%C3%AA%20Estudos%20MATI-VGX%20Novembro%202026.pdf">https://acervo.socioambiental.org/sites/default/files/documents/Dossi%C3%AA%20Estudos%20MATI-VGX%20Novembro%202026.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>SOUZA-CRUZ-BUENAGA, F. V. A.; ESPIG, S. A.; CASTRO, T. L. C.; SANTOS, M. A. Environmental impacts of a reduced flow stretch on hydropower plants [Impactos ambientais do trecho de vazão reduzida em usinas hidrelétricas]. <strong>Brazilian Journal of Biology</strong>, v. 79, n. 3, p. 470-487, 2019. DOI: 10.1590/1519-6984.183883. Disponível em: <a href="https://qa1.scielo.br/j/bjb/a/W4jZkwKcQ5tsLdy997t6ZPm/abstract/?lang=en">https://qa1.scielo.br/j/bjb/a/W4jZkwKcQ5tsLdy997t6ZPm/abstract/?lang=en</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>PORTO, Ana Alice Cesário. <strong>Avaliação da eficiência de tecnologias de proteção da ictiofauna em empreendimentos hidrelétricos</strong>. 2017. Dissertação (Mestrado em Engenharia Mecânica) – Escola de Engenharia, Universidade Federal de Minas Gerais, Belo Horizonte, 2017. Disponível em: <a href="https://repositorio.ufmg.br/bitstream/1843/BUBD-AYMKWW/1/vers_o_final_disserta__o___ana_alice_ces_rio_porto.pdf">https://repositorio.ufmg.br/bitstream/1843/BUBD-AYMKWW/1/vers_o_final_disserta__o___ana_alice_ces_rio_porto.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>LUZA, Wagner Andrey Fortunati; LORENZETTI, Emi Rainildes; REDON, Silvano; GENTILINI, Jean Carlos. Bomba d'água ecológica: opção de baixo custo para agricultura familiar em assentamento rural do Tocantins. <strong>Participação</strong> (Revista ParticipAção, UnB), Brasília, v. 1, n. 32, p. 98-107, 2019. Edição especial do III Congresso Nacional do Projeto Rondon. Disponível em: <a href="https://periodicos.unb.br/index.php/participacao/article/view/24105">https://periodicos.unb.br/index.php/participacao/article/view/24105</a>. Versão apresentada no congresso: <a href="https://conferencias.unb.br/index.php/PR/pr3/paper/download/5907/1647">https://conferencias.unb.br/index.php/PR/pr3/paper/download/5907/1647</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>BERMANN, Célio. Impasses e controvérsias da hidreletricidade. <strong>Estudos Avançados</strong>, São Paulo, v. 21, n. 59, p. 139-153, 2007. DOI: 10.1590/S0103-40142007000100011. Disponível em: <a href="https://revistas.usp.br/eav/article/view/10211">https://revistas.usp.br/eav/article/view/10211</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>AGOSTINHO, A. A.; PELICICE, F. M.; GOMES, L. C. Dams and the fish fauna of the Neotropical region: impacts and management related to diversity and fisheries [Barragens e a fauna de peixes da região neotropical: impactos e manejo ligados à diversidade e à pesca]. <strong>Brazilian Journal of Biology</strong>, v. 68, n. 4, supl., p. 1119-1132, 2008. DOI: 10.1590/S1519-69842008000500019. Disponível em: <a href="https://www.scielo.br/j/bjb/a/5ycwcWLBLM6jN9gMQMcysdK/?lang=en">https://www.scielo.br/j/bjb/a/5ycwcWLBLM6jN9gMQMcysdK/?lang=en</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>ARRAIS, Alcimar Andrade; COSTA, Adilson Ben da; KÖHLER, Andreas. Implantação de sistema de transposição para peixes junto a hidrelétricas: aspectos técnicos a serem considerados para as pequenas centrais hidrelétricas. <strong>Caderno de Pesquisa, série Biologia</strong>, Santa Cruz do Sul, v. 24, n. 2, 2012. Disponível em: <a href="https://core.ac.uk/download/228488998.pdf">https://core.ac.uk/download/228488998.pdf</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>SOUSA, Vinicius Facundes de. <strong>Projeto de uma central geradora hidrelétrica em uma propriedade rural no município de Gurupi-TO</strong>. 2017. 60 f. Trabalho de Conclusão de Curso (Engenharia Civil) – Centro Universitário Luterano de Palmas (CEULP/ULBRA), Palmas, 2017. Disponível em: <a href="https://ulbra-to.br/bibliotecadigital/uploads/document5d56b32249e99.pdf">https://ulbra-to.br/bibliotecadigital/uploads/document5d56b32249e99.pdf</a>. Acesso em: 16 nov. 2026.</li>
+                    </ul>
+
+                    <h3>Imprensa e sites</h3>
+                    <ul class="lista-referencias">
+                        <li>REPRESENTANTES do setor elétrico descartam racionamento em 2021. <strong>Agência Câmara de Notícias</strong>, 15 jun. 2021. Disponível em: <a href="https://www.camara.leg.br/noticias/772875-representantes-do-setor-eletrico-descartam-racionamento-em-2021/">https://www.camara.leg.br/noticias/772875-representantes-do-setor-eletrico-descartam-racionamento-em-2021/</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>ANEEL alerta que capacidade dos reservatórios das hidrelétricas pode ficar abaixo de 19%. <strong>Agência Câmara de Notícias</strong>, 8 set. 2021. Disponível em: <a href="https://www.camara.leg.br/noticias/803866-aneel-alerta-que-capacidade-dos-reservatorios-das-hidreletricas-pode-ficar-abaixo-de-19">https://www.camara.leg.br/noticias/803866-aneel-alerta-que-capacidade-dos-reservatorios-das-hidreletricas-pode-ficar-abaixo-de-19</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>GOVERNO recomenda reter mais água em reservatórios de hidrelétricas. <strong>IstoÉ Dinheiro</strong>, 7 jul. 2021. Disponível em: <a href="https://istoedinheiro.com.br/governo-recomenda-reter-mais-agua-em-reservatorios-de-hidreletricas-2">https://istoedinheiro.com.br/governo-recomenda-reter-mais-agua-em-reservatorios-de-hidreletricas-2</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>CONSUMO de energia supera patamar pré-pandemia e pressiona setor elétrico. <strong>IstoÉ Dinheiro</strong>, 13 ago. 2021. Disponível em: <a href="https://www.istoedinheiro.com.br/consumo-de-energia-supera-patamar-pre-pandemia-e-pressiona-setor-eletrico/">https://www.istoedinheiro.com.br/consumo-de-energia-supera-patamar-pre-pandemia-e-pressiona-setor-eletrico/</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>NOZAKI, William. A crise hidroenergética para além de suas causas naturais. 20 jun. 2021 (artigo de opinião). Disponível em: <a href="https://democraciasocialista.org.br/a-crise-hidroenergetica-para-alem-de-suas-causas-naturais-william-nozaki/?pdf=gerar">https://democraciasocialista.org.br/a-crise-hidroenergetica-para-alem-de-suas-causas-naturais-william-nozaki/?pdf=gerar</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>SECIUK, Cristina. Três questões estruturais que aprofundam os efeitos da seca no setor elétrico. <strong>Gazeta do Povo</strong>, 2 jun. 2021. Reportagem com entrevista de Nivalde de Castro (GESEL/UFRJ). Disponível em: <a href="https://www.ie.ufrj.br/images/IE/IEnaMidia/2021/06/Gazeta%20do%20Povo%2002-06%20Nivalde%20de%20Castro.pdf">https://www.ie.ufrj.br/images/IE/IEnaMidia/2021/06/Gazeta%20do%20Povo%2002-06%20Nivalde%20de%20Castro.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>MENEZES, Luiz Fernando. Entenda o debate sobre impactos ambientais de hidrelétricas, tidas como fonte limpa de energia. Colaborou Gisele Lobato. <strong>Aos Fatos</strong>, 2 out. 2023 (atualizado em 4 out. 2023). Disponível em: <a href="https://www.aosfatos.org/noticias/impacto-ambiental-hidreletricas-energia-limpa/">https://www.aosfatos.org/noticias/impacto-ambiental-hidreletricas-energia-limpa/</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>SETA, Isabel. Belo Monte: Diretoria do Ibama admite necessidade de rever vazão do rio Xingu. <strong>Agência Pública</strong>, 27 ago. 2025. Disponível em: <a href="https://apublica.org/2025/08/belo-monte-diretoria-do-ibama-admite-revisao-de-vazao-do-xingu/">https://apublica.org/2025/08/belo-monte-diretoria-do-ibama-admite-revisao-de-vazao-do-xingu/</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>SETA, Isabel. Belo Monte: Presidência do Ibama concorda que é preciso rever vazão do rio Xingu. <strong>Agência Pública</strong>, 13 set. 2025. Disponível em: <a href="https://apublica.org/2025/09/belo-monte-ibama-decide-e-usina-precisara-rever-vazao-do-xingu/">https://apublica.org/2025/09/belo-monte-ibama-decide-e-usina-precisara-rever-vazao-do-xingu/</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>CAMPOS JR., Geraldo. Norte Energia aponta riscos da revisão do hidrograma de Belo Monte. <strong>Agência iNFRA</strong>, 13 out. 2025. Entrevista com Paulo Roberto Pinto, presidente da Norte Energia. Disponível em: <a href="https://agenciainfra.com/blog/norte-energia-aponta-riscos-da-revisao-do-hidrograma-de-belo-monte/">https://agenciainfra.com/blog/norte-energia-aponta-riscos-da-revisao-do-hidrograma-de-belo-monte/</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>BELO Monte descumpre pela 2ª vez ordem para apresentar novo plano de vazão do rio Xingu. <strong>Acessa.com</strong>, 16 abr. 2026. Conteúdo da Folhapress. Disponível em: <a href="https://www.acessa.com/noticias/2026/04/320407-belo-monte-descumpre-pela-2-vez-ordem-para-apresentar-novo-plano-de-vazao-do-rio-xingu.html">https://www.acessa.com/noticias/2026/04/320407-belo-monte-descumpre-pela-2-vez-ordem-para-apresentar-novo-plano-de-vazao-do-rio-xingu.html</a>. Acesso em: 16 nov. 2026.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="chamada">
+            <div class="container">
+                <h2>Ficou com dúvida sobre o seu terreno?</h2>
+                <p>Conte o que você tem na propriedade e veja por onde começar.</p>
+                <a href="contato.html" class="botao">Fazer meu diagnóstico</a>
+            </div>
+        </section>
+        <div class="container">
+            <nav class="nav-paginas" aria-label="Navegação entre páginas">
+            <a href="hidraulica-funcionamento.html" class="anterior"><small>Página anterior</small>← Hidráulica: funcionamento</a>
+            <a href="noticias.html" class="proxima"><small>Próxima página</small>Notícias e Eco-Inovação →</a>
+            </nav>
+        </div>
+
+    </main>
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer>
+        <nav aria-label="Mapa do site">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Quem somos</a></li>
+                <li><a href="solar-fotovoltaica.html">Solar fotovoltaica</a></li>
+                <li><a href="solar-termica.html">Solar térmica</a></li>
+                <li><a href="eolica-residencial.html">Eólica residencial</a></li>
+                <li><a href="eolica-grandes-parques.html">Eólica em grandes parques</a></li>
+                <li><a href="hidraulica-funcionamento.html">Hidráulica: funcionamento</a></li>
+                <li><a href="hidraulica-impactos.html">Hidráulica: impactos</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html">Contato e diagnóstico</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 - TERS | Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra como usar a água corrente do seu sítio para gerar energia ou bombear água: roda d'água, carneiro hidráulico e microturbinas.">
+
+    <title>Energia Hidráulica: Funcionamento | TERS</title>
+
+    <!-- Folha de estilos e JavaScript compartilhados por todas as páginas -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body class="tema-hidraulica">
+
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ================= CABEÇALHO ================= -->
+    <header>
+        <div class="container">
+
+            <!-- Botão hambúrguer + logo -->
+            <div class="header-esquerda">
+                <button class="botao-menu" id="botao-menu" type="button"
+                        aria-label="Abrir menu de energias"
+                        aria-controls="menu-lateral"
+                        aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">TERS</a>
+            </div>
+
+            <!-- Menu horizontal (telas grandes) -->
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Quem somos</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Fase 7 (16/11/2026): botão de alto contraste (regra de acessibilidade).
+                 O main.js liga/desliga a classe "alto-contraste" no <html> e lembra a escolha. -->
+            <button class="botao-contraste" id="botao-contraste" type="button" aria-pressed="false">
+                <span aria-hidden="true">◐</span> Alto contraste
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ================= MENU LATERAL ================= -->
+    <!-- Fundo escuro: ao clicar, fecha o menu -->
+    <div class="menu-fundo" id="menu-fundo"></div>
+
+    <aside class="menu-lateral" id="menu-lateral" aria-label="Menu de energias">
+        <div class="menu-topo">
+            <span class="menu-logo">TERS</span>
+            <button class="menu-fechar" id="menu-fechar" type="button" aria-label="Fechar menu">✕</button>
+        </div>
+
+        <nav aria-label="Páginas de energia">
+                <p class="menu-grupo-titulo" id="grupo-solar">ENERGIA SOLAR</p>
+                <ul aria-labelledby="grupo-solar">
+                    <li><a href="solar-fotovoltaica.html"><span aria-hidden="true">☀️</span> Fotovoltaica</a></li>
+                    <li><a href="solar-termica.html"><span aria-hidden="true">🚿</span> Térmica</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-eolica">ENERGIA EÓLICA</p>
+                <ul aria-labelledby="grupo-eolica">
+                    <li><a href="eolica-residencial.html"><span aria-hidden="true">🌬️</span> Residencial</a></li>
+                    <li><a href="eolica-grandes-parques.html"><span aria-hidden="true">🏞️</span> Grandes parques</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-hidraulica">ENERGIA HIDRÁULICA</p>
+                <ul aria-labelledby="grupo-hidraulica">
+                    <li><a href="hidraulica-funcionamento.html" aria-current="page"><span aria-hidden="true">💧</span> Funcionamento</a></li>
+                    <li><a href="hidraulica-impactos.html"><span aria-hidden="true">🌿</span> Impactos</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-mais">MAIS</p>
+                <ul aria-labelledby="grupo-mais">
+                    <li><a href="noticias.html"><span aria-hidden="true">📰</span> Notícias e Eco-Inovação</a></li>
+                    <li><a href="contato.html"><span aria-hidden="true">✉️</span> Contato e Diagnóstico</a></li>
+                </ul>
+        </nav>
+    </aside>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main id="conteudo" tabindex="-1">
+        <section class="pagina-topo">
+            <div class="container">
+                <nav class="trilha" aria-label="Você está em">
+                    <ol>
+                    <li><a href="index.html">Início</a></li>
+                    <li>Energia Hidráulica</li>
+                    <li aria-current="page">Funcionamento</li>
+                    </ol>
+                </nav>
+
+                <div class="pagina-topo-conteudo">
+                    <div class="pagina-icone" aria-hidden="true">💧</div>
+                    <div>
+                        <span class="destaque">ENERGIA HIDRÁULICA</span>
+                        <h1>Como a água corrente do seu sítio pode virar energia</h1>
+                        <p>Você não precisa de uma usina. Um córrego, uma nascente com desnível ou um riacho já podem girar uma roda d'água, bombear água ou gerar eletricidade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="secao">
+            <div class="container">
+                <h2>Como funciona</h2>
+                <div class="texto-coluna">
+                    <p>Toda solução de energia da água depende de dois fatores. Quanto maiores eles forem, mais energia você tem:</p>
+                </div>                <div class="grade-3">
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">⬇️</span>
+                        <h3>Queda</h3>
+                        <p>A diferença de altura entre onde a água é captada e onde ela é usada, em metros.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">🌊</span>
+                        <h3>Vazão</h3>
+                        <p>A quantidade de água que passa por segundo, em litros por segundo (L/s).</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">⚙️</span>
+                        <h3>Movimento</h3>
+                        <p>A água cai ou corre, gira uma roda ou turbina, e esse movimento pode bombear água, moer grãos ou girar um gerador.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="secao secao-branca">
+            <div class="container">
+                <h2>Qual solução para cada situação</h2>
+                <div class="grade-3">
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">🎡</span>
+                        <h3>Roda d'água</h3>
+                        <p>Funciona bem com pouca queda e boa vazão. É lenta, simples de construir e fácil de manter. Para gerar eletricidade, precisa de um multiplicador de rotação, porque a roda gira devagar.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">⬆️</span>
+                        <h3>Carneiro hidráulico</h3>
+                        <p>Não usa eletricidade nem combustível: a própria queda da água empurra uma parte dela para cima. Ótimo para levar água da nascente até uma caixa mais alta. Só uma fração pequena da água é elevada, o resto volta ao curso.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">🌀</span>
+                        <h3>Microturbina</h3>
+                        <p>Gera eletricidade o dia todo, enquanto houver água. O modelo depende do terreno: tipo Pelton para muita queda e pouca água, tipo hélice para pouca queda e muita água.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="secao">
+            <div class="container">
+                <h2>Onde funciona</h2>
+                <div class="tabela-rolagem">
+                    <table>
+                        <caption>Qual solução costuma combinar com cada tipo de água</caption>
+                        <thead><tr><th scope="col">Situação no terreno</th><th scope="col">Solução mais comum</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Córrego com pouca queda e boa vazão</th><td>Roda d'água ou turbina de hélice</td></tr>
+                            <tr><th scope="row">Nascente em morro (muita queda, pouca água)</th><td>Microturbina Pelton ou carneiro hidráulico</td></tr>
+                            <tr><th scope="row">Rio grande e plano</th><td>Pouco indicado para pequena escala</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="caixa"><p><strong>Água o ano todo:</strong> o ideal é que o curso d'água tenha vazão boa também na época da seca. Veja a página de impactos para entender como planejar isso.</p></div>
+            </div>
+        </section>
+        <section class="secao secao-branca">
+            <div class="container">
+                <h2>Calcule o que o seu curso d'água pode render</h2>
+                <div class="texto-coluna">
+                    <p><strong>Como medir a vazão:</strong> encha um balde de 20 litros com o fluxo de água e marque o tempo. Se o balde encher em 4 segundos, a vazão é 20 ÷ 4 = 5 L/s.</p>
+                    <p><strong>Como medir a queda:</strong> use uma mangueira transparente cheia de água (nível de mangueira) ou um nível a laser para ver a diferença de altura entre o ponto de captação e o ponto onde ficará o equipamento.</p>
+                </div>
+                <form class="calculadora" id="calculadora" aria-labelledby="titulo-calculadora" novalidate>
+                    <h3 id="titulo-calculadora">Calculadora de potência</h3>
+                    <div class="calculadora-campos">
+                        <div class="campo">
+                            <label for="calc-vazao">Vazão (litros por segundo)</label>
+                            <input type="text" id="calc-vazao" inputmode="decimal" value="10">
+                        </div>
+                        <div class="campo">
+                            <label for="calc-queda">Queda (metros)</label>
+                            <input type="text" id="calc-queda" inputmode="decimal" value="5">
+                        </div>
+                        <div class="campo">
+                            <label for="calc-eficiencia">Aproveitamento do equipamento</label>
+                            <select id="calc-eficiencia">
+                                <option value="0.4">Simples (40%)</option>
+                                <option value="0.5" selected>Médio (50%)</option>
+                                <option value="0.6">Bom (60%)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="botao">Calcular</button>
+                    <div class="calculadora-resultado" id="calc-resultado" role="status" aria-live="polite">
+                        Preencha os campos e clique em Calcular.
+                    </div>
+                </form>
+                <div class="exemplo">Fórmula: potência (W) = 9,81 × vazão (L/s) × queda (m) × aproveitamento.<br>Exemplo: 10 L/s e 5 m de queda, com aproveitamento de 50%, dão cerca de 245 W.</div>
+                <div class="caixa caixa-atencao"><p>O resultado é uma estimativa máxima. Perdas na tubulação e no gerador reduzem o valor real, e o ideal é conferir com um técnico.</p></div>
+            </div>
+        </section>
+        <section class="secao">
+            <div class="container">
+                <h2>Tem espaço?</h2>
+                <div class="texto-coluna">
+                    <p>O espaço ocupado é pequeno, mas o percurso importa. Você vai precisar de:</p>
+                </div>                <ul class="lista">
+                    <li>Um ponto de <strong>captação</strong> no curso d'água, com grade e caixa de decantação.</li>
+                    <li>Um <strong>canal ou tubo</strong> para levar a água do alto até a roda ou turbina. Quanto mais curto, melhor.</li>
+                    <li>Uma <strong>casa de máquinas</strong> pequena, protegida, para o gerador e os equipamentos elétricos.</li>
+                    <li>Um <strong>retorno</strong> para a água voltar ao curso, mais abaixo.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="secao secao-branca">
+            <div class="container">
+                <h2>Como é a montagem</h2>
+                <ol class="passos">
+                    <li><strong>Meça vazão e queda</strong>Use o método do balde e o nível de mangueira. Meça em épocas diferentes, se puder.</li>
+                    <li><strong>Estime a potência</strong>Use a calculadora acima para saber se vale a pena.</li>
+                    <li><strong>Escolha a solução</strong>Roda d'água, carneiro hidráulico ou microturbina, conforme sua queda e vazão.</li>
+                    <li><strong>Faça a captação</strong>Uma pequena tomada d'água com grade para barrar folhas e galhos.</li>
+                    <li><strong>Leve a água até o equipamento</strong>Por canal aberto ou tubulação, sempre com o menor trajeto possível.</li>
+                    <li><strong>Instale casa de máquinas e gerador</strong>Se for gerar eletricidade, inclua controlador de carga, baterias ou inversor, com instalação elétrica feita por profissional.</li>
+                    <li><strong>Devolva toda a água ao curso</strong>Depois de passar pelo equipamento, a água deve voltar limpa ao riacho.</li>
+                </ol>
+                <div class="caixa caixa-atencao"><p><strong>Licenças:</strong> usar a água de um rio ou nascente pode exigir autorização (outorga) e licenciamento ambiental. As regras variam por estado e município. Consulte o órgão ambiental ou de recursos hídricos antes de construir.</p></div>
+            </div>
+        </section>
+
+        <!-- ===== 7. NO SÍTIO OU NA FAZENDA =====
+             - .item-risco: "Riscos e cuidados" do carneiro, destacado na própria lista.
+             - .caixa .caixa-risco: riscos da microcentral, sempre visíveis (sem acordeão).
+             - O link da etapa 2 leva à calculadora desta página (#calculadora). -->
+        <section class="secao" id="no-sitio">
+            <div class="container">
+                <h2>7. No sítio ou na fazenda: como fazer, métodos comprovados e riscos</h2>
+                <div class="texto-coluna">
+                    <p>Em propriedade rural há duas aplicações da força da água: levar a água para um ponto mais alto, sem eletricidade, e gerar eletricidade com uma microcentral. As duas dependem de queda e de vazão, e de um curso d'água que a propriedade possa usar legalmente.</p>
+                </div>
+
+                <h3>A) Carneiro hidráulico (bomba de aríete): elevar água sem energia elétrica</h3>
+                <ul class="lista">
+                    <!-- "Recalque" é explicado no texto, porque a regra de conteúdo pede
+                         explicar os termos técnicos para leigos. -->
+                    <li><strong>O que é.</strong> É um equipamento que bombeia água sem energia elétrica. Tem cinco partes: tubo de alimentação, válvula de impulso, válvula de recalque, câmara de ar e tubo de recalque. Recalque é o trecho em que a água é empurrada para cima, do equipamento até a caixa d'água. Funciona pelo princípio do golpe de aríete.</li>
+                    <li><strong>O que é preciso.</strong> Uma queda de água e vazão suficiente. Exige água em abundância. A queda costuma ser produzida por uma pequena barragem.</li>
+                    <li><strong>Exemplo de dimensionamento.</strong> Um material da USP traz um caso com queda de 2,5 m, altura de recalque de 15 m e necessidade de 2.180 litros por dia, ou cerca de 90,83 litros por hora.</li>
+                    <li><strong>Provado.</strong> Um trabalho do IF Goiano testou um carneiro de PVC com queda de 2,5 m. Outros estudos o apresentam como alternativa viável onde falta energia elétrica.</li>
+                    <li><strong>Limites.</strong> A vazão recalcada e o rendimento caem, e a vazão de desperdício aumenta, à medida que cresce o desnível de recalque. Ou seja, ele serve para pequenos volumes e alturas moderadas.</li>
+                    <li class="item-risco"><span aria-hidden="true">⚠️</span> <strong>Riscos e cuidados.</strong> Ele tira água do curso d'água de forma contínua. Pela Lei das Águas (Lei 9.433/1997, art. 12), toda captação depende de outorga, menos os usos considerados insignificantes, e quem define o que é insignificante é o regulamento de cada estado ou bacia: por isso, consulte o órgão estadual de recursos hídricos. A água de córregos e nascentes está mais sujeita a contaminação e deve ser tratada antes de beber (Embrapa Gado de Leite, 2013). A água elevada não volta ao riacho, e o trecho abaixo fica com menos vazão, o que pesa na estiagem. O golpe de aríete se repete de 20 a 100 vezes por minuto e pode danificar a tubulação de alimentação, que precisa ser compatível com a pressão. Um estudo da USP desenvolveu experimento para dar subsídios técnicos ao uso de PVC na alimentação do carneiro.</li>
+                    <li><strong>Fonte regional.</strong> A Epagri (SC) divulgou orientação de montagem e instalação do carneiro por seu extensionista, na Revista Agropecuária Catarinense de 2012.</li>
+                </ul>
+
+                <h3>B) Microcentral hidrelétrica (MCH): gerar eletricidade</h3> <!-- O espaço acima vem de ".secao .lista + h3" no CSS -->
+                <div class="texto-coluna">
+                    <p><strong>Impacto menor.</strong> Segundo um trabalho de 2019, a MCH causa menos impactos porque não exige represar o curso d'água.</p>
+                    <p><strong>Etapas.</strong></p>
+                </div>
+                <ol class="lista">
+                    <li>Medir a queda (desnível) e a vazão do rio ao longo do ano. Um trabalho da UNESP em Guaratinguetá mediu o perfil de velocidade na seção do rio e fez croqui do desnível para dimensionar o aproveitamento em propriedade rural isolada.</li>
+                    <li>Estimar a potência (P ≈ 9,81 · H · Q, como na <a href="#calculadora">seção de cálculo de potência desta página</a>). A potência real é menor, por causa das perdas na tubulação, na turbina e no gerador.</li>
+                    <li>Escolher a turbina conforme queda e vazão (Pelton, Banki, Francis, axial). Um projeto de casa de máquinas de microcentral (UTFPR) discute turbinas Francis horizontal e Banki.</li>
+                    <li>Prever o <strong>regulador de velocidade</strong>. A regulação de velocidade mantém o equilíbrio de potência entre geração e carga, de modo que velocidade e frequência fiquem em faixa viável. Uma alternativa ao regulador tradicional, que é caro, é o uso de carga auxiliar ("dump") controlada por eletrônica de potência.</li>
+                    <li>Proteções e operação segura. Uma dissertação da USP sobre gerenciamento de riscos em PCHs trata de NR-10, análise preliminar de riscos, permissão de trabalho e segurança de barragens.</li>
+                    <li>Decidir se será isolada ou ligada à rede. No caso estudado em Guaratinguetá, o custo da MCH foi comparado com o custo de estender a rede elétrica até a propriedade.</li>
+                </ol>
+
+                <div class="texto-coluna">
+                    <p><strong>Aspectos legais.</strong></p>
+                </div>
+                <ul class="lista">
+                    <li>A ANEEL classifica as centrais em CGH (até 5 MW), PCH (de 5 a 30 MW) e UHE (acima de 30 MW). O limite da CGH está na Lei 9.074/1995 (art. 8º, com a redação da Lei 13.360/2016), e a faixa da PCH, na Resolução Normativa ANEEL nº 875/2020 (art. 5º, com a redação da REN nº 1.070/2023).</li>
+                    <li>Microgeração distribuída é a de até 75 kW.</li>
+                    <li>Para CGH, a ANEEL entende que há registro, que não é outorga; os órgãos de recursos hídricos e de meio ambiente emitem outorga e licenciamento.</li>
+                    <li>Um material da ANEEL recomenda consultar os gestores de recursos hídricos antes do registro.</li>
+                    <li>Em Minas Gerais, o pedido de outorga para geração de energia aparece como modalidade própria (modo de uso 20).</li>
+                    <li>No Espírito Santo, o órgão ambiental informa que não há dispensa de licenciamento para geração de energia.</li>
+                    <li>Se a MCH for tão pequena que o estado a dispense de outorga ou licença, é preciso confirmar no órgão estadual. A Lei das Águas dispensa de outorga os usos considerados insignificantes, mas deixa a definição para o regulamento (Lei 9.433/1997, art. 12, § 1º); os comitês de bacia propõem esses limites aos conselhos de recursos hídricos (art. 38, V).</li>
+                </ul>
+
+                <div class="caixa caixa-risco"> <!-- Base .caixa (como .caixa-atencao) + cor vermelha de risco -->
+                    <h3><span aria-hidden="true">⚠️</span> Riscos</h3>
+                    <ul class="lista">
+                        <li><em>Elétricos e mecânicos:</em> sobrevelocidade da turbina se a carga for perdida e não houver regulação; choque; operação sozinho no local. A regulação de velocidade (item 4) é a barreira principal.</li>
+                        <li><em>Hidrológicos:</em> cheias podem danificar a tomada d'água e a casa de máquinas; na estiagem a potência cai, e o dimensionamento deve usar a vazão de seca, não a média.</li>
+                        <li><em>Ambientais:</em> uma CGH em Minas Gerais, no rio Novo, criou trecho de vazão reduzida de cerca de 540 m dentro da própria propriedade. Mesmo pequeno, o desvio exige vazão remanescente (veja a <a href="hidraulica-impactos.html">página 4</a>).</li>
+                        <li><em>Jurídicos:</em> uma portaria de outorga de Goiás para CGH prevê que o titular responde civil e criminalmente por danos à vida, à saúde e ao meio ambiente.</li>
+                        <li><em>Segurança de barragem:</em> o TCU decidiu que a ANEEL deve fiscalizar barragens de CGH, após auditoria apontar lacuna legislativa para usinas de até 5 MW. A Lei 12.334/2010 (Política Nacional de Segurança de Barragens) pode se aplicar conforme altura e volume do barramento: ela vale para a barragem que tenha pelo menos uma destas características: altura do maciço de 15 m ou mais; reservatório de 3 milhões de m³ ou mais; resíduos perigosos; dano potencial associado médio ou alto; ou risco alto, a critério do órgão fiscalizador (art. 1º, parágrafo único, com a redação da Lei 14.066/2020).</li>
+                        <li><em>Ligação à rede:</em> uma geração que continua ligada quando a rede cai é perigosa para quem trabalha na linha; só ligue com a distribuidora. As distribuidoras exigem a proteção anti-ilhamento, que desliga o gerador quando a rede é desligada. A norma da Light, por exemplo, põe essa proteção entre os requisitos de segurança, com desligamento em até 2 segundos, e pede no ponto de conexão a placa "Cuidado – risco de choque elétrico – geração própria".</li>
+                    </ul>
+                </div>
+
+                <div class="caixa caixa-atencao"><p><strong>Recomendação de segurança:</strong> a parte elétrica e a obra civil de uma microcentral devem ser feitas por profissionais habilitados, e o uso da água deve seguir outorga e licenciamento.</p></div>
+            </div>
+        </section>
+
+        <!-- ===== 8. COMPARANDO AS FONTES (substitui a anterior; texto igual nas 4 páginas) =====
+             Os cartões usam .card-comparacao: o rótulo em negrito faz papel de título.
+             No "Veja também", o link da página atual leva aria-current="page". -->
+        <section class="secao secao-branca" id="comparacao">
+            <div class="container">
+                <h2>8. Comparando as fontes de energia deste site</h2>
+                <div class="grade-3">
+                    <div class="card card-comparacao">
+                        <span class="card-icone" aria-hidden="true">☀️</span>
+                        <p><strong>Fotovoltaica:</strong> transforma luz em eletricidade, sem peças móveis; produz em corrente contínua, e o inversor a converte. Depende do sol e, para uso noturno, de baterias ou da rede.</p>
+                    </div>
+                    <div class="card card-comparacao">
+                        <span class="card-icone" aria-hidden="true">🚿</span>
+                        <p><strong>Solar térmica:</strong> transforma luz em calor para aquecer água. É a mais simples de montar e de manter, mas não gera eletricidade.</p>
+                    </div>
+                    <div class="card card-comparacao">
+                        <span class="card-icone" aria-hidden="true">💧</span>
+                        <p><strong>Hidráulica (páginas 3 e 4):</strong> transforma a queda e a vazão da água em eletricidade. Pode ser controlada pelo operador quando há reservatório, mas depende de rio, de licenças e de gestão do uso da água.</p>
+                    </div>
+                </div>
+                <div class="texto-coluna">
+                    <p><strong>No campo:</strong> a térmica é a de menor risco elétrico; a fotovoltaica exige cuidado com corrente contínua e arco elétrico; a hidráulica é a que mais depende de autorizações e de cuidados com o rio.</p>
+                    <p><strong>Em comum:</strong> as três usam fontes renováveis. Fontes que variam com o clima, como a solar, podem ser complementadas por usinas controláveis, como as hidrelétricas com reservatório. A própria hidráulica também varia com a chuva, como mostra a <a href="hidraulica-impactos.html">página 4</a>.</p>
+                </div>
+                <p class="ver-tambem">→ Veja também as páginas: <a href="solar-fotovoltaica.html">Solar Fotovoltaica</a>, <a href="solar-termica.html">Solar Térmica</a>, <a href="hidraulica-funcionamento.html" aria-current="page">Hidráulica – Funcionamento</a> e <a href="hidraulica-impactos.html">Hidráulica – Impactos</a>.</p>
+            </div>
+        </section>
+
+        <!-- ===== 9. REFERÊNCIAS (formato ABNT) =====
+             Cada fonte foi conferida no documento original. O material da USP
+             (e-Disciplinas) não traz autoria visível; por isso a entrada começa
+             pelo título, como a ABNT manda para obras sem autor. -->
+        <section class="secao" id="referencias">
+            <div class="container">
+                <h2>9. Referências</h2>
+                <div class="referencias">
+                    <h3>Normas e legislação</h3>
+                    <ul class="lista-referencias">
+                        <li>BRASIL. <strong>Lei nº 9.074, de 7 de julho de 1995</strong>. Estabelece normas para outorga e prorrogações das concessões e permissões de serviços públicos e dá outras providências. Brasília, DF: Presidência da República, 1995. Texto compilado, art. 8º com a redação dada pela Lei nº 13.360, de 2016. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/leis/l9074cons.htm">https://www.planalto.gov.br/ccivil_03/leis/l9074cons.htm</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>BRASIL. <strong>Lei nº 9.433, de 8 de janeiro de 1997</strong>. Institui a Política Nacional de Recursos Hídricos, cria o Sistema Nacional de Gerenciamento de Recursos Hídricos, regulamenta o inciso XIX do art. 21 da Constituição Federal, e altera o art. 1º da Lei nº 8.001, de 13 de março de 1990, que modificou a Lei nº 7.990, de 28 de dezembro de 1989. Brasília, DF: Presidência da República, 1997. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/leis/l9433.htm">https://www.planalto.gov.br/ccivil_03/leis/l9433.htm</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>BRASIL. <strong>Lei nº 12.334, de 20 de setembro de 2010</strong>. Estabelece a Política Nacional de Segurança de Barragens destinadas à acumulação de água para quaisquer usos, à disposição final ou temporária de rejeitos e à acumulação de resíduos industriais, cria o Sistema Nacional de Informações sobre Segurança de Barragens e altera a redação do art. 35 da Lei nº 9.433, de 8 de janeiro de 1997, e do art. 4º da Lei nº 9.984, de 17 de julho de 2000. Brasília, DF: Presidência da República, 2010. Art. 1º, parágrafo único, com a redação dada pela Lei nº 14.066, de 2020. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12334.htm">https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12334.htm</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>BRASIL. <strong>Lei nº 13.360, de 17 de novembro de 2016</strong>. Altera a Lei nº 5.655, de 20 de maio de 1971, a Lei nº 10.438, de 26 de abril de 2002, a Lei nº 9.648, de 27 de maio de 1998, a Lei nº 12.111, de 9 de dezembro de 2009, a Lei nº 12.783, de 11 de janeiro de 2013, a Lei nº 9.074, de 7 de julho de 1995, a Lei nº 7.990, de 28 de dezembro de 1989, a Lei nº 9.491, de 9 de setembro de 1997, a Lei nº 9.427, de 26 de dezembro de 1996, a Lei nº 10.848, de 15 de março de 2004, a Lei nº 11.488, de 15 de junho de 2007, a Lei nº 12.767, de 27 de dezembro de 2012, a Lei nº 13.334, de 13 de setembro de 2016, a Lei nº 13.169, de 6 de outubro de 2015, a Lei nº 11.909, de 4 de março de 2009, e a Lei nº 13.203, de 8 de dezembro de 2015; e dá outras providências. Brasília, DF: Presidência da República, 2016. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13360.htm">https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13360.htm</a>. Acesso em: 15 nov. 2026.</li>
+                    </ul>
+
+                    <h3>Artigos e trabalhos</h3>
+                    <ul class="lista-referencias">
+                        <li>PASCUETTI, Douglas Yuri Leite. <strong>Alternativas para regulação de velocidade de turbinas em micro centrais hidrelétricas</strong>. 2021. Trabalho de conclusão de curso (Engenharia Elétrica) – UTFPR, Pato Branco, 2021. Disponível em: <a href="https://riut.utfpr.edu.br/jspui/bitstream/1/28056/1/regulacaovelocidadeturbinasmicro.pdf">https://riut.utfpr.edu.br/jspui/bitstream/1/28056/1/regulacaovelocidadeturbinasmicro.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>CALGARO, José Isaac da Silva; LIMA, Bruno Ferreira de. <strong>Sistema de regulação de velocidade em micro central hidrelétrica (MCH)</strong>. 2013. Trabalho de diplomação (Tecnologia em Automação Industrial) – UTFPR, Pato Branco, 2013. Disponível em: <a href="https://repositorio.utfpr.edu.br/jspui/bitstream/1/14879/4/PB_COAUT_2013_1_04.pdf">https://repositorio.utfpr.edu.br/jspui/bitstream/1/14879/4/PB_COAUT_2013_1_04.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>SOSTER, Rodrigo André. <strong>Redução de oscilações de frequência com o uso de carga "dump" em micro centrais elétricas isoladas</strong>. 2012. Trabalho de conclusão de curso (Engenharia Elétrica) – UTFPR, Pato Branco, 2012. Disponível em: <a href="https://repositorio.utfpr.edu.br/jspui/bitstream/1/14957/2/PB_COELT_2012_1_04.pdf">https://repositorio.utfpr.edu.br/jspui/bitstream/1/14957/2/PB_COELT_2012_1_04.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>SALOME NETO, Rodolfo. <strong>Gerenciamento de riscos técnicos de operação de pequenas centrais hidrelétricas</strong>. 2014. Dissertação – Escola Politécnica, Universidade de São Paulo, São Paulo, 2014. Disponível em: <a href="https://bdta.abcd.usp.br/directbitstream/733228d3-577f-4f81-8c7d-d383e73db193/RodolfoSalomeNeto.pdf">https://bdta.abcd.usp.br/directbitstream/733228d3-577f-4f81-8c7d-d383e73db193/RodolfoSalomeNeto.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>BALDINI, José Mateus Guedes. <strong>Projeto e implantação de micro central de geração hidrelétrica</strong>: análise de caso. 2014. Trabalho de graduação (Engenharia Mecânica) – Faculdade de Engenharia de Guaratinguetá, UNESP, Guaratinguetá, 2014. A capa e a folha de rosto indicam 2014; a ficha catalográfica registra 2013. Disponível em: <a href="https://repositorio.unesp.br/bitstreams/bd896e76-2810-49c6-8b39-3f9d66950ca2/download">https://repositorio.unesp.br/bitstreams/bd896e76-2810-49c6-8b39-3f9d66950ca2/download</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>CARVALHO, Alex Quadros de; MOREIRA, Caio Augusto. <strong>Projeto da casa de máquinas da micro central hidrelétrica de Rio Branco do Sul</strong>. 2015. Trabalho de conclusão de curso (Engenharia Elétrica) – UTFPR, Curitiba, 2015. Disponível em: <a href="https://repositorio.utfpr.edu.br/jspui/bitstream/1/10027/3/CT_COELE_2015_1_15.pdf">https://repositorio.utfpr.edu.br/jspui/bitstream/1/10027/3/CT_COELE_2015_1_15.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>BRAGA, Izadora da Silva; PEREIRA, Leonardo Contreira. Aspectos legais e sócio-ambientais da implantação de microhidrelétricas em propriedades rurais. In: SEMANA INTEGRADA DE INOVAÇÃO, ENSINO, PESQUISA E EXTENSÃO DA UFPEL (SIIEPE), 5., 2019, Pelotas. Disponível em: <a href="https://anais-siiepe.ufpel.edu.br/2019/EN_03741.pdf">https://anais-siiepe.ufpel.edu.br/2019/EN_03741.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>CARNEIRO hidráulico. São Paulo: Universidade de São Paulo, [20--]. Material didático publicado no e-Disciplinas, com acesso restrito a usuários da USP. Disponível em: <a href="https://edisciplinas.usp.br/pluginfile.php/5811359/mod_resource/content/0/Carneiro%20hidr%C3%A1ulico.pdf">https://edisciplinas.usp.br/pluginfile.php/5811359/mod_resource/content/0/Carneiro%20hidr%C3%A1ulico.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>SILVEIRA, Lauro Alberto da; PORTO, Gabriel de Souza; PAULA, Tássio Rodrigues; ALVES, Thiago Ferreira; CAVALCANTE, Jhonatan Reis; SILVA, Cicero José da. Construção e rendimento de carneiro hidráulico de PVC. In: CONGRESSO ESTADUAL DE INICIAÇÃO CIENTÍFICA DO IF GOIANO (CEIC), 4., 2015. Instituto Federal Goiano, Câmpus Morrinhos, 21 a 24 set. 2015. Disponível em: <a href="https://ifgoiano.edu.br/ceic/anais/files/papers/20622.pdf">https://ifgoiano.edu.br/ceic/anais/files/papers/20622.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>ABATE, Caroline; BOTREL, Tarlei Arriel. Carneiro hidráulico com tubulação de alimentação em aço galvanizado e em PVC. <strong>Scientia Agricola</strong>, Piracicaba, v. 59, n. 1, p. 197-203, jan./mar. 2002. Disponível em: <a href="https://revistas.usp.br/sa/article/download/21713/23737/25345">https://revistas.usp.br/sa/article/download/21713/23737/25345</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>INVENÇÃO centenária bombeia água com economia. <strong>Revista Agropecuária Catarinense</strong>, v. 25, n. 1, mar. 2012. Seção "Vida rural" (matéria sem autoria indicada). Epagri. Disponível em: <a href="https://publicacoes.epagri.sc.gov.br/rac/issue/download/107/162">https://publicacoes.epagri.sc.gov.br/rac/issue/download/107/162</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>OTENIO, Marcelo; CARVALHO, Gilvânia Lúcia Oliveira de; SOUZA, André Monteiro de; NEPOMUCENO, Raquel Sant'Ana Coelho. Cloração de água para propriedades rurais. <strong>Engormix</strong>, 10 out. 2013. Artigo técnico da Embrapa Gado de Leite. Cópia guardada no repositório Infoteca-e da Embrapa. Disponível em: <a href="https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/982691/1/Cloracao-de-agaua-para-propriedades-rurais.pdf">https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/982691/1/Cloracao-de-agaua-para-propriedades-rurais.pdf</a>. Acesso em: 16 nov. 2026.</li>
+                    </ul>
+
+                    <h3>Governo e órgãos reguladores</h3>
+                    <ul class="lista-referencias">
+                        <li>AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA (Brasil). <strong>Resolução Normativa nº 875, de 10 de março de 2020</strong>. Brasília, DF: ANEEL, 2020. Art. 5º com a redação dada pela Resolução Normativa nº 1.070, de 29 de agosto de 2023. Texto da REN nº 1.070/2023 disponível em: <a href="https://www.lex.com.br/resolucao-normativa-aneel-no-1-070-de-29-de-agosto-de-2023/">https://www.lex.com.br/resolucao-normativa-aneel-no-1-070-de-29-de-agosto-de-2023/</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>GOIÁS. Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável. <strong>Portaria nº 104/2022 – SRH</strong> (outorga de CGH). Disponível em: <a href="https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2025/09/PORTARIA-No-104-2022-Outorga-Disponibilidade-Hidrica-Luiz-Carlos-Tiecher.pdf">https://goias.gov.br/meioambiente/wp-content/uploads/sites/33/2025/09/PORTARIA-No-104-2022-Outorga-Disponibilidade-Hidrica-Luiz-Carlos-Tiecher.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>ESPÍRITO SANTO. Instituto Estadual de Meio Ambiente e Recursos Hídricos (IEMA). <strong>Orientações gerais sobre atividade de geração de energia</strong>. Disponível em: <a href="https://iema.es.gov.br/Media/iema/LICENCIAMENTO/Energia/ORIENTA%C3%87%C3%95ES%20GERAIS%20SOBRE%20ATIVIDADE%20DE%20GERA%C3%87%C3%83O%20DE%20ENERGIA.pdf">https://iema.es.gov.br/Media/iema/LICENCIAMENTO/Energia/ORIENTA%C3%87%C3%95ES%20GERAIS%20SOBRE%20ATIVIDADE%20DE%20GERA%C3%87%C3%83O%20DE%20ENERGIA.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>MINAS GERAIS. Processo de outorga da CGH Maurício, rio Novo (Leopoldina). Disponível em: <a href="https://sistemas.meioambiente.mg.gov.br/licenciamento/arquivos_outorga/MqE0Kl3mjFqqqxif4JghBKytuAAn0e-T.pdf">https://sistemas.meioambiente.mg.gov.br/licenciamento/arquivos_outorga/MqE0Kl3mjFqqqxif4JghBKytuAAn0e-T.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA. <strong>Processo nº 48500.000121/2018-84</strong>: consulta sobre segurança de barragens de usinas com capacidade reduzida – CGHs. Aberto em 9 fev. 2018. Inclui o Parecer nº 363/2017/PF-ANA/PGF/AGU, encaminhado pelo Ofício nº 207/2017/AA-ANA, de 21 set. 2017. Disponível em: <a href="https://www.snirh.gov.br/portal/snisb/Entenda_Mais/legislacao-aplicada/arquivos/parecer-aneel-seguranca-de-barragens-pchs.pdf">https://www.snirh.gov.br/portal/snisb/Entenda_Mais/legislacao-aplicada/arquivos/parecer-aneel-seguranca-de-barragens-pchs.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>CARVALHO, Carlos Eduardo Cabral (ANEEL, Superintendente de Concessões e Autorizações de Geração). Apresentação. In: V CONFERÊNCIA NACIONAL DE PCHs E CGHs, Brasília, 24 mar. 2022. ABRAPCH. Disponível em: <a href="https://abrapch.org.br/wp-content/uploads/2022/03/20220324_ConferenciaNacional__CarlosEduardoCabral_ANEEL.pdf">https://abrapch.org.br/wp-content/uploads/2022/03/20220324_ConferenciaNacional__CarlosEduardoCabral_ANEEL.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                    </ul>
+
+                    <h3>Sites e dados setoriais</h3>
+                    <ul class="lista-referencias">
+                        <li>FERNANDES, Rafael Luis. TCU decide que Aneel deve fiscalizar barragens de CGHs. <strong>Brasil Energia</strong>, [2020?]. A decisão noticiada é o Acórdão nº 726/2020 – TCU – Plenário, de 1º abr. 2020. Disponível em: <a href="https://brasilenergia.com.br/energia/hidrica/tcu-decide-que-aneel-deve-fiscalizar-barragens-de-cghs">https://brasilenergia.com.br/energia/hidrica/tcu-decide-que-aneel-deve-fiscalizar-barragens-de-cghs</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>LIGHT SERVIÇOS DE ELETRICIDADE S.A. <strong>Procedimentos para a conexão de microgeração e minigeração ao sistema de distribuição da Light SESA</strong>: até classe 36,2 kV. Informação Técnica DTE/DTP 01/2012, revisão de abril de 2024. Rio de Janeiro: Light, 2024. Item 5, Requisitos de segurança. Disponível em: <a href="https://www.light.com.br/Downloads/LIGHT_Informacao_Tecnica_DTE_DTP_01_2012_%20rev%20Abril_2024.pdf">https://www.light.com.br/Downloads/LIGHT_Informacao_Tecnica_DTE_DTP_01_2012_%20rev%20Abril_2024.pdf</a>. Acesso em: 16 nov. 2026.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="chamada">
+            <div class="container">
+                <h2>Ficou com dúvida sobre o seu terreno?</h2>
+                <p>Conte o que você tem na propriedade e veja por onde começar.</p>
+                <a href="contato.html" class="botao">Fazer meu diagnóstico</a>
+            </div>
+        </section>
+        <div class="container">
+            <nav class="nav-paginas" aria-label="Navegação entre páginas">
+            <a href="eolica-grandes-parques.html" class="anterior"><small>Página anterior</small>← Eólica em grandes parques</a>
+            <a href="hidraulica-impactos.html" class="proxima"><small>Próxima página</small>Hidráulica: impactos →</a>
+            </nav>
+        </div>
+
+    </main>
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer>
+        <nav aria-label="Mapa do site">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Quem somos</a></li>
+                <li><a href="solar-fotovoltaica.html">Solar fotovoltaica</a></li>
+                <li><a href="solar-termica.html">Solar térmica</a></li>
+                <li><a href="eolica-residencial.html">Eólica residencial</a></li>
+                <li><a href="eolica-grandes-parques.html">Eólica em grandes parques</a></li>
+                <li><a href="hidraulica-funcionamento.html">Hidráulica: funcionamento</a></li>
+                <li><a href="hidraulica-impactos.html">Hidráulica: impactos</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html">Contato e diagnóstico</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 - TERS | Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
