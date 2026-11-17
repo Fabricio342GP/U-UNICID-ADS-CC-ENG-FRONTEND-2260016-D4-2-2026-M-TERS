@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entenda como painéis solares geram eletricidade, onde funcionam, quanto espaço ocupam e como é a montagem em sítios e casas.">
+
+    <title>Energia Solar Fotovoltaica | TERS</title>
+
+    <!-- Folha de estilos e JavaScript compartilhados por todas as páginas -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body class="tema-solar">
+
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ================= CABEÇALHO ================= -->
+    <header>
+        <div class="container">
+
+            <!-- Botão hambúrguer + logo -->
+            <div class="header-esquerda">
+                <button class="botao-menu" id="botao-menu" type="button"
+                        aria-label="Abrir menu de energias"
+                        aria-controls="menu-lateral"
+                        aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">TERS</a>
+            </div>
+
+            <!-- Menu horizontal (telas grandes) -->
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Quem somos</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Fase 7 (16/11/2026): botão de alto contraste (regra de acessibilidade).
+                 O main.js liga/desliga a classe "alto-contraste" no <html> e lembra a escolha. -->
+            <button class="botao-contraste" id="botao-contraste" type="button" aria-pressed="false">
+                <span aria-hidden="true">◐</span> Alto contraste
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ================= MENU LATERAL ================= -->
+    <!-- Fundo escuro: ao clicar, fecha o menu -->
+    <div class="menu-fundo" id="menu-fundo"></div>
+
+    <aside class="menu-lateral" id="menu-lateral" aria-label="Menu de energias">
+        <div class="menu-topo">
+            <span class="menu-logo">TERS</span>
+            <button class="menu-fechar" id="menu-fechar" type="button" aria-label="Fechar menu">✕</button>
+        </div>
+
+        <nav aria-label="Páginas de energia">
+                <p class="menu-grupo-titulo" id="grupo-solar">ENERGIA SOLAR</p>
+                <ul aria-labelledby="grupo-solar">
+                    <li><a href="solar-fotovoltaica.html" aria-current="page"><span aria-hidden="true">☀️</span> Fotovoltaica</a></li>
+                    <li><a href="solar-termica.html"><span aria-hidden="true">🚿</span> Térmica</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-eolica">ENERGIA EÓLICA</p>
+                <ul aria-labelledby="grupo-eolica">
+                    <li><a href="eolica-residencial.html"><span aria-hidden="true">🌬️</span> Residencial</a></li>
+                    <li><a href="eolica-grandes-parques.html"><span aria-hidden="true">🏞️</span> Grandes parques</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-hidraulica">ENERGIA HIDRÁULICA</p>
+                <ul aria-labelledby="grupo-hidraulica">
+                    <li><a href="hidraulica-funcionamento.html"><span aria-hidden="true">💧</span> Funcionamento</a></li>
+                    <li><a href="hidraulica-impactos.html"><span aria-hidden="true">🌿</span> Impactos</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-mais">MAIS</p>
+                <ul aria-labelledby="grupo-mais">
+                    <li><a href="noticias.html"><span aria-hidden="true">📰</span> Notícias e Eco-Inovação</a></li>
+                    <li><a href="contato.html"><span aria-hidden="true">✉️</span> Contato e Diagnóstico</a></li>
+                </ul>
+        </nav>
+    </aside>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main id="conteudo" tabindex="-1">
+        <section class="pagina-topo">
+            <div class="container">
+                <nav class="trilha" aria-label="Você está em">
+                    <ol>
+                    <li><a href="index.html">Início</a></li>
+                    <li>Energia Solar</li>
+                    <li aria-current="page">Fotovoltaica</li>
+                    </ol>
+                </nav>
+
+                <div class="pagina-topo-conteudo">
+                    <div class="pagina-icone" aria-hidden="true">☀️</div>
+                    <div>
+                        <span class="destaque">ENERGIA SOLAR</span>
+                        <h1>Energia solar fotovoltaica: eletricidade a partir da luz do Sol</h1>
+                        <p>Painéis instalados no telhado ou no chão transformam a luz do Sol em eletricidade para a casa, o galpão ou a bomba d'água do sítio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="secao">
+            <div class="container">
+                <h2>Como funciona</h2>
+                <div class="grade-3">
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">🔲</span>
+                        <h3>1. Painéis</h3>
+                        <p>As células de silício transformam a luz do Sol em corrente contínua (CC). Não precisa de calor: o que importa é a luz.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">🔌</span>
+                        <h3>2. Inversor</h3>
+                        <p>Converte a corrente contínua em corrente alternada (CA), que é a usada nas tomadas e nos equipamentos.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">🏡</span>
+                        <h3>3. Uso da energia</h3>
+                        <p>A energia alimenta a propriedade. O que sobra vai para a rede elétrica ou para baterias, conforme o tipo de sistema.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="secao secao-branca">
+            <div class="container">
+                <h2>Dois tipos de sistema para o campo</h2>
+                <div class="tabela-rolagem">
+                    <table>
+                        <caption>Comparação entre sistema ligado à rede e sistema isolado</caption>
+                        <thead><tr><th scope="col">Tipo</th><th scope="col">Como é</th><th scope="col">Indicado para</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Ligado à rede (on-grid)</th><td>Sem baterias. A energia que sobra vai para a rede e vira créditos com a distribuidora. Por segurança, desliga quando a rede cai.</td><td>Quem já tem energia da distribuidora e quer reduzir a conta de luz.</td></tr>
+                            <tr><th scope="row">Isolado (off-grid)</th><td>Usa baterias e controlador de carga para guardar energia. Fica independente da rede, mas custa mais e as baterias exigem cuidados.</td><td>Quem não tem rede elétrica ou está longe dela.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="secao">
+            <div class="container">
+                <h2>Onde funciona</h2>
+                <div class="texto-coluna">
+                    <p>A energia solar funciona na maior parte do Brasil, porque o país recebe muito sol durante o ano. Algumas regiões geram mais, mas mesmo no Sul o resultado é bom. O que mais pesa é o local da instalação:</p>
+                </div>                <ul class="lista">
+                    <li><strong>Sem sombra:</strong> árvores, morros ou construções não devem cobrir os painéis, principalmente entre 9h e 15h.</li>
+                    <li><strong>Voltados para o Norte:</strong> no Brasil, o Sol passa mais pelo lado Norte, então os painéis ficam apontados para lá.</li>
+                    <li><strong>Inclinação parecida com a latitude local:</strong> o instalador define o ângulo ideal para a sua região.</li>
+                    <li><strong>Base firme:</strong> telhado resistente ou terreno firme, com estrutura bem fixada contra o vento.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="secao">
+            <div class="container">
+                <h2>Tem espaço?</h2>
+                <div class="texto-coluna">
+                    <!-- Exemplo com fonte e ano para a área do painel.
+                         Ficha técnica Intelbras EMSH-550 HC: 1134 x 2278 mm (cerca de 2,58 m²). -->
+                    <p>Cada painel ocupa em torno de 2 a 2,6 m². Um exemplo: o módulo de 550 W EMSH-550 HC, da Intelbras, mede 2,28 m × 1,13 m, ou cerca de 2,6 m² (ficha técnica, 2023). Quantos painéis você vai precisar depende do seu consumo: olhe, na conta de luz, o consumo em kWh dos últimos 12 meses e leve esse número para pedir o orçamento.</p>
+                    <p>No sítio, o telhado da casa ou do galpão costuma ser o melhor lugar. Se não houver espaço ou sol suficiente no telhado, os painéis podem ficar no chão, em uma área limpa e cercada.</p>
+                </div>                <div class="caixa"><p><strong>Uso muito comum no campo:</strong> a bomba d'água solar. Os painéis ligam a bomba direto, ela puxa água do poço, do açude ou do rio durante o dia e enche a caixa d'água, sem precisar de bateria.</p></div>
+            </div>
+        </section>
+        <section class="secao secao-branca">
+            <div class="container">
+                <h2>Como é a montagem</h2>
+                <ol class="passos">
+                    <li><strong>Levante o consumo</strong>Veja na conta de luz quantos kWh a propriedade usa por mês.</li>
+                    <li><strong>Escolha o local</strong>Telhado ou terreno sem sombra durante o dia, voltado para o Norte.</li>
+                    <li><strong>Peça um projeto</strong>Uma empresa ou profissional habilitado calcula o tamanho do sistema e apresenta o orçamento.</li>
+                    <li><strong>Instalação</strong>Instalam a estrutura, os painéis, o inversor e as proteções elétricas, incluindo o aterramento.</li>
+                    <li><strong>Liberação com a distribuidora</strong>Se o sistema for ligado à rede, é preciso pedir a conexão e trocar o medidor.</li>
+                    <li><strong>Manutenção</strong>Limpe os painéis com água e pano macio, de manhã cedo ou no fim da tarde, e acompanhe se a produção está normal.</li>
+                </ol>
+                <div class="caixa caixa-atencao"><p><strong>Atenção:</strong> a parte elétrica deve ser feita por profissional habilitado. A corrente contínua dos painéis pode causar choque e incêndio se a instalação for mal feita.</p></div>
+            </div>
+        </section>
+
+        <!-- ===== 7. NO SÍTIO OU NA FAZENDA =====
+             - .caixa .caixa-risco: avisos de risco sempre visíveis (sem acordeão). -->
+
+        <section class="secao" id="no-sitio">
+            <div class="container">
+                <h2>7. No sítio ou na fazenda: como fazer, métodos comprovados e riscos</h2>
+
+                <h3>Usos que funcionam no campo</h3>
+                <ol class="lista">
+                    <!-- "Altura manométrica" e "altura de recalque" são explicadas no texto,
+                         porque a regra de conteúdo pede explicar termos técnicos para leigos. -->
+                    <li><strong>Bombeamento solar de água.</strong> Os painéis alimentam uma motobomba e a água fica guardada em caixa elevada, o que dispensa baterias. Um estudo de 2017 instalou e mediu um sistema assim para uma família rural média em Cascavel (PR). Esse trabalho descreve que o tamanho do gerador depende da altura manométrica e da vazão. Altura manométrica é a altura total que a bomba precisa vencer: o desnível até a caixa d'água somado à perda de pressão da água nos canos. Primeiro meça quanta água a propriedade usa por dia e a altura de recalque (a diferença de altura entre a bomba e o ponto mais alto aonde a água precisa chegar); o dimensionamento sai disso.</li>
+                    <li><strong>Sistema isolado (off-grid).</strong> Painéis, controlador de carga, baterias e inversor atendem casa, galpão ou outras cargas sem rede. A NBR 16767 trata de elementos e baterias estacionárias para sistemas fotovoltaicos não conectados à rede.</li>
+                    <li><strong>Sistema conectado à rede (on-grid).</strong> A distribuidora precisa aprovar a ligação. Pela Lei 14.300/2022, microgeração é a central de até 75 kW (art. 1º, XI). O pedido é feito à distribuidora local num formulário-padrão definido pela ANEEL (art. 2º, § 3º), e a energia que o sistema manda para a rede é depois descontada do consumo, no Sistema de Compensação de Energia Elétrica (art. 1º, XIV).</li>
+                </ol>
+
+                <h3>Como fazer, em linhas gerais</h3> <!-- O espaço acima vem de ".secao .lista + h3" no CSS -->
+                <ul class="lista">
+                    <li>Levante o consumo (kWh/mês) ou o volume de água e a altura de recalque.</li>
+                    <li>Escolha um local sem sombra e longe de material combustível.</li>
+                    <li>Dimensione painéis, cabos e proteções. Em propriedade rural o cabo do painel até a construção costuma ser longo. Um estudo de caso em propriedade rural mostra que a NBR 16690 recomenda, sem exigir, queda de tensão no circuito CC de até 3%. Cabos mais grossos reduzem a perda, mas encarecem a obra.</li>
+                    <li>Contrate instalador qualificado e peça a instalação conforme a ABNT NBR 16690:2019, "Instalações elétricas de arranjos fotovoltaicos – Requisitos de projeto", que regula o lado de corrente contínua.</li>
+                </ul>
+
+                <div class="caixa caixa-risco"> <!-- Base .caixa (como .caixa-atencao) + cor vermelha de risco -->
+                    <h3><span aria-hidden="true">⚠️</span> Riscos</h3>
+                    <ul class="lista">
+                        <li><strong>Painéis ficam energizados.</strong> Em corrente contínua, o painel gera tensão sempre que recebe luz, mesmo com o inversor desconectado, o que desafia os procedimentos habituais de bloqueio da NR-10. Desligar o disjuntor não deixa o arranjo sem tensão.</li>
+                        <li><strong>Arco elétrico em CC.</strong> O arco não pode ser apagado com água nem com extintor comum; só a interrupção do circuito o contém. Conexões mal crimpadas ou conectores incompatíveis aumentam a resistência de contato, o aquecimento e o risco de arco. Não improvise emendas nem misture conectores de marcas diferentes.</li>
+                        <li><strong>Trabalho em altura e choque.</strong> Um artigo acadêmico de 2026 analisa o choque elétrico e a queda na instalação e na manutenção, e aponta as NR-10 e NR-35 como referência.</li>
+                        <li><strong>Incêndio.</strong> Uma apresentação do Corpo de Bombeiros de Minas Gerais cita um estudo alemão: 56% dos incêndios em painéis vieram de raio, 18% de falha de instalação, 17% de falha do produto e 9% de erro de projeto. Isso reforça aterramento, proteção contra descargas e instalação feita por profissional.</li>
+                        <li><strong>Baterias</strong> (sistemas isolados): a apresentação do CBMMG lista baterias entre os principais riscos. Instale em local ventilado e fora do alcance de crianças e animais.</li>
+                        <!-- Siglas AFPE e GFCI explicadas no texto.
+                             <abbr title> mostra o nome ao passar o mouse; como isso não aparece
+                             no celular nem pelo teclado, a explicação também fica escrita. -->
+                        <li><strong>Normas estaduais de bombeiros.</strong> A Norma Técnica 44/2023 (citada em documento do Canal Solar) prevê, para certos sistemas, proteção contra falha de arco (<abbr title="proteção contra falha de arco">AFPE</abbr>, um dispositivo que percebe faíscas nos cabos e desliga o circuito) e interruptor de falha de aterramento (<abbr title="interruptor de falha de aterramento">GFCI</abbr>, que desliga o circuito quando a corrente escapa para a estrutura ou para o chão, o que reduz o risco de choque e de incêndio). Consulte a norma do seu estado.</li>
+                    </ul>
+                </div>
+
+                <div class="caixa caixa-atencao"><p><strong>Recomendação de segurança:</strong> montagem totalmente caseira da parte elétrica não é recomendada. O que pode ser feito com segurança por conta própria é o planejamento, a medição de consumo e de água, e a infraestrutura civil (base e estrutura). A parte elétrica deve ser feita por profissional habilitado.</p></div>
+            </div>
+        </section>
+
+        <!-- ===== 8. COMPARANDO AS FONTES (substitui a anterior; texto igual nas 4 páginas) =====
+             Os cartões usam .card-comparacao: o rótulo em negrito faz papel de título.
+             No "Veja também", o link da página atual leva aria-current="page". -->
+        <section class="secao secao-branca" id="comparacao">
+            <div class="container">
+                <h2>8. Comparando as fontes de energia deste site</h2>
+                <div class="grade-3">
+                    <div class="card card-comparacao">
+                        <span class="card-icone" aria-hidden="true">☀️</span>
+                        <p><strong>Fotovoltaica:</strong> transforma luz em eletricidade, sem peças móveis; produz em corrente contínua, e o inversor a converte. Depende do sol e, para uso noturno, de baterias ou da rede.</p>
+                    </div>
+                    <div class="card card-comparacao">
+                        <span class="card-icone" aria-hidden="true">🚿</span>
+                        <p><strong>Solar térmica:</strong> transforma luz em calor para aquecer água. É a mais simples de montar e de manter, mas não gera eletricidade.</p>
+                    </div>
+                    <div class="card card-comparacao">
+                        <span class="card-icone" aria-hidden="true">💧</span>
+                        <p><strong>Hidráulica (páginas 3 e 4):</strong> transforma a queda e a vazão da água em eletricidade. Pode ser controlada pelo operador quando há reservatório, mas depende de rio, de licenças e de gestão do uso da água.</p>
+                    </div>
+                </div>
+                <div class="texto-coluna">
+                    <p><strong>No campo:</strong> a térmica é a de menor risco elétrico; a fotovoltaica exige cuidado com corrente contínua e arco elétrico; a hidráulica é a que mais depende de autorizações e de cuidados com o rio.</p>
+                    <p><strong>Em comum:</strong> as três usam fontes renováveis. Fontes que variam com o clima, como a solar, podem ser complementadas por usinas controláveis, como as hidrelétricas com reservatório. A própria hidráulica também varia com a chuva, como mostra a <a href="hidraulica-impactos.html">página 4</a>.</p>
+                </div>
+                <p class="ver-tambem">→ Veja também as páginas: <a href="solar-fotovoltaica.html" aria-current="page">Solar Fotovoltaica</a>, <a href="solar-termica.html">Solar Térmica</a>, <a href="hidraulica-funcionamento.html">Hidráulica – Funcionamento</a> e <a href="hidraulica-impactos.html">Hidráulica – Impactos</a>.</p>
+            </div>
+        </section>
+
+        <!-- ===== 9. REFERÊNCIAS (formato ABNT) =====
+             Cada fonte foi conferida no documento original. NR 10 e NR 35
+             aparecem em dois itens, com a versão vigente de cada uma. -->
+        <section class="secao" id="referencias">
+            <div class="container">
+                <h2>9. Referências</h2>
+                <div class="referencias">
+                    <h3>Normas e legislação</h3>
+                    <ul class="lista-referencias">
+                        <li>ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. <strong>ABNT NBR 16690:2019</strong>: instalações elétricas de arranjos fotovoltaicos – requisitos de projeto. Rio de Janeiro: ABNT, 2019.</li>
+                        <li>ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. <strong>ABNT NBR 16767:2019</strong>: elementos e baterias estacionárias para aplicação em sistemas fotovoltaicos não conectados à rede elétrica de energia (off-grid) – requisitos gerais e métodos de ensaio. Rio de Janeiro: ABNT, 2019.</li>
+                        <li>BRASIL. <strong>Lei nº 14.300, de 6 de janeiro de 2022</strong>. Institui o marco legal da microgeração e minigeração distribuída, o Sistema de Compensação de Energia Elétrica (SCEE) e o Programa de Energia Renovável Social (PERS); altera as Leis nºs 10.848, de 15 de março de 2004, e 9.427, de 26 de dezembro de 1996; e dá outras providências. Brasília, DF: Presidência da República, 2022. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm">https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>BRASIL. Ministério do Trabalho e Emprego. <strong>NR 10</strong>: segurança em instalações e serviços em eletricidade. Texto vigente dado pela Portaria MTE nº 598, de 7 de dezembro de 2004; nova redação aprovada pela Portaria MTE nº 737, de 29 de maio de 2026, em vigor a partir de 1º de junho de 2027.</li>
+                        <li>BRASIL. Ministério do Trabalho e Emprego. <strong>NR 35</strong>: trabalho em altura. Texto dado pela Portaria MTP nº 4.218, de 20 de dezembro de 2022, com alterações das Portarias MTE nº 1.680/2025 e nº 1.259/2026.</li>
+                    </ul>
+
+                    <h3>Artigos e trabalhos</h3>
+                    <ul class="lista-referencias">
+                        <li>ACORCI, Jeferson Manenti. <strong>Instalação e avaliação de um sistema de bombeamento d'água com placas fotovoltaicas, na cidade de Cascavel-PR</strong>. 2017. Trabalho de conclusão de curso – Centro Universitário FAG, Cascavel, 2017. Disponível em: <a href="https://www2.fag.edu.br/coopex/arquivos/producao/14999028625966b38e3b7bd.pdf">https://www2.fag.edu.br/coopex/arquivos/producao/14999028625966b38e3b7bd.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>CARRINHO, Jhone Batista. O paradoxo da segurança em sistemas fotovoltaicos: a inviabilidade técnica da desenergização total frente à NR-10 e NR-35. <strong>Plural – Revista Acadêmica</strong> (Sumaré), v. 5, n. 9, maio 2026. ISSN 2965-5285. Disponível em: <a href="https://sumare.edu.br/revista-academica/artigos/engenharia/2026-v5/ENG_O%20paradoxo%20da%20seguran%C3%A7a%20em%20fotovoltaicos.pdf">https://sumare.edu.br/revista-academica/artigos/engenharia/2026-v5/ENG_O%20paradoxo%20da%20seguran%C3%A7a%20em%20fotovoltaicos.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>CORPO DE BOMBEIROS MILITAR DE MINAS GERAIS. Apresentação sobre riscos com painéis fotovoltaicos (Ten. Evandro Maroni). In: Câmara dos Deputados, Comissão de Minas e Energia, audiência de 6 jul. 2022. Acesso em: 15 nov. 2026.</li>
+                    </ul>
+
+                    <h3>Sites e dados setoriais</h3>
+                    <ul class="lista-referencias">
+                        <li>SOUZA, João. Riscos do arco elétrico em sistemas fotovoltaicos e soluções de segurança. <strong>Canal Solar</strong>, 27 dez. 2021. Disponível em: <a href="https://canalsolar.com.br/riscos-do-arco-eletrico-em-sistemas-fotovoltaicos-e-solucoes-de-seguranca/">https://canalsolar.com.br/riscos-do-arco-eletrico-em-sistemas-fotovoltaicos-e-solucoes-de-seguranca/</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>SANTOS, Marcelo dos. Risco de incêndio: o perigo que o mercado solar brasileiro insiste em ignorar. <strong>Canal Solar</strong>, 4 set. 2025. Disponível em: <a href="https://canalsolar.com.br/risco-incendio-perigo-mercado-energia-solar-brasil/">https://canalsolar.com.br/risco-incendio-perigo-mercado-energia-solar-brasil/</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>VILLALVA, Marcelo. Como aplicar a NBR 16690 em estudo de queda de tensão no circuito CC? <strong>Canal Solar</strong>, 25 jul. 2020. Disponível em: <a href="https://canalsolar.com.br/estudo-de-caso-queda-de-tensao-no-circuito-de-cc-segundo-a-nbr-16690/">https://canalsolar.com.br/estudo-de-caso-queda-de-tensao-no-circuito-de-cc-segundo-a-nbr-16690/</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>GOIÁS. Corpo de Bombeiros Militar. <strong>Norma Técnica 44/2023</strong>: segurança em sistemas fotovoltaicos. Editada pela Portaria nº 544, de 20 de outubro de 2023. Disponível em: <a href="https://canalsolar.com.br/wp-content/uploads/2023/11/nota-tecnica.pdf">https://canalsolar.com.br/wp-content/uploads/2023/11/nota-tecnica.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <!-- Fonte da área do painel (seção "Tem espaço?"). -->
+                        <li>INTELBRAS. <strong>Módulo fotovoltaico EMSH-550 HC</strong>: ficha técnica. [<em>S. l.</em>]: Intelbras, 2023. Certificado Inmetro 011720/2022. Disponível em: <a href="https://backend.intelbras.com/sites/default/files/2023-02/datasheet-emsh-550-hc-pt.pdf">https://backend.intelbras.com/sites/default/files/2023-02/datasheet-emsh-550-hc-pt.pdf</a>. Acesso em: 16 nov. 2026.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="chamada">
+            <div class="container">
+                <h2>Ficou com dúvida sobre o seu terreno?</h2>
+                <p>Conte o que você tem na propriedade e veja por onde começar.</p>
+                <a href="contato.html" class="botao">Fazer meu diagnóstico</a>
+            </div>
+        </section>
+        <div class="container">
+            <nav class="nav-paginas" aria-label="Navegação entre páginas">
+            <a href="index.html" class="anterior"><small>Página anterior</small>← Início</a>
+            <a href="solar-termica.html" class="proxima"><small>Próxima página</small>Solar térmica →</a>
+            </nav>
+        </div>
+
+    </main>
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer>
+        <nav aria-label="Mapa do site">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Quem somos</a></li>
+                <li><a href="solar-fotovoltaica.html">Solar fotovoltaica</a></li>
+                <li><a href="solar-termica.html">Solar térmica</a></li>
+                <li><a href="eolica-residencial.html">Eólica residencial</a></li>
+                <li><a href="eolica-grandes-parques.html">Eólica em grandes parques</a></li>
+                <li><a href="hidraulica-funcionamento.html">Hidráulica: funcionamento</a></li>
+                <li><a href="hidraulica-impactos.html">Hidráulica: impactos</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html">Contato e diagnóstico</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 - TERS | Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
