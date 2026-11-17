@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grandes parques eólicos: como funcionam, quais são os benefícios e os desafios, o que é o Mecanismo de Desenvolvimento Limpo (MDL) e o futuro da energia eólica.">
+
+    <title>Energia Eólica em Grandes Parques | TERS</title>
+
+    <!-- Folha de estilos e JavaScript compartilhados por todas as páginas -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body class="tema-eolica">
+
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ================= CABEÇALHO ================= -->
+    <header>
+        <div class="container">
+
+            <!-- Botão hambúrguer + logo -->
+            <div class="header-esquerda">
+                <button class="botao-menu" id="botao-menu" type="button"
+                        aria-label="Abrir menu de energias"
+                        aria-controls="menu-lateral"
+                        aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">TERS</a>
+            </div>
+
+            <!-- Menu horizontal (telas grandes) -->
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Quem somos</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Fase 7 (16/11/2026): botão de alto contraste (regra de acessibilidade).
+                 O main.js liga/desliga a classe "alto-contraste" no <html> e lembra a escolha. -->
+            <button class="botao-contraste" id="botao-contraste" type="button" aria-pressed="false">
+                <span aria-hidden="true">◐</span> Alto contraste
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ================= MENU LATERAL ================= -->
+    <!-- Fundo escuro: ao clicar, fecha o menu -->
+    <div class="menu-fundo" id="menu-fundo"></div>
+
+    <aside class="menu-lateral" id="menu-lateral" aria-label="Menu de energias">
+        <div class="menu-topo">
+            <span class="menu-logo">TERS</span>
+            <button class="menu-fechar" id="menu-fechar" type="button" aria-label="Fechar menu">✕</button>
+        </div>
+
+        <nav aria-label="Páginas de energia">
+                <p class="menu-grupo-titulo" id="grupo-solar">ENERGIA SOLAR</p>
+                <ul aria-labelledby="grupo-solar">
+                    <li><a href="solar-fotovoltaica.html"><span aria-hidden="true">☀️</span> Fotovoltaica</a></li>
+                    <li><a href="solar-termica.html"><span aria-hidden="true">🚿</span> Térmica</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-eolica">ENERGIA EÓLICA</p>
+                <ul aria-labelledby="grupo-eolica">
+                    <li><a href="eolica-residencial.html"><span aria-hidden="true">🌬️</span> Residencial</a></li>
+                    <li><a href="eolica-grandes-parques.html" aria-current="page"><span aria-hidden="true">🏞️</span> Grandes parques</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-hidraulica">ENERGIA HIDRÁULICA</p>
+                <ul aria-labelledby="grupo-hidraulica">
+                    <li><a href="hidraulica-funcionamento.html"><span aria-hidden="true">💧</span> Funcionamento</a></li>
+                    <li><a href="hidraulica-impactos.html"><span aria-hidden="true">🌿</span> Impactos</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-mais">MAIS</p>
+                <ul aria-labelledby="grupo-mais">
+                    <li><a href="noticias.html"><span aria-hidden="true">📰</span> Notícias e Eco-Inovação</a></li>
+                    <li><a href="contato.html"><span aria-hidden="true">✉️</span> Contato e Diagnóstico</a></li>
+                </ul>
+        </nav>
+    </aside>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main id="conteudo" tabindex="-1">
+        <!-- ===== TEXTO NOVO DA EQUIPE (16/11/2026) =====
+             Todo o conteúdo desta página foi trocado pelo texto "Grandes Parques Eólicos: energia
+             para milhares de pessoas", enviado pela equipe. O texto foi copiado sem mudanças.
+             As seções antigas (O que é um parque eólico, Pequeno gerador ou grande parque?, O que é o MDL,
+             E para quem tem terra?, Vantagens e impactos) estão no backup
+             _backup-2026-11-16/antes-texto-novo-eolica/. -->
+        <section class="pagina-topo">
+            <div class="container">
+                <nav class="trilha" aria-label="Você está em">
+                    <ol>
+                    <li><a href="index.html">Início</a></li>
+                    <li>Energia Eólica</li>
+                    <li aria-current="page">Grandes parques</li>
+                    </ol>
+                </nav>
+
+                <div class="pagina-topo-conteudo">
+                    <div class="pagina-icone" aria-hidden="true">🏞️</div>
+                    <div>
+                        <span class="destaque">ENERGIA EÓLICA</span>
+                        <!-- Título e primeiro parágrafo do texto da equipe, no mesmo lugar do resumo
+                             da página Hidráulica – Impactos (antes: "Energia eólica em grandes parques
+                             e o Mecanismo de Desenvolvimento Limpo") -->
+                        <h1>Grandes Parques Eólicos: energia para milhares de pessoas</h1>
+                        <p>Os grandes parques eólicos são áreas que possuem diversas turbinas instaladas para aproveitar a força dos ventos e produzir grandes quantidades de eletricidade. Diferentemente dos pequenos geradores residenciais, essas estruturas são desenvolvidas para atender à demanda energética de cidades, indústrias e diferentes regiões.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 1. COMO FUNCIONAM ===== -->
+        <section class="secao">
+            <div class="container">
+                <h2>Como funcionam os parques eólicos?</h2>
+                <div class="texto-coluna">
+                    <p>O processo de geração começa quando o vento movimenta as pás das turbinas. Esse movimento faz girar um rotor conectado a um gerador, que transforma a energia mecânica em energia elétrica.</p>
+                    <p>Depois de produzida, a eletricidade passa por equipamentos que ajustam sua tensão e é encaminhada por linhas de transmissão até as redes de distribuição, chegando aos consumidores.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 2. BENEFÍCIOS =====
+             Lista com o rótulo em negrito, no mesmo formato das outras listas do site (classe .lista) -->
+        <section class="secao secao-branca">
+            <div class="container">
+                <h2>Quais são os benefícios?</h2>
+                <ul class="lista">
+                    <li><strong>Grande capacidade de geração:</strong> vários aerogeradores trabalhando juntos conseguem produzir grandes quantidades de eletricidade.</li>
+                    <li><strong>Fonte renovável:</strong> utiliza uma fonte natural que se renova continuamente.</li>
+                    <li><strong>Redução de emissões:</strong> pode diminuir a necessidade de geração de eletricidade por meio de combustíveis fósseis.</li>
+                    <li><strong>Desenvolvimento econômico:</strong> a construção e a manutenção dos parques podem gerar empregos e movimentar a economia local.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== 3. O QUE É O MDL =====
+             Regra de conteúdo: ideia de terceiros precisa de fonte. As informações desta seção
+             foram conferidas no Texto para Discussão 2877 do Ipea (2023), citado nas Referências:
+             o MDL foi criado pelo Protocolo de Quioto, um país desenvolvido pode usar as reduções
+             certificadas de projetos feitos em países em desenvolvimento para cumprir suas metas,
+             e o mecanismo também buscava ajudar esses países no desenvolvimento sustentável. -->
+        <section class="secao">
+            <div class="container">
+                <h2>O que é o Mecanismo de Desenvolvimento Limpo (MDL)?</h2>
+                <div class="texto-coluna">
+                    <p>O Mecanismo de Desenvolvimento Limpo (MDL) foi criado no âmbito do Protocolo de Kyoto, um acordo internacional relacionado à redução das emissões de gases de efeito estufa.</p>
+                    <p>Com esse mecanismo, projetos realizados em países em desenvolvimento, como parques de energia renovável, poderiam gerar créditos de carbono quando comprovassem reduções de emissões em relação a uma situação de referência.</p>
+                    <p>Esses créditos poderiam ser utilizados por países desenvolvidos para cumprir parte de suas metas de redução de emissões.</p>
+                    <p>O MDL foi uma iniciativa importante para incentivar investimentos em tecnologias mais limpas e apoiar o desenvolvimento sustentável.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 4. DESAFIOS ===== -->
+        <section class="secao secao-branca">
+            <div class="container">
+                <h2>Quais são os desafios?</h2>
+                <div class="texto-coluna">
+                    <p>Apesar dos benefícios, os grandes parques eólicos também apresentam desafios. É necessário escolher locais com ventos adequados, investir em infraestrutura e avaliar possíveis impactos ambientais, como os efeitos sobre aves, morcegos e a paisagem natural.</p>
+                    <p>Por isso, o planejamento e os estudos ambientais são fundamentais antes da construção de uma usina eólica.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 5. O FUTURO DA ENERGIA EÓLICA ===== -->
+        <section class="secao">
+            <div class="container">
+                <h2>O futuro da energia eólica</h2>
+                <div class="texto-coluna">
+                    <p>A energia eólica possui um papel importante na transição energética mundial. Com o avanço da tecnologia, as turbinas estão se tornando mais eficientes, permitindo aproveitar melhor os ventos e ampliar a participação das fontes renováveis na produção de eletricidade.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== REFERÊNCIAS =====
+             Formato ABNT, em ordem alfabética, igual às outras páginas.
+             - Ipea (2023): acrescentado com o texto novo, como fonte da seção 3 (MDL).
+             - WEG (2026): mantido porque a regra é não retirar fontes. Ele era a fonte dos números
+               do texto antigo (cubo a 134 m e turbinas de 6,6 a 7 MW), que saíram da página.
+               A equipe decide se continua aqui (veja o log de 16/11/2026).
+             Reaproveita as classes .referencias e .lista-referencias (seção 18 do CSS). -->
+        <section class="secao secao-branca" id="referencias">
+            <div class="container">
+                <h2>Referências</h2>
+                <div class="referencias">
+                    <ul class="lista-referencias">
+                        <li>LUEDEMANN, Gustavo; TOZATO, Heloisa; COELHO, Luísa; FRANGETTO, Flavia Witkowski; FONSECA, Rafael. <strong>Gastos federais, alavancagem de capital privado e receitas advindas da venda de reduções certificadas de emissões (RCEs) no contexto do Mecanismo de Desenvolvimento Limpo no Brasil (2000 a 2020)</strong>. Rio de Janeiro: Ipea, maio 2023. (Texto para Discussão, n. 2877). DOI: 10.38116/td2877-port. Disponível em: <a href="https://doi.org/10.38116/td2877-port">https://doi.org/10.38116/td2877-port</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>WEG EQUIPAMENTOS ELÉTRICOS S.A. <strong>Aerogeradores AGW 7.X</strong>: catálogo. Jaraguá do Sul: WEG, ago. 2026. Cód. 50125670, rev. 03. Disponível em: <a href="https://static.weg.net/medias/downloadcenter/hd2/h25/WEG-aerogeradores-agw-172-7mw-50125670-catalogo-portugues.pdf">https://static.weg.net/medias/downloadcenter/hd2/h25/WEG-aerogeradores-agw-172-7mw-50125670-catalogo-portugues.pdf</a>. Acesso em: 16 nov. 2026.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="chamada">
+            <div class="container">
+                <h2>Ficou com dúvida sobre o seu terreno?</h2>
+                <p>Conte o que você tem na propriedade e veja por onde começar.</p>
+                <a href="contato.html" class="botao">Fazer meu diagnóstico</a>
+            </div>
+        </section>
+        <div class="container">
+            <nav class="nav-paginas" aria-label="Navegação entre páginas">
+            <a href="eolica-residencial.html" class="anterior"><small>Página anterior</small>← Eólica residencial</a>
+            <a href="hidraulica-funcionamento.html" class="proxima"><small>Próxima página</small>Hidráulica: funcionamento →</a>
+            </nav>
+        </div>
+
+    </main>
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer>
+        <nav aria-label="Mapa do site">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Quem somos</a></li>
+                <li><a href="solar-fotovoltaica.html">Solar fotovoltaica</a></li>
+                <li><a href="solar-termica.html">Solar térmica</a></li>
+                <li><a href="eolica-residencial.html">Eólica residencial</a></li>
+                <li><a href="eolica-grandes-parques.html">Eólica em grandes parques</a></li>
+                <li><a href="hidraulica-funcionamento.html">Hidráulica: funcionamento</a></li>
+                <li><a href="hidraulica-impactos.html">Hidráulica: impactos</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html">Contato e diagnóstico</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 - TERS | Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
