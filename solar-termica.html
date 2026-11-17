@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Veja como o aquecedor solar esquenta a água para banho e uso diário, onde funciona, quanto espaço ocupa e como é a instalação.">
+
+    <title>Energia Solar Térmica | TERS</title>
+
+    <!-- Folha de estilos e JavaScript compartilhados por todas as páginas -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body class="tema-solar">
+
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ================= CABEÇALHO ================= -->
+    <header>
+        <div class="container">
+
+            <!-- Botão hambúrguer + logo -->
+            <div class="header-esquerda">
+                <button class="botao-menu" id="botao-menu" type="button"
+                        aria-label="Abrir menu de energias"
+                        aria-controls="menu-lateral"
+                        aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="logo">TERS</a>
+            </div>
+
+            <!-- Menu horizontal (telas grandes) -->
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Quem somos</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Fase 7 (16/11/2026): botão de alto contraste (regra de acessibilidade).
+                 O main.js liga/desliga a classe "alto-contraste" no <html> e lembra a escolha. -->
+            <button class="botao-contraste" id="botao-contraste" type="button" aria-pressed="false">
+                <span aria-hidden="true">◐</span> Alto contraste
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ================= MENU LATERAL ================= -->
+    <!-- Fundo escuro: ao clicar, fecha o menu -->
+    <div class="menu-fundo" id="menu-fundo"></div>
+
+    <aside class="menu-lateral" id="menu-lateral" aria-label="Menu de energias">
+        <div class="menu-topo">
+            <span class="menu-logo">TERS</span>
+            <button class="menu-fechar" id="menu-fechar" type="button" aria-label="Fechar menu">✕</button>
+        </div>
+
+        <nav aria-label="Páginas de energia">
+                <p class="menu-grupo-titulo" id="grupo-solar">ENERGIA SOLAR</p>
+                <ul aria-labelledby="grupo-solar">
+                    <li><a href="solar-fotovoltaica.html"><span aria-hidden="true">☀️</span> Fotovoltaica</a></li>
+                    <li><a href="solar-termica.html" aria-current="page"><span aria-hidden="true">🚿</span> Térmica</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-eolica">ENERGIA EÓLICA</p>
+                <ul aria-labelledby="grupo-eolica">
+                    <li><a href="eolica-residencial.html"><span aria-hidden="true">🌬️</span> Residencial</a></li>
+                    <li><a href="eolica-grandes-parques.html"><span aria-hidden="true">🏞️</span> Grandes parques</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-hidraulica">ENERGIA HIDRÁULICA</p>
+                <ul aria-labelledby="grupo-hidraulica">
+                    <li><a href="hidraulica-funcionamento.html"><span aria-hidden="true">💧</span> Funcionamento</a></li>
+                    <li><a href="hidraulica-impactos.html"><span aria-hidden="true">🌿</span> Impactos</a></li>
+                </ul>
+                <p class="menu-grupo-titulo" id="grupo-mais">MAIS</p>
+                <ul aria-labelledby="grupo-mais">
+                    <li><a href="noticias.html"><span aria-hidden="true">📰</span> Notícias e Eco-Inovação</a></li>
+                    <li><a href="contato.html"><span aria-hidden="true">✉️</span> Contato e Diagnóstico</a></li>
+                </ul>
+        </nav>
+    </aside>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main id="conteudo" tabindex="-1">
+        <section class="pagina-topo">
+            <div class="container">
+                <nav class="trilha" aria-label="Você está em">
+                    <ol>
+                    <li><a href="index.html">Início</a></li>
+                    <li>Energia Solar</li>
+                    <li aria-current="page">Térmica</li>
+                    </ol>
+                </nav>
+
+                <div class="pagina-topo-conteudo">
+                    <div class="pagina-icone" aria-hidden="true">🚿</div>
+                    <div>
+                        <span class="destaque">ENERGIA SOLAR</span>
+                        <h1>Energia solar térmica: água quente sem gastar eletricidade</h1>
+                        <p>Coletores solares esquentam a água do banho, da cozinha e até da piscina usando apenas o calor do Sol.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="secao">
+            <div class="container">
+                <h2>Como funciona</h2>
+                <div class="grade-3">
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">🔥</span>
+                        <h3>1. Coletor solar</h3>
+                        <p>Placas escuras, protegidas por vidro, absorvem o calor do Sol e esquentam a água que passa por dentro de tubos.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">🛢️</span>
+                        <h3>2. Reservatório térmico</h3>
+                        <p>A água quente é guardada em um tanque com isolamento, que mantém o calor por horas, até a noite ou a manhã seguinte.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icone" aria-hidden="true">🚰</span>
+                        <h3>3. Chuveiro e torneiras</h3>
+                        <p>A água quente segue pela tubulação até os pontos de uso. Nos dias nublados, uma resistência ou o gás ajuda.</p>
+                    </div>
+                </div>
+                <div class="caixa"><p><strong>Sem bomba e sem eletricidade:</strong> em sistemas pequenos, a água quente fica mais leve e sobe sozinha até o reservatório (o chamado termossifão). Por isso o reservatório precisa ficar mais alto que os coletores.</p></div>
+            </div>
+        </section>
+        <section class="secao secao-branca">
+            <div class="container">
+                <h2>Não confunda com painel fotovoltaico</h2>
+                <div class="tabela-rolagem">
+                    <table>
+                        <caption>Diferença entre os dois tipos de energia solar</caption>
+                        <thead><tr><th scope="col"></th><th scope="col">Solar térmica</th><th scope="col">Solar fotovoltaica</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">O que produz</th><td>Água quente</td><td>Eletricidade</td></tr>
+                            <tr><th scope="row">O que aproveita</th><td>O calor do Sol</td><td>A luz do Sol</td></tr>
+                            <tr><th scope="row">Uso no sítio</th><td>Banho, cozinha, lavagem de equipamentos, piscina</td><td>Iluminação, bombas, geladeira, tomadas</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="secao">
+            <div class="container">
+                <h2>Onde funciona</h2>
+                <div class="texto-coluna">
+                    <p>Funciona onde há sol durante boa parte do dia, e é muito útil em regiões frias, onde o banho quente faz mais falta. O que você precisa observar:</p>
+                </div>                <ul class="lista">
+                    <li><strong>Telhado com sol e sem sombra,</strong> de preferência voltado para o Norte.</li>
+                    <li><strong>Inclinação um pouco maior que a latitude local,</strong> para aproveitar melhor o sol do inverno, quando mais se usa água quente.</li>
+                    <li><strong>Reservatório acima dos coletores</strong> e perto dos pontos de uso, para a tubulação ser curta e perder menos calor.</li>
+                    <li><strong>Cuidado com geada forte:</strong> em locais onde a água pode congelar, o sistema precisa de proteção contra congelamento.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="secao">
+            <div class="container">
+                <h2>Tem espaço?</h2>
+                <div class="texto-coluna">
+                    <p>Ocupa pouco: em uma casa pequena, são poucos metros quadrados de telhado para os coletores, mais um reservatório de algumas centenas de litros, que pode ficar no telhado ou dentro do forro. O instalador define o tamanho pelo número de moradores e pelos pontos de uso.</p>
+                    <p>Também dá para usar coletores simples para aquecer a água de uma piscina, ou fornecer água quente para a limpeza de equipamentos e utensílios.</p>
+                </div>
+            </div>
+        </section>
+        <section class="secao secao-branca">
+            <div class="container">
+                <h2>Como é a montagem</h2>
+                <ol class="passos">
+                    <li><strong>Conte os usos</strong>Quantas pessoas moram na casa e onde a água quente será usada: chuveiros, pia da cozinha, tanque.</li>
+                    <li><strong>Escolha o telhado</strong>Um lugar com sol o dia todo, mais baixo que o reservatório e perto dos pontos de uso.</li>
+                    <li><strong>Instale coletores e reservatório</strong>Fixe os coletores no telhado na inclinação correta e o reservatório isolado no ponto mais alto.</li>
+                    <li><strong>Use a tubulação certa</strong>Para água quente, use cobre, CPVC ou PPR. O PVC comum não aguenta a temperatura. Isole os canos para não perder calor.</li>
+                    <li><strong>Ligue o aquecimento de apoio</strong>Resistência elétrica ou gás para os dias de chuva ou muito nublados.</li>
+                    <li><strong>Faça a manutenção</strong>Limpe o vidro dos coletores, veja se há vazamentos e confira o isolamento de vez em quando.</li>
+                </ol>
+                <div class="caixa caixa-atencao"><p><strong>Alternativa de baixo custo:</strong> existem projetos populares de aquecedor solar feitos com materiais reciclados. Eles funcionam, mas exigem cuidado com a pressão e a temperatura da água. Se tiver dúvida, peça a ajuda de um técnico.</p></div>
+            </div>
+        </section>
+
+        <!-- ===== 7. NO SÍTIO OU NA FAZENDA =====
+             - .caixa .caixa-risco: avisos de risco sempre visíveis (sem acordeão).
+             - O link "manual oficial do ASBC" aponta para a página de informações
+               técnicas da Sociedade do Sol. -->
+        <section class="secao" id="no-sitio">
+            <div class="container">
+                <h2>7. No sítio ou na fazenda: como fazer, métodos comprovados e riscos</h2>
+
+                <h3>Duas opções</h3>
+                <ol class="lista">
+                    <li><strong>Coletor solar comercial, certificado.</strong> É o caminho de menor risco: o equipamento segue as normas técnicas e traz a etiqueta ENCE/PBE. O regulamento do Inmetro para aquecimento solar de água (Portaria nº 633/2026) exige a certificação e a etiqueta, e cita a NBR 16641, que trata da segurança dos reservatórios. A instalação segue a NBR 15569, que traz os requisitos de projeto e instalação do sistema. Serve como referência de desempenho e durabilidade.</li>
+                    <li><strong>Aquecedor solar de baixo custo (ASBC).</strong> Foi difundido pela ONG Sociedade do Sol. É um aquecedor de água construído com tubos e forros de PVC. Há trabalhos acadêmicos que o testaram:
+                        <ul class="lista">
+                            <li>Um estudo comparou o ASBC com um aquecedor convencional e obteve eficiência térmica de 41,9% para o coletor de PVC e 44,7% para o convencional.</li>
+                            <li>Os pesquisadores concluíram que o desempenho é semelhante, mas a vida útil do ASBC é menor.</li>
+                            <li>Um estudo em Araranguá (SC) considerou uma vida útil de 10 anos, conforme a Sociedade do Sol, e concluiu que a instalação é viável nessa cidade.</li>
+                            <li>Outro trabalho (UTFPR) mediu o coletor de metal 14,4% mais eficiente que o de baixo custo.</li>
+                            <li>Em um teste publicado pela Sociedade do Sol, a temperatura final esperada da água era a temperatura máxima do dia mais 20 °C.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Como fazer, em linhas gerais</h3> <!-- O espaço acima vem de ".secao .lista + h3" no CSS -->
+                <ul class="lista">
+                    <li>Siga o <a href="https://www.sociedadedosol.org.br/infotecnicas">manual oficial do ASBC</a>, e não vídeos avulsos.</li>
+                    <li>Posicione o coletor voltado para o sol e com inclinação adequada ao local (veja a seção de orientação na página 2).</li>
+                    <li>Ligue o coletor ao reservatório (boiler) por tubulação isolada e mantenha o chuveiro elétrico ou outro apoio para dias nublados.</li>
+                </ul>
+
+                <div class="caixa caixa-risco"> <!-- Base .caixa (como .caixa-atencao) + cor vermelha de risco -->
+                    <h3><span aria-hidden="true">⚠️</span> Riscos</h3>
+                    <ul class="lista">
+                        <li><strong>Limite de temperatura do PVC.</strong> O material degrada sob radiação solar e sob calor; a literatura indica vida útil menor que a do coletor de cobre. O sistema deve limitar a temperatura da água ao que o PVC suporta.</li>
+                        <li><strong>Qualidade da água e Legionella.</strong> Um trabalho da Unicamp avaliou a eficiência térmica de coletores de baixo custo dois anos após a instalação e analisou a qualidade da água. O pôster desse trabalho cita literatura sobre Legionella. Evite manter água morna parada por dias e limpe o reservatório.</li>
+                        <li><strong>Queimadura e pressão.</strong> Em dias muito quentes a água pode passar da temperatura de conforto. O manual de um fabricante recomenda válvula misturadora de água quente e fria na saída do reservatório, para evitar queimaduras e o derretimento da tubulação. No aquecedor solar de garrafas PET descrito em manual da Celesc, a água chegou a 52 °C e precisava ser misturada com água fria antes do uso. O mesmo manual de fabricante avisa que o reservatório de baixa pressão nunca deve trabalhar acima da pressão máxima indicada: no modelo dele, 5 m.c.a. (metros de coluna d'água), ou seja, a caixa d'água fria fica no máximo 5 m acima do reservatório.</li>
+                        <li><strong>Estruturas no telhado.</strong> Fixe bem o conjunto: coletores cheios de água são pesados e sofrem com o vento.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 8. COMPARANDO AS FONTES (substitui a anterior; texto igual nas 4 páginas) =====
+             Os cartões usam .card-comparacao: o rótulo em negrito faz papel de título.
+             No "Veja também", o link da página atual leva aria-current="page". -->
+        <section class="secao secao-branca" id="comparacao">
+            <div class="container">
+                <h2>8. Comparando as fontes de energia deste site</h2>
+                <div class="grade-3">
+                    <div class="card card-comparacao">
+                        <span class="card-icone" aria-hidden="true">☀️</span>
+                        <p><strong>Fotovoltaica:</strong> transforma luz em eletricidade, sem peças móveis; produz em corrente contínua, e o inversor a converte. Depende do sol e, para uso noturno, de baterias ou da rede.</p>
+                    </div>
+                    <div class="card card-comparacao">
+                        <span class="card-icone" aria-hidden="true">🚿</span>
+                        <p><strong>Solar térmica:</strong> transforma luz em calor para aquecer água. É a mais simples de montar e de manter, mas não gera eletricidade.</p>
+                    </div>
+                    <div class="card card-comparacao">
+                        <span class="card-icone" aria-hidden="true">💧</span>
+                        <p><strong>Hidráulica (páginas 3 e 4):</strong> transforma a queda e a vazão da água em eletricidade. Pode ser controlada pelo operador quando há reservatório, mas depende de rio, de licenças e de gestão do uso da água.</p>
+                    </div>
+                </div>
+                <div class="texto-coluna">
+                    <p><strong>No campo:</strong> a térmica é a de menor risco elétrico; a fotovoltaica exige cuidado com corrente contínua e arco elétrico; a hidráulica é a que mais depende de autorizações e de cuidados com o rio.</p>
+                    <p><strong>Em comum:</strong> as três usam fontes renováveis. Fontes que variam com o clima, como a solar, podem ser complementadas por usinas controláveis, como as hidrelétricas com reservatório. A própria hidráulica também varia com a chuva, como mostra a <a href="hidraulica-impactos.html">página 4</a>.</p>
+                </div>
+                <p class="ver-tambem">→ Veja também as páginas: <a href="solar-fotovoltaica.html">Solar Fotovoltaica</a>, <a href="solar-termica.html" aria-current="page">Solar Térmica</a>, <a href="hidraulica-funcionamento.html">Hidráulica – Funcionamento</a> e <a href="hidraulica-impactos.html">Hidráulica – Impactos</a>.</p>
+            </div>
+        </section>
+
+        <!-- ===== 9. REFERÊNCIAS (formato ABNT) =====
+             Cada fonte foi conferida no documento original. As normas da ABNT são
+             vendidas; por isso a entrada traz só os dados do catálogo, sem link. -->
+        <section class="secao" id="referencias">
+            <div class="container">
+                <h2>9. Referências</h2>
+                <div class="referencias">
+                    <h3>Normas e regulamentos</h3>
+                    <ul class="lista-referencias">
+                        <li>ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. <strong>ABNT NBR 15569</strong>: sistema de aquecimento solar de água em circuito direto – requisitos de projeto e instalação. Rio de Janeiro: ABNT, 2021.</li>
+                        <li>ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. <strong>ABNT NBR 16641</strong>: reservatórios termossolares – requisitos específicos para utilização em sistemas de acumulação de energia solar térmica – segurança mecânica e elétrica. Rio de Janeiro: ABNT, 2023.</li>
+                        <li>INSTITUTO NACIONAL DE METROLOGIA, QUALIDADE E TECNOLOGIA (Brasil). <strong>Portaria nº 633, de 5 de novembro de 2026</strong>. Aprova o Regulamento Técnico da Qualidade e os Requisitos de Avaliação da Conformidade para Equipamentos de Aquecimento Solar de Água – Consolidado. Diário Oficial da União: seção 1, Brasília, DF, ed. 209, p. 42, 6 nov. 2026.</li>
+                    </ul>
+
+                    <h3>Artigos e trabalhos</h3>
+                    <ul class="lista-referencias">
+                        <li>SANTOS, Felipe Marques; OLIVEIRA, Rogério Gomes de; NOVAK, Matheus Vercka. Construção e análise de desempenho de um coletor solar de baixo custo para aquecimento de água. <strong>Revista Técnico-Científica do IFSC</strong>, v. 3, n. especial (Anais do 1º Simpósio de Integração Científica e Tecnológica do Sul Catarinense – SICT-Sul), p. 383, 2012. Disponível em: <a href="https://core.ac.uk/download/482748485.pdf">https://core.ac.uk/download/482748485.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>MOREIRA, Giuliana Chaves; SACCOL DE SÁ, Jocelito. Análise do desempenho de materiais recicláveis no aquecimento de água por meio da energia solar. <strong>Revista Gestão &amp; Sustentabilidade Ambiental</strong>, Florianópolis, v. 6, n. 1, p. 41-66, maio 2017. DOI: 10.19177/rgsa.v6e1201741-66. Disponível em: <a href="https://portaldeperiodicos.animaeducacao.com.br/index.php/gestao_ambiental/article/download/3318/3065/11766">https://portaldeperiodicos.animaeducacao.com.br/index.php/gestao_ambiental/article/download/3318/3065/11766</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>PENEREIRO, Júlio César. Medidas das eficiências térmicas em aquecedores solares: uma alternativa complementar para o ensino de conceitos de física para estudantes das engenharias. <strong>Revista Brasileira de Ensino de Ciência e Tecnologia</strong> (UTFPR), Ponta Grossa, v. 9, n. 1, p. 99-122, jan./abr. 2016. DOI: 10.3895/rbect.v9n1.1598. Disponível em: <a href="https://periodicos.utfpr.edu.br/rbect/article/download/1598/2960">https://periodicos.utfpr.edu.br/rbect/article/download/1598/2960</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>CARMINATTI, Matheus de Rossi; BARTOLI, Julio Roberto. <strong>Coletores solares de baixo custo para aquecimento de água</strong>: avaliação da eficiência térmica pós instalação (2 anos) e análises da qualidade da água. In: CONGRESSO INTERNO DE INICIAÇÃO CIENTÍFICA DA UNICAMP, 16., 2008, Campinas. Disponível em: <a href="https://www.prp.unicamp.br/pibic/congressos/xvicongresso/resumos/045333.pdf">https://www.prp.unicamp.br/pibic/congressos/xvicongresso/resumos/045333.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>ARREGUY, Rodrigo Veronez Etienne. <strong>Avaliação da eficiência de dois modelos de aquecedores solares de baixo custo no município de Ouro Fino – MG</strong>. 2013. Trabalho de conclusão de curso – IFSULDEMINAS, Inconfidentes, 2013. Disponível em: <a href="https://portal.ifs.ifsuldeminas.edu.br/arquivos/paginas/menu_institucional/departamentos/Biblioteca/tcc/TCC_-_Rodrigo_Veronez_Etienne_Arreguy_-_TGA.pdf">https://portal.ifs.ifsuldeminas.edu.br/arquivos/paginas/menu_institucional/departamentos/Biblioteca/tcc/TCC_-_Rodrigo_Veronez_Etienne_Arreguy_-_TGA.pdf</a>. Acesso em: 15 nov. 2026.</li>
+                    </ul>
+
+                    <h3>Sites e dados setoriais</h3>
+                    <ul class="lista-referencias">
+                        <li>SOCIEDADE DO SOL. <strong>Manual de instrução de manufatura e instalação experimental do aquecedor solar de baixo custo – ASBC</strong>: anexo 1, minuta de norma técnica. Versão VII. Jun. 2005. Disponível em: <a href="https://www.sociedadedosol.org.br/infotecnicas">https://www.sociedadedosol.org.br/infotecnicas</a>. Acesso em: 15 nov. 2026.</li>
+                        <li>SOCIEDADE DO SOL. Comparação de eficiência entre modelos diferentes de coletores solares de baixo custo. In: SOCIEDADE DO SOL. <strong>Informações técnicas</strong>. Item 10.2, temperatura final esperada. Disponível em: <a href="https://www.sociedadedosol.org.br/infotecnicas">https://www.sociedadedosol.org.br/infotecnicas</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>KOMECO. <strong>Manual do usuário</strong>: tubo a vácuo de baixa pressão (15, 20 e 30 tubos). [S. l.]: Komeco, [20--]. Seção 8, Instalação. Disponível em: <a href="https://www.komeco.com.br/arquivos/manuais/aquecimento-solar/coletor-solar-tubo-a-vacuo/manual-coletor-solar-tubo-a-vacuo-baixa-pressao.pdf">https://www.komeco.com.br/arquivos/manuais/aquecimento-solar/coletor-solar-tubo-a-vacuo/manual-coletor-solar-tubo-a-vacuo-baixa-pressao.pdf</a>. Acesso em: 16 nov. 2026.</li>
+                        <li>CELESC DISTRIBUIÇÃO S.A. <strong>Aquecedor solar composto de produtos descartáveis</strong>: manual de construção e instalação. Responsável técnico: José Alcino Alano. [S. l.]: Celesc, maio 2009. Disponível em: <a href="https://www.celesc.com.br/arquivos/manuais/manual-aquecedor-solar.pdf">https://www.celesc.com.br/arquivos/manuais/manual-aquecedor-solar.pdf</a>. Acesso em: 16 nov. 2026.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="chamada">
+            <div class="container">
+                <h2>Ficou com dúvida sobre o seu terreno?</h2>
+                <p>Conte o que você tem na propriedade e veja por onde começar.</p>
+                <a href="contato.html" class="botao">Fazer meu diagnóstico</a>
+            </div>
+        </section>
+        <div class="container">
+            <nav class="nav-paginas" aria-label="Navegação entre páginas">
+            <a href="solar-fotovoltaica.html" class="anterior"><small>Página anterior</small>← Solar fotovoltaica</a>
+            <a href="eolica-residencial.html" class="proxima"><small>Próxima página</small>Eólica residencial →</a>
+            </nav>
+        </div>
+
+    </main>
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer>
+        <nav aria-label="Mapa do site">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Quem somos</a></li>
+                <li><a href="solar-fotovoltaica.html">Solar fotovoltaica</a></li>
+                <li><a href="solar-termica.html">Solar térmica</a></li>
+                <li><a href="eolica-residencial.html">Eólica residencial</a></li>
+                <li><a href="eolica-grandes-parques.html">Eólica em grandes parques</a></li>
+                <li><a href="hidraulica-funcionamento.html">Hidráulica: funcionamento</a></li>
+                <li><a href="hidraulica-impactos.html">Hidráulica: impactos</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html">Contato e diagnóstico</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 - TERS | Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
